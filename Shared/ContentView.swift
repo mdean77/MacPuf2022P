@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+var macpuf = Simulator()
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Button("Simulate") {
+            macpuf.simulate()
+        }
     }
 }
 

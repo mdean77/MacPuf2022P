@@ -17,6 +17,19 @@
 		850DCAF0286745FD00292A94 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCAC6286745FB00292A94 /* ContentView.swift */; };
 		850DCAF1286745FD00292A94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850DCAC7286745FD00292A94 /* Assets.xcassets */; };
 		850DCAF2286745FD00292A94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850DCAC7286745FD00292A94 /* Assets.xcassets */; };
+		850DCB082867626000292A94 /* CalculateContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB072867626000292A94 /* CalculateContents.swift */; };
+		850DCB092867626000292A94 /* CalculateContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB072867626000292A94 /* CalculateContents.swift */; };
+		850DCB0A2867626000292A94 /* CalculateContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB072867626000292A94 /* CalculateContents.swift */; };
+		850DCB0B2867626000292A94 /* CalculateContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB072867626000292A94 /* CalculateContents.swift */; };
+		850DCB0D2867695B00292A94 /* Human.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB0C2867695B00292A94 /* Human.swift */; };
+		850DCB0E2867695B00292A94 /* Human.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB0C2867695B00292A94 /* Human.swift */; };
+		850DCB0F2867695B00292A94 /* Human.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB0C2867695B00292A94 /* Human.swift */; };
+		850DCB102867695B00292A94 /* Human.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB0C2867695B00292A94 /* Human.swift */; };
+		850DCB1228676B4100292A94 /* Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1128676B4100292A94 /* Simulator.swift */; };
+		850DCB1328676B4100292A94 /* Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1128676B4100292A94 /* Simulator.swift */; };
+		850DCB1428676B4100292A94 /* Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1128676B4100292A94 /* Simulator.swift */; };
+		850DCB1528676B4100292A94 /* Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1128676B4100292A94 /* Simulator.swift */; };
+		850DCB1728677C8500292A94 /* TestCalculateContentFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1628677C8500292A94 /* TestCalculateContentFunction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +62,10 @@
 		850DCAE5286745FD00292A94 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		850DCAE9286745FD00292A94 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		850DCAEB286745FD00292A94 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		850DCB072867626000292A94 /* CalculateContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateContents.swift; sourceTree = "<group>"; };
+		850DCB0C2867695B00292A94 /* Human.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Human.swift; sourceTree = "<group>"; };
+		850DCB1128676B4100292A94 /* Simulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simulator.swift; sourceTree = "<group>"; };
+		850DCB1628677C8500292A94 /* TestCalculateContentFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCalculateContentFunction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +117,9 @@
 				850DCAC5286745FB00292A94 /* MacPuf2022PApp.swift */,
 				850DCAC6286745FB00292A94 /* ContentView.swift */,
 				850DCAC7286745FD00292A94 /* Assets.xcassets */,
+				850DCB072867626000292A94 /* CalculateContents.swift */,
+				850DCB0C2867695B00292A94 /* Human.swift */,
+				850DCB1128676B4100292A94 /* Simulator.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -128,6 +148,7 @@
 			children = (
 				850DCADD286745FD00292A94 /* Tests_iOS.swift */,
 				850DCADF286745FD00292A94 /* Tests_iOSLaunchTests.swift */,
+				850DCB1628677C8500292A94 /* TestCalculateContentFunction.swift */,
 			);
 			path = "Tests iOS";
 			sourceTree = "<group>";
@@ -300,7 +321,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				850DCAEF286745FD00292A94 /* ContentView.swift in Sources */,
+				850DCB1228676B4100292A94 /* Simulator.swift in Sources */,
+				850DCB082867626000292A94 /* CalculateContents.swift in Sources */,
 				850DCAED286745FD00292A94 /* MacPuf2022PApp.swift in Sources */,
+				850DCB0D2867695B00292A94 /* Human.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +333,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				850DCAF0286745FD00292A94 /* ContentView.swift in Sources */,
+				850DCB1328676B4100292A94 /* Simulator.swift in Sources */,
+				850DCB092867626000292A94 /* CalculateContents.swift in Sources */,
 				850DCAEE286745FD00292A94 /* MacPuf2022PApp.swift in Sources */,
+				850DCB0E2867695B00292A94 /* Human.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,8 +344,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				850DCB0A2867626000292A94 /* CalculateContents.swift in Sources */,
+				850DCB1428676B4100292A94 /* Simulator.swift in Sources */,
 				850DCAE0286745FD00292A94 /* Tests_iOSLaunchTests.swift in Sources */,
 				850DCADE286745FD00292A94 /* Tests_iOS.swift in Sources */,
+				850DCB1728677C8500292A94 /* TestCalculateContentFunction.swift in Sources */,
+				850DCB0F2867695B00292A94 /* Human.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,8 +357,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				850DCB0B2867626000292A94 /* CalculateContents.swift in Sources */,
+				850DCB1528676B4100292A94 /* Simulator.swift in Sources */,
 				850DCAEC286745FD00292A94 /* Tests_macOSLaunchTests.swift in Sources */,
 				850DCAEA286745FD00292A94 /* Tests_macOS.swift in Sources */,
+				850DCB102867695B00292A94 /* Human.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
