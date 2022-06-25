@@ -30,6 +30,14 @@
 		850DCB1428676B4100292A94 /* Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1128676B4100292A94 /* Simulator.swift */; };
 		850DCB1528676B4100292A94 /* Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1128676B4100292A94 /* Simulator.swift */; };
 		850DCB1728677C8500292A94 /* TestCalculateContentFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1628677C8500292A94 /* TestCalculateContentFunction.swift */; };
+		850DCB1928677E0400292A94 /* CalculatePh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1828677E0400292A94 /* CalculatePh.swift */; };
+		850DCB1A28677E0400292A94 /* CalculatePh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1828677E0400292A94 /* CalculatePh.swift */; };
+		850DCB1B28677E0400292A94 /* CalculatePh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1828677E0400292A94 /* CalculatePh.swift */; };
+		850DCB1C28677E0400292A94 /* CalculatePh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1828677E0400292A94 /* CalculatePh.swift */; };
+		850DCB1E28677E2B00292A94 /* CalculatePressures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1D28677E2B00292A94 /* CalculatePressures.swift */; };
+		850DCB1F28677E2B00292A94 /* CalculatePressures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1D28677E2B00292A94 /* CalculatePressures.swift */; };
+		850DCB2028677E2B00292A94 /* CalculatePressures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1D28677E2B00292A94 /* CalculatePressures.swift */; };
+		850DCB2128677E2B00292A94 /* CalculatePressures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1D28677E2B00292A94 /* CalculatePressures.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +74,8 @@
 		850DCB0C2867695B00292A94 /* Human.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Human.swift; sourceTree = "<group>"; };
 		850DCB1128676B4100292A94 /* Simulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simulator.swift; sourceTree = "<group>"; };
 		850DCB1628677C8500292A94 /* TestCalculateContentFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCalculateContentFunction.swift; sourceTree = "<group>"; };
+		850DCB1828677E0400292A94 /* CalculatePh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePh.swift; sourceTree = "<group>"; };
+		850DCB1D28677E2B00292A94 /* CalculatePressures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePressures.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +130,8 @@
 				850DCB072867626000292A94 /* CalculateContents.swift */,
 				850DCB0C2867695B00292A94 /* Human.swift */,
 				850DCB1128676B4100292A94 /* Simulator.swift */,
+				850DCB1828677E0400292A94 /* CalculatePh.swift */,
+				850DCB1D28677E2B00292A94 /* CalculatePressures.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -324,7 +336,9 @@
 				850DCB1228676B4100292A94 /* Simulator.swift in Sources */,
 				850DCB082867626000292A94 /* CalculateContents.swift in Sources */,
 				850DCAED286745FD00292A94 /* MacPuf2022PApp.swift in Sources */,
+				850DCB1928677E0400292A94 /* CalculatePh.swift in Sources */,
 				850DCB0D2867695B00292A94 /* Human.swift in Sources */,
+				850DCB1E28677E2B00292A94 /* CalculatePressures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +350,9 @@
 				850DCB1328676B4100292A94 /* Simulator.swift in Sources */,
 				850DCB092867626000292A94 /* CalculateContents.swift in Sources */,
 				850DCAEE286745FD00292A94 /* MacPuf2022PApp.swift in Sources */,
+				850DCB1A28677E0400292A94 /* CalculatePh.swift in Sources */,
 				850DCB0E2867695B00292A94 /* Human.swift in Sources */,
+				850DCB1F28677E2B00292A94 /* CalculatePressures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +365,9 @@
 				850DCAE0286745FD00292A94 /* Tests_iOSLaunchTests.swift in Sources */,
 				850DCADE286745FD00292A94 /* Tests_iOS.swift in Sources */,
 				850DCB1728677C8500292A94 /* TestCalculateContentFunction.swift in Sources */,
+				850DCB2028677E2B00292A94 /* CalculatePressures.swift in Sources */,
 				850DCB0F2867695B00292A94 /* Human.swift in Sources */,
+				850DCB1B28677E0400292A94 /* CalculatePh.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +379,9 @@
 				850DCB1528676B4100292A94 /* Simulator.swift in Sources */,
 				850DCAEC286745FD00292A94 /* Tests_macOSLaunchTests.swift in Sources */,
 				850DCAEA286745FD00292A94 /* Tests_macOS.swift in Sources */,
+				850DCB1C28677E0400292A94 /* CalculatePh.swift in Sources */,
 				850DCB102867695B00292A94 /* Human.swift in Sources */,
+				850DCB2128677E2B00292A94 /* CalculatePressures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
