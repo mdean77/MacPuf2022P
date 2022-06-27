@@ -46,6 +46,10 @@
 		850DCB2A2868E85800292A94 /* GetVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB282868E85800292A94 /* GetVariables.swift */; };
 		850DCB2B2868E85800292A94 /* GetVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB282868E85800292A94 /* GetVariables.swift */; };
 		850DCB2C2868E85800292A94 /* GetVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB282868E85800292A94 /* GetVariables.swift */; };
+		85523187286A10A000484232 /* DebugConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85523186286A10A000484232 /* DebugConsoleOutput.swift */; };
+		85523188286A10A000484232 /* DebugConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85523186286A10A000484232 /* DebugConsoleOutput.swift */; };
+		85523189286A10A000484232 /* DebugConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85523186286A10A000484232 /* DebugConsoleOutput.swift */; };
+		8552318A286A10A000484232 /* DebugConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85523186286A10A000484232 /* DebugConsoleOutput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +90,7 @@
 		850DCB1D28677E2B00292A94 /* CalculatePressures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePressures.swift; sourceTree = "<group>"; };
 		850DCB222867C9A400292A94 /* GetConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetConstants.swift; sourceTree = "<group>"; };
 		850DCB282868E85800292A94 /* GetVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVariables.swift; sourceTree = "<group>"; };
+		85523186286A10A000484232 /* DebugConsoleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugConsoleOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +195,7 @@
 			children = (
 				850DCB222867C9A400292A94 /* GetConstants.swift */,
 				850DCB282868E85800292A94 /* GetVariables.swift */,
+				85523186286A10A000484232 /* DebugConsoleOutput.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -352,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85523187286A10A000484232 /* DebugConsoleOutput.swift in Sources */,
 				850DCAEF286745FD00292A94 /* ContentView.swift in Sources */,
 				850DCB1228676B4100292A94 /* Simulator.swift in Sources */,
 				850DCB232867C9A400292A94 /* GetConstants.swift in Sources */,
@@ -368,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85523188286A10A000484232 /* DebugConsoleOutput.swift in Sources */,
 				850DCAF0286745FD00292A94 /* ContentView.swift in Sources */,
 				850DCB1328676B4100292A94 /* Simulator.swift in Sources */,
 				850DCB242867C9A400292A94 /* GetConstants.swift in Sources */,
@@ -393,6 +401,7 @@
 				850DCB2028677E2B00292A94 /* CalculatePressures.swift in Sources */,
 				850DCB0F2867695B00292A94 /* Human.swift in Sources */,
 				850DCB1B28677E0400292A94 /* CalculatePh.swift in Sources */,
+				85523189286A10A000484232 /* DebugConsoleOutput.swift in Sources */,
 				850DCB252867C9A400292A94 /* GetConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8552318A286A10A000484232 /* DebugConsoleOutput.swift in Sources */,
 				850DCB0B2867626000292A94 /* CalculateContents.swift in Sources */,
 				850DCB1528676B4100292A94 /* Simulator.swift in Sources */,
 				850DCB262867C9A400292A94 /* GetConstants.swift in Sources */,
