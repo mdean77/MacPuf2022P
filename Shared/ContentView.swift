@@ -8,6 +8,7 @@
 import SwiftUI
 var macpuf = Simulator()
 
+
 struct ContentView: View {
     var body: some View {
         Button("Simulate") {

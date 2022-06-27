@@ -38,6 +38,14 @@
 		850DCB1F28677E2B00292A94 /* CalculatePressures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1D28677E2B00292A94 /* CalculatePressures.swift */; };
 		850DCB2028677E2B00292A94 /* CalculatePressures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1D28677E2B00292A94 /* CalculatePressures.swift */; };
 		850DCB2128677E2B00292A94 /* CalculatePressures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1D28677E2B00292A94 /* CalculatePressures.swift */; };
+		850DCB232867C9A400292A94 /* GetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB222867C9A400292A94 /* GetConstants.swift */; };
+		850DCB242867C9A400292A94 /* GetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB222867C9A400292A94 /* GetConstants.swift */; };
+		850DCB252867C9A400292A94 /* GetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB222867C9A400292A94 /* GetConstants.swift */; };
+		850DCB262867C9A400292A94 /* GetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB222867C9A400292A94 /* GetConstants.swift */; };
+		850DCB292868E85800292A94 /* GetVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB282868E85800292A94 /* GetVariables.swift */; };
+		850DCB2A2868E85800292A94 /* GetVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB282868E85800292A94 /* GetVariables.swift */; };
+		850DCB2B2868E85800292A94 /* GetVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB282868E85800292A94 /* GetVariables.swift */; };
+		850DCB2C2868E85800292A94 /* GetVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB282868E85800292A94 /* GetVariables.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +84,8 @@
 		850DCB1628677C8500292A94 /* TestCalculateContentFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCalculateContentFunction.swift; sourceTree = "<group>"; };
 		850DCB1828677E0400292A94 /* CalculatePh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePh.swift; sourceTree = "<group>"; };
 		850DCB1D28677E2B00292A94 /* CalculatePressures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePressures.swift; sourceTree = "<group>"; };
+		850DCB222867C9A400292A94 /* GetConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetConstants.swift; sourceTree = "<group>"; };
+		850DCB282868E85800292A94 /* GetVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVariables.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +134,7 @@
 		850DCAC4286745FB00292A94 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				850DCB272867C9B300292A94 /* Extensions */,
 				850DCAC5286745FB00292A94 /* MacPuf2022PApp.swift */,
 				850DCAC6286745FB00292A94 /* ContentView.swift */,
 				850DCAC7286745FD00292A94 /* Assets.xcassets */,
@@ -172,6 +183,15 @@
 				850DCAEB286745FD00292A94 /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		850DCB272867C9B300292A94 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				850DCB222867C9A400292A94 /* GetConstants.swift */,
+				850DCB282868E85800292A94 /* GetVariables.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +354,8 @@
 			files = (
 				850DCAEF286745FD00292A94 /* ContentView.swift in Sources */,
 				850DCB1228676B4100292A94 /* Simulator.swift in Sources */,
+				850DCB232867C9A400292A94 /* GetConstants.swift in Sources */,
+				850DCB292868E85800292A94 /* GetVariables.swift in Sources */,
 				850DCB082867626000292A94 /* CalculateContents.swift in Sources */,
 				850DCAED286745FD00292A94 /* MacPuf2022PApp.swift in Sources */,
 				850DCB1928677E0400292A94 /* CalculatePh.swift in Sources */,
@@ -348,6 +370,8 @@
 			files = (
 				850DCAF0286745FD00292A94 /* ContentView.swift in Sources */,
 				850DCB1328676B4100292A94 /* Simulator.swift in Sources */,
+				850DCB242867C9A400292A94 /* GetConstants.swift in Sources */,
+				850DCB2A2868E85800292A94 /* GetVariables.swift in Sources */,
 				850DCB092867626000292A94 /* CalculateContents.swift in Sources */,
 				850DCAEE286745FD00292A94 /* MacPuf2022PApp.swift in Sources */,
 				850DCB1A28677E0400292A94 /* CalculatePh.swift in Sources */,
@@ -360,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				850DCB2B2868E85800292A94 /* GetVariables.swift in Sources */,
 				850DCB0A2867626000292A94 /* CalculateContents.swift in Sources */,
 				850DCB1428676B4100292A94 /* Simulator.swift in Sources */,
 				850DCAE0286745FD00292A94 /* Tests_iOSLaunchTests.swift in Sources */,
@@ -368,6 +393,7 @@
 				850DCB2028677E2B00292A94 /* CalculatePressures.swift in Sources */,
 				850DCB0F2867695B00292A94 /* Human.swift in Sources */,
 				850DCB1B28677E0400292A94 /* CalculatePh.swift in Sources */,
+				850DCB252867C9A400292A94 /* GetConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +403,8 @@
 			files = (
 				850DCB0B2867626000292A94 /* CalculateContents.swift in Sources */,
 				850DCB1528676B4100292A94 /* Simulator.swift in Sources */,
+				850DCB262867C9A400292A94 /* GetConstants.swift in Sources */,
+				850DCB2C2868E85800292A94 /* GetVariables.swift in Sources */,
 				850DCAEC286745FD00292A94 /* Tests_macOSLaunchTests.swift in Sources */,
 				850DCAEA286745FD00292A94 /* Tests_macOS.swift in Sources */,
 				850DCB1C28677E0400292A94 /* CalculatePh.swift in Sources */,

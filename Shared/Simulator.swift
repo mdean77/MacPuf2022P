@@ -12,6 +12,7 @@ struct Simulator {
     var intervalFactor = 300
     var totalSeconds = -1
     var human = Human()
+
     
     func cycleReport() -> String{
         // Returns a string for single line of output
@@ -45,13 +46,13 @@ struct Simulator {
         let x = 10*pow(2,(8.0 - human.RPH)*3.33)
         let result = String(format:"\nFinal values for this run were...\n\n")
         let result1 = String(format:"Arterial pO2 = %6.1f              O2 Cont =%6.1f      O2 Sat = %5.1f%%\n",human.RO2PR, human.RO2CT,human.PJ)
-        let result2 = String(format:"Arterial pCO2 = %.1f              CO2 Cont =%6.1f\n",human.RC2PR,human.RC2CT)
+        let result2 = String(format:"Arterial pCO2 = %5.1f              CO2 Cont =%6.1f\n",human.RC2PR,human.RC2CT)
         let result3 = String(format:"Arterial pH = %7.2f (%3.1f nm)    Arterial bicarbonate = %5.1f\n\n",human.RPH,x,human.RC3CT)
-        let result4 = String(format:"Respiratory rate = %5.1f           Tidal vol.= %6.0f ml\n", human.RRATE, human.TIDVL)
-        let result5 = String(format:"Total ventilation =%5.1f l/min     Actual cardiac output = %4.1f l/min\n",human.DVENT, human.COADJ)
-        let result6 = String(format:"Total dead space = %4.0f ml         Actual venous admixture = %3.1f%%\n",human.DSPAC,human.PW)
-        let result7 = String(format:"Cardiac output = %5.1f l/min       Cerebral blood flow = %5.1f ml/100g/min\n", human.COADJ, human.CBF)
-        let result8 = String(format:"Heart rate = %5.1f                 Stroke volume = %5.1f ml\n", human.HRATE, human.STRVL)
+        let result4 = String(format:"Respiratory rate =  %5.1f          Tidal vol.= %6.0f ml\n", human.RRATE, human.TIDVL)
+        let result5 = String(format:"Total ventilation = %5.1f l/min    Actual cardiac output = %4.1f l/min\n",human.DVENT, human.COADJ)
+        let result6 = String(format:"Total dead space =   %4.0f ml       Actual venous admixture = %3.1f%%\n",human.DSPAC,human.PW)
+        let result7 = String(format:"Cardiac output =    %5.1f l/min    Cerebral blood flow = %5.1f ml/100g/min\n", human.COADJ, human.CBF)
+        let result8 = String(format:"Heart rate =        %5.1f          Stroke volume = %5.1f ml\n", human.HRATE, human.STRVL)
         return result + result1 + result2 + result3 + result4 + result5 + result6 + result7 + result8
     }
     
@@ -93,11 +94,12 @@ struct Simulator {
     }
     
     mutating func simulate(){
+        human.getConstants()    // only happens once per run instead of every iteration
         iterations = iterations >= intervalFactor ? iterations : intervalFactor
         reportOut(title:"Initial conditions before starting simulations:")
         print("\n   Time     0     10    20    30    40    50    60    70    80    90   100   110   120")
         print("(Min:Secs)  .     .     .     .     .     .     .     .     .     .     .     .     .")
-        for cycle in 0..<iterations {
+        for cycle in 0...iterations {
             human.simulate(cycle: cycle, iterations: iterations)
             totalSeconds += 1
             if cycle % intervalFactor == 0 {

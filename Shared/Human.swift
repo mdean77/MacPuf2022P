@@ -133,11 +133,36 @@ struct Human {
     
     var NARTI = 1                               // (1 = natural, 0 = artificial)
     
+    // Initialize constants with zero values
+    var (c1, c2, c3, c4, c5, c6, c7, c8, c9, c10) = (0.0, 0.0, 0.0, 0.0,0.0, 0.0, 0.0, 0.0,0.0,0.0)
+    var (c11, c12, c13, c14, c15, c16, c17, c18, c19, c20) = (0.0, 0.0, 0.0, 0.0,0.0, 0.0, 0.0, 0.0,0.0,0.0)
+    var (c21, c22, c23, c24, c25, c26, c27, c28, c29, c30) = (0.0, 0.0, 0.0, 0.0,0.0, 0.0, 0.0, 0.0,0.0,0.0)
+    var (c31, c32, c33, c34, c35, c36, c37, c38, c39, c40) = (0.0, 0.0, 0.0, 0.0,0.0, 0.0, 0.0, 0.0,0.0,0.0)
+    var (c41, c42, c43, c44, c45, c46, c47, c48, c49, c50) = (0.0, 0.0, 0.0, 0.0,0.0, 0.0, 0.0, 0.0,0.0,0.0)
+    var (c51, c52, c53, c54, c55, c56, c57, c58, c59, c60) = (0.0, 0.0, 0.0, 0.0,0.0, 0.0, 0.0, 0.0,0.0,0.0)
+    var (c61, c62, c63, c64, c65, c66, c67, c68, c69, c70) = (0.0, 0.0, 0.0, 0.0,0.0, 0.0, 0.0, 0.0,0.0,0.0)
+    
+    // Replace constants with the correct constant values
+    mutating func getConstants (){
+        setConstants()
+    }
+    
+    
+    
+    
+    
     mutating func simulate(cycle:Int, iterations:Int){
-        
+
         
         if cycle == iterations {
+            print(c1)
+            print(c2)
+            print(c3)
+            print(c4)
+            print(c70)
             ADDC3 = 0
         }
     }
 }
+
+
