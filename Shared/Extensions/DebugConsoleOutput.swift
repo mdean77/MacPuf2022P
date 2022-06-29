@@ -107,8 +107,8 @@ extension Simulator {
         print(title)
         print(runReport())
         print(inspectionReport())
-       // print(dumpFirstSixParametersReport())
-       // print(dumpAllParametersReport())
+        print(dumpFirstSixParametersReport())
+        print(dumpAllParametersReport())
     }
     
 }

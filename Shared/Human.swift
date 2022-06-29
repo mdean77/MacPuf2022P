@@ -49,7 +49,7 @@ struct Human {
     }
     
     mutating func simulate(cycle:Int, iterations:Int){
-
+        BC3CT = 5000  // should be 22.7
         
         if cycle == iterations {
             ADDC3 = 0

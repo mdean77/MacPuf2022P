@@ -10,10 +10,20 @@ var macpuf = Simulator()
 
 
 struct ContentView: View {
+    @State private var patientStarted = false
+    
     var body: some View {
-        Button("Simulate") {
-            macpuf.simulate()
+        VStack(spacing:10){
+            Button("Simulate new") {
+                macpuf.startUp()
+                patientStarted = true
+            }
+            Button("Continue same") {
+                macpuf.continueSubject()
+            }
+            .disabled(!patientStarted)
         }
+   
     }
 }
 
