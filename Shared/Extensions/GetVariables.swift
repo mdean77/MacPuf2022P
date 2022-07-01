@@ -114,7 +114,7 @@ extension Human {
          TN2PR = 571.1            // TN2PR - Fast equilibrating store Factor 103
          FEV = 4.0                // MacPuf variable FEV      Factor 104
          SN2PR = 564.0            // SN2PR - Slow equilibraint store Factor 105
-         RN2CT = 0.73             // MacPuf same as EN2CT Factor  Factor 106
+         EN2CT = 0.73             // MacPuf same as EN2CT Factor  Factor 106
          UN2MT = 0.0              // UN2MT Factor 107
          RN2MT = 7.26             // MacPuf variable RN2MT  Factor 108
          HRATE = 70.0             // HRATE Factor 109  Heart rate
@@ -129,5 +129,12 @@ extension Human {
          HT = 178.0               // HT  Factor 118
          WT = 70.0                // WT  Factor 119
          AGE = 40.0               // AGE Factor 120
+        
+        for i in 1...20 {
+            TDLAY[i]=VO2CT
+            TDLAY[i+20]=VC2CT
+            TDLAY[i+40]=VC3MT
+            TDLAY[i+60]=TC2PR
+        }
     }
 }

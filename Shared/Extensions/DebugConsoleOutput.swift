@@ -97,7 +97,7 @@ extension Simulator {
         let row8 =  String(format:"\n%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f",human.REFLV,human.RO2PR,human.CONSO,human.RC2PR,human.PG,human.PJ,human.TND,human.RC2CT,human.QB,human.PW)
         let row9 =  String(format:"\n%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f",human.FT,human.CONOM,human.BUBBL,human.TC2RF,human.TC3MT,human.VC3MT,human.TC3CT,human.VC3CT,human.TLAMT,human.RLACT)
         let row10 =  String(format:"\n%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f",human.BC3CT,human.BO2AD,human.COADJ,human.EO2CT,human.TO2MT,human.TO2PR,human.TC2PR,human.VO2MT,human.AVENT,human.PL)
-        let row11 =  String(format:"\n%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f",human.EC2CT,human.TN2MT,human.TN2PR,human.FEV,human.SN2PR,human.RN2CT,human.UN2MT,human.RN2MT,human.HRATE,human.STRVL)
+        let row11 =  String(format:"\n%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f",human.EC2CT,human.TN2MT,human.TN2PR,human.FEV,human.SN2PR,human.EN2CT,human.UN2MT,human.RN2MT,human.HRATE,human.STRVL)
         let row12 =  String(format:"\n%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f",human.TC3AJ,human.SN2MT,human.QA,human.RVADM,human.XDSPA,human.BAG,human.XMALE,human.HT,human.WT,human.AGE)
 
         return row1+row2+row3+row4+row5+row6+row7+row8+row9+row10+row11+row12

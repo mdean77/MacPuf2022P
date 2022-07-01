@@ -30,10 +30,10 @@
 		850DCB1428676B4100292A94 /* Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1128676B4100292A94 /* Simulator.swift */; };
 		850DCB1528676B4100292A94 /* Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1128676B4100292A94 /* Simulator.swift */; };
 		850DCB1728677C8500292A94 /* TestCalculateContentFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1628677C8500292A94 /* TestCalculateContentFunction.swift */; };
-		850DCB1928677E0400292A94 /* CalculatePh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1828677E0400292A94 /* CalculatePh.swift */; };
-		850DCB1A28677E0400292A94 /* CalculatePh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1828677E0400292A94 /* CalculatePh.swift */; };
-		850DCB1B28677E0400292A94 /* CalculatePh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1828677E0400292A94 /* CalculatePh.swift */; };
-		850DCB1C28677E0400292A94 /* CalculatePh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1828677E0400292A94 /* CalculatePh.swift */; };
+		850DCB1928677E0400292A94 /* SmallFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1828677E0400292A94 /* SmallFunctions.swift */; };
+		850DCB1A28677E0400292A94 /* SmallFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1828677E0400292A94 /* SmallFunctions.swift */; };
+		850DCB1B28677E0400292A94 /* SmallFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1828677E0400292A94 /* SmallFunctions.swift */; };
+		850DCB1C28677E0400292A94 /* SmallFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1828677E0400292A94 /* SmallFunctions.swift */; };
 		850DCB1E28677E2B00292A94 /* CalculatePressures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1D28677E2B00292A94 /* CalculatePressures.swift */; };
 		850DCB1F28677E2B00292A94 /* CalculatePressures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1D28677E2B00292A94 /* CalculatePressures.swift */; };
 		850DCB2028677E2B00292A94 /* CalculatePressures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1D28677E2B00292A94 /* CalculatePressures.swift */; };
@@ -46,6 +46,50 @@
 		850DCB2A2868E85800292A94 /* GetVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB282868E85800292A94 /* GetVariables.swift */; };
 		850DCB2B2868E85800292A94 /* GetVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB282868E85800292A94 /* GetVariables.swift */; };
 		850DCB2C2868E85800292A94 /* GetVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB282868E85800292A94 /* GetVariables.swift */; };
+		8533A801286DEFE20077DE75 /* MACPUF17december1981JMD.for in Sources */ = {isa = PBXBuildFile; fileRef = 8533A800286DEFE20077DE75 /* MACPUF17december1981JMD.for */; };
+		8533A802286DEFE20077DE75 /* MACPUF17december1981JMD.for in Sources */ = {isa = PBXBuildFile; fileRef = 8533A800286DEFE20077DE75 /* MACPUF17december1981JMD.for */; };
+		8533A803286DEFE20077DE75 /* MACPUF17december1981JMD.for in Sources */ = {isa = PBXBuildFile; fileRef = 8533A800286DEFE20077DE75 /* MACPUF17december1981JMD.for */; };
+		8533A804286DEFE20077DE75 /* MACPUF17december1981JMD.for in Sources */ = {isa = PBXBuildFile; fileRef = 8533A800286DEFE20077DE75 /* MACPUF17december1981JMD.for */; };
+		8533A806286DF3120077DE75 /* SetupCardiacOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A805286DF3120077DE75 /* SetupCardiacOutput.swift */; };
+		8533A807286DF3120077DE75 /* SetupCardiacOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A805286DF3120077DE75 /* SetupCardiacOutput.swift */; };
+		8533A808286DF3120077DE75 /* SetupCardiacOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A805286DF3120077DE75 /* SetupCardiacOutput.swift */; };
+		8533A809286DF3120077DE75 /* SetupCardiacOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A805286DF3120077DE75 /* SetupCardiacOutput.swift */; };
+		8533A80B286DF7180077DE75 /* ArterialPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A80A286DF7180077DE75 /* ArterialPool.swift */; };
+		8533A80C286DF7180077DE75 /* ArterialPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A80A286DF7180077DE75 /* ArterialPool.swift */; };
+		8533A80D286DF7180077DE75 /* ArterialPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A80A286DF7180077DE75 /* ArterialPool.swift */; };
+		8533A80E286DF7180077DE75 /* ArterialPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A80A286DF7180077DE75 /* ArterialPool.swift */; };
+		8533A810286E02A10077DE75 /* LactateMetabolism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A80F286E02A10077DE75 /* LactateMetabolism.swift */; };
+		8533A811286E02A10077DE75 /* LactateMetabolism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A80F286E02A10077DE75 /* LactateMetabolism.swift */; };
+		8533A812286E02A10077DE75 /* LactateMetabolism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A80F286E02A10077DE75 /* LactateMetabolism.swift */; };
+		8533A813286E02A10077DE75 /* LactateMetabolism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A80F286E02A10077DE75 /* LactateMetabolism.swift */; };
+		8533A815286E08440077DE75 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A814286E08440077DE75 /* Function.swift */; };
+		8533A816286E08440077DE75 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A814286E08440077DE75 /* Function.swift */; };
+		8533A817286E08440077DE75 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A814286E08440077DE75 /* Function.swift */; };
+		8533A818286E08440077DE75 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A814286E08440077DE75 /* Function.swift */; };
+		8533A81A286E28660077DE75 /* TissueNitrogenStores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A819286E28660077DE75 /* TissueNitrogenStores.swift */; };
+		8533A81B286E28660077DE75 /* TissueNitrogenStores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A819286E28660077DE75 /* TissueNitrogenStores.swift */; };
+		8533A81C286E28660077DE75 /* TissueNitrogenStores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A819286E28660077DE75 /* TissueNitrogenStores.swift */; };
+		8533A81D286E28660077DE75 /* TissueNitrogenStores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A819286E28660077DE75 /* TissueNitrogenStores.swift */; };
+		8533A81F286E2AB90077DE75 /* TissueMetabolism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A81E286E2AB90077DE75 /* TissueMetabolism.swift */; };
+		8533A820286E2AB90077DE75 /* TissueMetabolism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A81E286E2AB90077DE75 /* TissueMetabolism.swift */; };
+		8533A821286E2AB90077DE75 /* TissueMetabolism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A81E286E2AB90077DE75 /* TissueMetabolism.swift */; };
+		8533A822286E2AB90077DE75 /* TissueMetabolism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A81E286E2AB90077DE75 /* TissueMetabolism.swift */; };
+		8533A824286E376E0077DE75 /* VenousDelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A823286E376E0077DE75 /* VenousDelay.swift */; };
+		8533A825286E376E0077DE75 /* VenousDelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A823286E376E0077DE75 /* VenousDelay.swift */; };
+		8533A826286E376E0077DE75 /* VenousDelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A823286E376E0077DE75 /* VenousDelay.swift */; };
+		8533A827286E376E0077DE75 /* VenousDelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A823286E376E0077DE75 /* VenousDelay.swift */; };
+		8533A829286E4A020077DE75 /* LungMetabolism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A828286E4A020077DE75 /* LungMetabolism.swift */; };
+		8533A82A286E4A020077DE75 /* LungMetabolism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A828286E4A020077DE75 /* LungMetabolism.swift */; };
+		8533A82B286E4A020077DE75 /* LungMetabolism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A828286E4A020077DE75 /* LungMetabolism.swift */; };
+		8533A82C286E4A020077DE75 /* LungMetabolism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A828286E4A020077DE75 /* LungMetabolism.swift */; };
+		8533A82E286E548E0077DE75 /* BrainMetabolism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A82D286E548E0077DE75 /* BrainMetabolism.swift */; };
+		8533A82F286E548E0077DE75 /* BrainMetabolism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A82D286E548E0077DE75 /* BrainMetabolism.swift */; };
+		8533A830286E548E0077DE75 /* BrainMetabolism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A82D286E548E0077DE75 /* BrainMetabolism.swift */; };
+		8533A831286E548E0077DE75 /* BrainMetabolism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A82D286E548E0077DE75 /* BrainMetabolism.swift */; };
+		8533A833286E612A0077DE75 /* Ventilation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A832286E612A0077DE75 /* Ventilation.swift */; };
+		8533A834286E612A0077DE75 /* Ventilation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A832286E612A0077DE75 /* Ventilation.swift */; };
+		8533A835286E612A0077DE75 /* Ventilation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A832286E612A0077DE75 /* Ventilation.swift */; };
+		8533A836286E612A0077DE75 /* Ventilation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A832286E612A0077DE75 /* Ventilation.swift */; };
 		85523187286A10A000484232 /* DebugConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85523186286A10A000484232 /* DebugConsoleOutput.swift */; };
 		85523188286A10A000484232 /* DebugConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85523186286A10A000484232 /* DebugConsoleOutput.swift */; };
 		85523189286A10A000484232 /* DebugConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85523186286A10A000484232 /* DebugConsoleOutput.swift */; };
@@ -86,10 +130,21 @@
 		850DCB0C2867695B00292A94 /* Human.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Human.swift; sourceTree = "<group>"; };
 		850DCB1128676B4100292A94 /* Simulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simulator.swift; sourceTree = "<group>"; };
 		850DCB1628677C8500292A94 /* TestCalculateContentFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCalculateContentFunction.swift; sourceTree = "<group>"; };
-		850DCB1828677E0400292A94 /* CalculatePh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePh.swift; sourceTree = "<group>"; };
+		850DCB1828677E0400292A94 /* SmallFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallFunctions.swift; sourceTree = "<group>"; };
 		850DCB1D28677E2B00292A94 /* CalculatePressures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePressures.swift; sourceTree = "<group>"; };
 		850DCB222867C9A400292A94 /* GetConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetConstants.swift; sourceTree = "<group>"; };
 		850DCB282868E85800292A94 /* GetVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVariables.swift; sourceTree = "<group>"; };
+		8533A800286DEFE20077DE75 /* MACPUF17december1981JMD.for */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.fortran; path = MACPUF17december1981JMD.for; sourceTree = "<group>"; };
+		8533A805286DF3120077DE75 /* SetupCardiacOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupCardiacOutput.swift; sourceTree = "<group>"; };
+		8533A80A286DF7180077DE75 /* ArterialPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArterialPool.swift; sourceTree = "<group>"; };
+		8533A80F286E02A10077DE75 /* LactateMetabolism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LactateMetabolism.swift; sourceTree = "<group>"; };
+		8533A814286E08440077DE75 /* Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
+		8533A819286E28660077DE75 /* TissueNitrogenStores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TissueNitrogenStores.swift; sourceTree = "<group>"; };
+		8533A81E286E2AB90077DE75 /* TissueMetabolism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TissueMetabolism.swift; sourceTree = "<group>"; };
+		8533A823286E376E0077DE75 /* VenousDelay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenousDelay.swift; sourceTree = "<group>"; };
+		8533A828286E4A020077DE75 /* LungMetabolism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LungMetabolism.swift; sourceTree = "<group>"; };
+		8533A82D286E548E0077DE75 /* BrainMetabolism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainMetabolism.swift; sourceTree = "<group>"; };
+		8533A832286E612A0077DE75 /* Ventilation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ventilation.swift; sourceTree = "<group>"; };
 		85523186286A10A000484232 /* DebugConsoleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugConsoleOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +187,7 @@
 				850DCAD3286745FD00292A94 /* macOS */,
 				850DCADC286745FD00292A94 /* Tests iOS */,
 				850DCAE8286745FD00292A94 /* Tests macOS */,
+				8533A7FF286DEF9F0077DE75 /* FORTRAN Source */,
 				850DCACD286745FD00292A94 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -146,7 +202,7 @@
 				850DCB072867626000292A94 /* CalculateContents.swift */,
 				850DCB0C2867695B00292A94 /* Human.swift */,
 				850DCB1128676B4100292A94 /* Simulator.swift */,
-				850DCB1828677E0400292A94 /* CalculatePh.swift */,
+				850DCB1828677E0400292A94 /* SmallFunctions.swift */,
 				850DCB1D28677E2B00292A94 /* CalculatePressures.swift */,
 			);
 			path = Shared;
@@ -196,8 +252,26 @@
 				850DCB222867C9A400292A94 /* GetConstants.swift */,
 				850DCB282868E85800292A94 /* GetVariables.swift */,
 				85523186286A10A000484232 /* DebugConsoleOutput.swift */,
+				8533A805286DF3120077DE75 /* SetupCardiacOutput.swift */,
+				8533A80A286DF7180077DE75 /* ArterialPool.swift */,
+				8533A828286E4A020077DE75 /* LungMetabolism.swift */,
+				8533A80F286E02A10077DE75 /* LactateMetabolism.swift */,
+				8533A814286E08440077DE75 /* Function.swift */,
+				8533A819286E28660077DE75 /* TissueNitrogenStores.swift */,
+				8533A81E286E2AB90077DE75 /* TissueMetabolism.swift */,
+				8533A823286E376E0077DE75 /* VenousDelay.swift */,
+				8533A82D286E548E0077DE75 /* BrainMetabolism.swift */,
+				8533A832286E612A0077DE75 /* Ventilation.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8533A7FF286DEF9F0077DE75 /* FORTRAN Source */ = {
+			isa = PBXGroup;
+			children = (
+				8533A800286DEFE20077DE75 /* MACPUF17december1981JMD.for */,
+			);
+			path = "FORTRAN Source";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,16 +432,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8533A81F286E2AB90077DE75 /* TissueMetabolism.swift in Sources */,
+				8533A806286DF3120077DE75 /* SetupCardiacOutput.swift in Sources */,
+				8533A810286E02A10077DE75 /* LactateMetabolism.swift in Sources */,
 				85523187286A10A000484232 /* DebugConsoleOutput.swift in Sources */,
 				850DCAEF286745FD00292A94 /* ContentView.swift in Sources */,
+				8533A829286E4A020077DE75 /* LungMetabolism.swift in Sources */,
 				850DCB1228676B4100292A94 /* Simulator.swift in Sources */,
 				850DCB232867C9A400292A94 /* GetConstants.swift in Sources */,
 				850DCB292868E85800292A94 /* GetVariables.swift in Sources */,
+				8533A82E286E548E0077DE75 /* BrainMetabolism.swift in Sources */,
 				850DCB082867626000292A94 /* CalculateContents.swift in Sources */,
+				8533A81A286E28660077DE75 /* TissueNitrogenStores.swift in Sources */,
 				850DCAED286745FD00292A94 /* MacPuf2022PApp.swift in Sources */,
-				850DCB1928677E0400292A94 /* CalculatePh.swift in Sources */,
+				8533A815286E08440077DE75 /* Function.swift in Sources */,
+				850DCB1928677E0400292A94 /* SmallFunctions.swift in Sources */,
+				8533A80B286DF7180077DE75 /* ArterialPool.swift in Sources */,
 				850DCB0D2867695B00292A94 /* Human.swift in Sources */,
+				8533A801286DEFE20077DE75 /* MACPUF17december1981JMD.for in Sources */,
 				850DCB1E28677E2B00292A94 /* CalculatePressures.swift in Sources */,
+				8533A833286E612A0077DE75 /* Ventilation.swift in Sources */,
+				8533A824286E376E0077DE75 /* VenousDelay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,16 +460,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8533A820286E2AB90077DE75 /* TissueMetabolism.swift in Sources */,
+				8533A807286DF3120077DE75 /* SetupCardiacOutput.swift in Sources */,
+				8533A811286E02A10077DE75 /* LactateMetabolism.swift in Sources */,
 				85523188286A10A000484232 /* DebugConsoleOutput.swift in Sources */,
 				850DCAF0286745FD00292A94 /* ContentView.swift in Sources */,
+				8533A82A286E4A020077DE75 /* LungMetabolism.swift in Sources */,
 				850DCB1328676B4100292A94 /* Simulator.swift in Sources */,
 				850DCB242867C9A400292A94 /* GetConstants.swift in Sources */,
 				850DCB2A2868E85800292A94 /* GetVariables.swift in Sources */,
+				8533A82F286E548E0077DE75 /* BrainMetabolism.swift in Sources */,
 				850DCB092867626000292A94 /* CalculateContents.swift in Sources */,
+				8533A81B286E28660077DE75 /* TissueNitrogenStores.swift in Sources */,
 				850DCAEE286745FD00292A94 /* MacPuf2022PApp.swift in Sources */,
-				850DCB1A28677E0400292A94 /* CalculatePh.swift in Sources */,
+				8533A816286E08440077DE75 /* Function.swift in Sources */,
+				850DCB1A28677E0400292A94 /* SmallFunctions.swift in Sources */,
+				8533A80C286DF7180077DE75 /* ArterialPool.swift in Sources */,
 				850DCB0E2867695B00292A94 /* Human.swift in Sources */,
+				8533A802286DEFE20077DE75 /* MACPUF17december1981JMD.for in Sources */,
 				850DCB1F28677E2B00292A94 /* CalculatePressures.swift in Sources */,
+				8533A834286E612A0077DE75 /* Ventilation.swift in Sources */,
+				8533A825286E376E0077DE75 /* VenousDelay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,17 +488,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8533A808286DF3120077DE75 /* SetupCardiacOutput.swift in Sources */,
+				8533A835286E612A0077DE75 /* Ventilation.swift in Sources */,
 				850DCB2B2868E85800292A94 /* GetVariables.swift in Sources */,
+				8533A830286E548E0077DE75 /* BrainMetabolism.swift in Sources */,
+				8533A803286DEFE20077DE75 /* MACPUF17december1981JMD.for in Sources */,
 				850DCB0A2867626000292A94 /* CalculateContents.swift in Sources */,
 				850DCB1428676B4100292A94 /* Simulator.swift in Sources */,
+				8533A812286E02A10077DE75 /* LactateMetabolism.swift in Sources */,
+				8533A80D286DF7180077DE75 /* ArterialPool.swift in Sources */,
+				8533A821286E2AB90077DE75 /* TissueMetabolism.swift in Sources */,
 				850DCAE0286745FD00292A94 /* Tests_iOSLaunchTests.swift in Sources */,
 				850DCADE286745FD00292A94 /* Tests_iOS.swift in Sources */,
 				850DCB1728677C8500292A94 /* TestCalculateContentFunction.swift in Sources */,
 				850DCB2028677E2B00292A94 /* CalculatePressures.swift in Sources */,
 				850DCB0F2867695B00292A94 /* Human.swift in Sources */,
-				850DCB1B28677E0400292A94 /* CalculatePh.swift in Sources */,
+				850DCB1B28677E0400292A94 /* SmallFunctions.swift in Sources */,
+				8533A82B286E4A020077DE75 /* LungMetabolism.swift in Sources */,
+				8533A826286E376E0077DE75 /* VenousDelay.swift in Sources */,
+				8533A81C286E28660077DE75 /* TissueNitrogenStores.swift in Sources */,
 				85523189286A10A000484232 /* DebugConsoleOutput.swift in Sources */,
 				850DCB252867C9A400292A94 /* GetConstants.swift in Sources */,
+				8533A817286E08440077DE75 /* Function.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,16 +517,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8533A822286E2AB90077DE75 /* TissueMetabolism.swift in Sources */,
+				8533A809286DF3120077DE75 /* SetupCardiacOutput.swift in Sources */,
+				8533A813286E02A10077DE75 /* LactateMetabolism.swift in Sources */,
 				8552318A286A10A000484232 /* DebugConsoleOutput.swift in Sources */,
 				850DCB0B2867626000292A94 /* CalculateContents.swift in Sources */,
+				8533A82C286E4A020077DE75 /* LungMetabolism.swift in Sources */,
 				850DCB1528676B4100292A94 /* Simulator.swift in Sources */,
 				850DCB262867C9A400292A94 /* GetConstants.swift in Sources */,
 				850DCB2C2868E85800292A94 /* GetVariables.swift in Sources */,
+				8533A831286E548E0077DE75 /* BrainMetabolism.swift in Sources */,
 				850DCAEC286745FD00292A94 /* Tests_macOSLaunchTests.swift in Sources */,
+				8533A81D286E28660077DE75 /* TissueNitrogenStores.swift in Sources */,
 				850DCAEA286745FD00292A94 /* Tests_macOS.swift in Sources */,
-				850DCB1C28677E0400292A94 /* CalculatePh.swift in Sources */,
+				8533A818286E08440077DE75 /* Function.swift in Sources */,
+				850DCB1C28677E0400292A94 /* SmallFunctions.swift in Sources */,
+				8533A80E286DF7180077DE75 /* ArterialPool.swift in Sources */,
 				850DCB102867695B00292A94 /* Human.swift in Sources */,
+				8533A804286DEFE20077DE75 /* MACPUF17december1981JMD.for in Sources */,
 				850DCB2128677E2B00292A94 /* CalculatePressures.swift in Sources */,
+				8533A836286E612A0077DE75 /* Ventilation.swift in Sources */,
+				8533A827286E376E0077DE75 /* VenousDelay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

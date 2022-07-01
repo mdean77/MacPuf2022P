@@ -22,7 +22,7 @@ struct Human {
     var (REFLV,RO2PR,CONSO,RC2PR,PG,PJ,TND,RC2CT,QB,PW) = zeroes
     var (FT,CONOM,BUBBL,TC2RF,TC3MT,VC3MT,TC3CT,VC3CT,TLAMT,RLACT) = zeroes
     var (BC3CT,BO2AD,COADJ,EO2CT,TO2MT,TO2PR,TC2PR,VO2MT,AVENT,PL) = zeroes
-    var (EC2CT,TN2MT,TN2PR,FEV,SN2PR,RN2CT,UN2MT,RN2MT,HRATE,STRVL) = zeroes
+    var (EC2CT,TN2MT,TN2PR,FEV,SN2PR,EN2CT,UN2MT,RN2MT,HRATE,STRVL) = zeroes
     var (TC3AJ,SN2MT,QA,RVADM,XDSPA,BAG,XMALE,HT,WT,AGE) = zeroes
     
     // Initialize constants with zero values
@@ -35,8 +35,20 @@ struct Human {
     var (c61, c62, c63, c64, c65, c66, c67, c68, c69, c70) = zeroes
     var (c71, c72, c73, c74, c75) = (0.0, 0.0, 0.0, 0.0, 0.0)
     
+    // Data sets for FUNCTN calls
+    // FUN1 for tissue RQ, FUN2 for muscle lactate catabolism, FUN3 for work rate-efficiency relation
+    let FUN1:[Double] = [0.0, 250.0,0.80,450.0, 0.86, 1320.0, 0.87, 2100.0,0.90, 3150.0,1.00]
+    let FUN2:[Double] = [0.0, 450.0,0.27,578.0,0.280, 626.0,0.402, 730, 1.99,734,2,860,8,1010,14,1130,23.5,2500,5.5, 3500,0.35]
+    let FUN3:[Double] = [0,3,2,15,6.7,30,11.5,45,14.5,75,18,90,19.3,120,20.7,150,20.9,225, 22.5,300,20.5]
+    
+    // Venous pool delay arrays
+    var TDLAY = [Double](repeating:0.0, count:81)
+ 
     var NARTI = 1
     var SIMLT = 1.0
+    let E = 0.0000001
+    var (FTCO, FTCOC, U, V,Y, X,W,Z, SAT, FY) = (0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0)
+    var INDEX:Int = 1
     
     // Replace parameters with correct values from extension
     mutating func getVariables(){
@@ -49,7 +61,20 @@ struct Human {
     }
     
     mutating func simulate(cycle:Int, iterations:Int){
-        BC3CT = 5000  // should be 22.7
+        
+        if PL > 1.5 {
+            print("CALL BAGER") //200 CALL BAGER (2,C12,C12,C12,SIMLT)
+        }
+        
+        setupCardiacOutput()
+        arterialPool()
+        lactateMetabolism()
+        tissueNitrogenStores()
+        tissueMetabolism()
+        venousDelay()
+        lungMetabolism()
+        brainMetabolism()
+        ventilation()
         
         if cycle == iterations {
             ADDC3 = 0

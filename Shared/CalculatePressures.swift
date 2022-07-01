@@ -7,10 +7,7 @@
 
 import Foundation
 
-// sign(f,g) = sgn(g) * abs(f)
-func sign(_ op1:Double, op2:Double) -> Double {
-    return op2 < 0 ? -abs(op1) : abs(op1)
-}
+
 
 //func calculatePressures(_ temperature:Double = 37.0, DPG:Double = 3.7842, Hct:Double = 45.0,
 //                        Hgb: Double = 14.8){
