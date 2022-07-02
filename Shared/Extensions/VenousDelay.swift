@@ -17,7 +17,7 @@ extension Human {
         //          CALL DELAY
         
         
-        let NFT=max(Int(32.2*FT*sqrt(COADJ)),20)
+        let NFT = max(Int(32.2 * FT * sqrt(COADJ)),20)
         
         //if(NFT-20) 110,110,100
         // 100 NFT=20

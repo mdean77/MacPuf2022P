@@ -23,7 +23,7 @@ extension Human{
         //    C COMPUTE PART.PRESS. FROM TOTAL CO2 AND STAND. BICARB.
         TC2PR=(TC2MT*c30-TC3MT*c36+c33)*c43
         //    C FY STORES CHANGE IN TISS. CO2 FOR ADJUSTING TISS/. HCO3 BUFFERS
-        let FY=TC2PR-TC2RF
+         FY=TC2PR-TC2RF
         TC2RF=TC2PR
         //    C .4 IN LINE BELOW REPRESENTS BUFFERS OF LACTIC ACID PARTLY INSIDE
         //    C CELLS, SO THAT THE DISPLACEMENT OF BICARBONATE IS LESS
@@ -34,7 +34,7 @@ extension Human{
         TC3MT=TC3MT+FTCOC*0.1*(VC3MT*c1-TC3MT*c13)-1.0*V
         //    C
         //    C++++++++++++++++++++++++++++++++++++++++++++++++++++
-        let Y=(TC2PR-40.0)*c3
+         Y=(TC2PR-40.0)*c3
         //690
         TC3CT=TC3MT*c13+Y
         //if(TC3CT) 940,940,700

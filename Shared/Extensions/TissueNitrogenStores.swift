@@ -15,11 +15,11 @@ extension Human {
         //        C MOVE N2 BETWEEN FAST(T) AND SLOW(S) TISSUE COMPARTMENTS
         //        C ACCORDING TO P.PRESS. DIFFS.
         //          640
-        let X=(TN2PR-SN2PR)*c60
+         X=(TN2PR-SN2PR)*c60
         TN2MT=TN2MT+FTCOC*(EN2CT-TN2PR*0.00127)-X
         SN2MT=SN2MT+X
         //        C TEST ifSLOW SPACE SUPERSATURATED
-        var  Y=(SN2MT*c26-c11)*c27
+          Y=(SN2MT*c26-c11)*c27
         //if(Y) 650,650,660
         //        C ifSO, AUGMENT U AND DECREMENT S, OR VICE VERSA IF
         //        C AMBIENT PRESSURE RELATIVELY HIGHER

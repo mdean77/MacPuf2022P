@@ -48,7 +48,7 @@ extension Human {
           BC2MT=BC2MT+Y*(RC2CT-BC2CT)+2.15*X
               BO2PR=BO2MT*1.6
               BC2PR=BC2MT*0.078
-             var  W=BC2PR-40.0
+               W=BC2PR-40.0
               Y=BC3CT+BC3AJ+0.2*W
 //        C A SMALL PROPORTION OF ADDED BICARBONATE IS ADDED ALSO
 //        C TO CSF, THUS AFFECTING BREATHING APPROPRIATELY

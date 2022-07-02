@@ -61,7 +61,6 @@ struct Human {
     }
     
     mutating func simulate(cycle:Int, iterations:Int){
-        
         if PL > 1.5 {
             print("CALL BAGER") //200 CALL BAGER (2,C12,C12,C12,SIMLT)
         }
@@ -72,7 +71,7 @@ struct Human {
         tissueNitrogenStores()
         tissueMetabolism()
         venousDelay()
-        lungMetabolism()
+        lungMetabolism2()
         brainMetabolism()
         ventilation()
         

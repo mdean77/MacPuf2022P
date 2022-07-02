@@ -94,6 +94,10 @@
 		85523188286A10A000484232 /* DebugConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85523186286A10A000484232 /* DebugConsoleOutput.swift */; };
 		85523189286A10A000484232 /* DebugConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85523186286A10A000484232 /* DebugConsoleOutput.swift */; };
 		8552318A286A10A000484232 /* DebugConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85523186286A10A000484232 /* DebugConsoleOutput.swift */; };
+		85B566FE2870D05A00D2B676 /* LungMetabolism2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B566FD2870D05A00D2B676 /* LungMetabolism2.swift */; };
+		85B566FF2870D05A00D2B676 /* LungMetabolism2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B566FD2870D05A00D2B676 /* LungMetabolism2.swift */; };
+		85B567002870D05A00D2B676 /* LungMetabolism2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B566FD2870D05A00D2B676 /* LungMetabolism2.swift */; };
+		85B567012870D05A00D2B676 /* LungMetabolism2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B566FD2870D05A00D2B676 /* LungMetabolism2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +150,7 @@
 		8533A82D286E548E0077DE75 /* BrainMetabolism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainMetabolism.swift; sourceTree = "<group>"; };
 		8533A832286E612A0077DE75 /* Ventilation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ventilation.swift; sourceTree = "<group>"; };
 		85523186286A10A000484232 /* DebugConsoleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugConsoleOutput.swift; sourceTree = "<group>"; };
+		85B566FD2870D05A00D2B676 /* LungMetabolism2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LungMetabolism2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +260,7 @@
 				8533A805286DF3120077DE75 /* SetupCardiacOutput.swift */,
 				8533A80A286DF7180077DE75 /* ArterialPool.swift */,
 				8533A828286E4A020077DE75 /* LungMetabolism.swift */,
+				85B566FD2870D05A00D2B676 /* LungMetabolism2.swift */,
 				8533A80F286E02A10077DE75 /* LactateMetabolism.swift */,
 				8533A814286E08440077DE75 /* Function.swift */,
 				8533A819286E28660077DE75 /* TissueNitrogenStores.swift */,
@@ -451,6 +457,7 @@
 				850DCB0D2867695B00292A94 /* Human.swift in Sources */,
 				8533A801286DEFE20077DE75 /* MACPUF17december1981JMD.for in Sources */,
 				850DCB1E28677E2B00292A94 /* CalculatePressures.swift in Sources */,
+				85B566FE2870D05A00D2B676 /* LungMetabolism2.swift in Sources */,
 				8533A833286E612A0077DE75 /* Ventilation.swift in Sources */,
 				8533A824286E376E0077DE75 /* VenousDelay.swift in Sources */,
 			);
@@ -479,6 +486,7 @@
 				850DCB0E2867695B00292A94 /* Human.swift in Sources */,
 				8533A802286DEFE20077DE75 /* MACPUF17december1981JMD.for in Sources */,
 				850DCB1F28677E2B00292A94 /* CalculatePressures.swift in Sources */,
+				85B566FF2870D05A00D2B676 /* LungMetabolism2.swift in Sources */,
 				8533A834286E612A0077DE75 /* Ventilation.swift in Sources */,
 				8533A825286E376E0077DE75 /* VenousDelay.swift in Sources */,
 			);
@@ -510,6 +518,7 @@
 				85523189286A10A000484232 /* DebugConsoleOutput.swift in Sources */,
 				850DCB252867C9A400292A94 /* GetConstants.swift in Sources */,
 				8533A817286E08440077DE75 /* Function.swift in Sources */,
+				85B567002870D05A00D2B676 /* LungMetabolism2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +545,7 @@
 				850DCB102867695B00292A94 /* Human.swift in Sources */,
 				8533A804286DEFE20077DE75 /* MACPUF17december1981JMD.for in Sources */,
 				850DCB2128677E2B00292A94 /* CalculatePressures.swift in Sources */,
+				85B567012870D05A00D2B676 /* LungMetabolism2.swift in Sources */,
 				8533A836286E612A0077DE75 /* Ventilation.swift in Sources */,
 				8533A827286E376E0077DE75 /* VenousDelay.swift in Sources */,
 			);

@@ -15,7 +15,7 @@ extension Human {
         ///  Initial set up for Macpuf FORTRAN  lines 210 through 280
         
         //        C NEXT AUTOMATICALLY INCREASES CARDIAC OUTPUT ifO2 SUPPLIED IS LOW
-        var Y=RO2CT*0.056
+         Y=RO2CT*0.056
         //        C-------- REDUCES CARDIAC OUTP. INC. WITH HYPOXIA - PREV. TOO BIG
         if Y < 0.4 {Y = 0.4}
         //          220 if(Y-.4) 230,240,240

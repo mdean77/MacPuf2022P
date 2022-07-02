@@ -17,7 +17,7 @@ extension Human {
         //        C INVOLVE 11X NO OF MOLES OF LACTATE BEING PRODUCED
         //        C WITH OXYGEN BEING SPARED (XLACT)
         //490 U=FT*(ABS(SVENT)**C4*C5+COADJ+C7)
-        let U = FT * pow(abs(SVENT),c4)*c5+COADJ+c7
+         U = FT * (pow(abs(SVENT),c4) * c5 + COADJ + c7)
         //        C COMPUTE NEW TISSUE GAS AMOUNTS(T-2MT)
         //500
         TO2MT=TO2MT+FTCOC*(EO2CT-TO2CT)-U+XLACT
@@ -41,7 +41,7 @@ extension Human {
         //        C LOCAL VARIABLE Y WILL BE USED LATER FOR CATABOLISM RELATED
         //        C TO CARDIAC OUTPUT AND METABOLISM
         //530
-        let  Y=RLACT*c29
+          Y=RLACT*c29
         //        C Z=CATABOLIC RATE FOR LACTATE
         //        C X IS THRESHOLD - WHEN TPH LESS THAN 7.0 CATABOLISM IMPAIRED
         //        C CEREB.BL.FLOW(CBF) IS USED TO GIVE APPROPRIATE CHANGES IN LACTATE

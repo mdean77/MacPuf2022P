@@ -43,11 +43,13 @@ extension Human {
             //              GO TO 1350
             //        C RESP.RATE CALC.FROM CONSTANT + ELASTANCE +TOTAL VENTN.+ART PO2
             //        C ALLOWING FOR MANUAL ADJUSTMT.OF BREATHING CAP(PR)
-        } else {
+         else {
             if NARTI == 1 {
                 DVENT = SVENT
                 RRATE=(c49+pow(DVENT,0.865)*0.370)*c50/(PJ+40.0)
             }
+             
+         }
             //            1290 if(NARTI) 1320,1320,1300
             //                    1300 DVENT=SVENT
             //                    RRATE=(C49+DVENT**.865*.370)*C50/(PJ+40.)

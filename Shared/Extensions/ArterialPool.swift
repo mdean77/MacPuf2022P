@@ -10,7 +10,8 @@ import Foundation
 extension Human{
     mutating func arterialPool(){
         
-        //        C O2 CONT.OR PRESS. INFLUENCES VEN. ADMIXTURE AND (V.SLOWLY) 2,3-DPG
+        var results:(pO2: Double, pCO2:Double)
+        //        C O2 CONT.O PRESS. INFLUENCES VEN. ADMIXTURE AND (V.SLOWLY) 2,3-DPG
         //        C-------- C71-72 NEW PARAMETERS, AMENDING RATE OF CHANGE OF 2,3-DPG
         DPG=DPG+(c71-RO2CT-DPG)*c72
         //        C........
@@ -19,7 +20,7 @@ extension Human{
         //              if(X-200.) 300,300,290
         //          290 X=200.
         //        C INCREASE EFF.VEN.ADM.ifALV.PO2 VERY HIGH
-        var Y=AO2PR
+         Y=AO2PR
         if Y > 600  {Y = 600}
         //              if(Y-600.) 320,320,310
         //          310 Y=600.
@@ -38,13 +39,14 @@ extension Human{
         if PW > 100 {PW = 100}
         //              if(PW-100.) 380,380,370
         //          370 PW=100.
-        PC = 1 - PW/100
+        X = PW / 100
+        PC = 1 - X
         //          380 X=PW*.01
         //              PC=1.-X
         //
         RN2MT=RN2MT+FTCO*((X*TN2PR+PC*(c11-AO2PR-AC2PR))*0.00127-EN2CT)
-        let U=X*VC2CT+PC*PC2CT
-        let V=X*VO2CT+PC*PO2CT
+         U=X*VC2CT+PC*PC2CT
+         V=X*VO2CT+PC*PO2CT
         RC2MT=RC2MT+FTCO*(U-EC2CT)
         RO2MT=RO2MT+FTCO*(V-EO2CT)
         //        C CONTENTS PASSING TO TISSUES AFFECTED BY RATES OF BLOOD FLOW
@@ -82,11 +84,16 @@ extension Human{
         //        C USE TEST ROUTINE GSINV TO INVERT GASES
         //        C+++ (REPLACES ITERATIVE REVERSAL ROUTINE IN PREVIOUS VERSIONS)
         //              CALL GSINV (RO2PR,RC2PR,RO2CT,RC2CT,RPH,SAT)
+        
+        results = calculatePressures(O2CT: RO2CT, CO2CT: RC2CT, pH: RPH, temperature: TEMP, DPG: DPG, Hct: PCV/100, Hgb: HB)
+        RO2PR = results.pO2
+        RC2PR = results.pCO2
         // This is a very awkward way to get the saturation.   I am going to call the GASES
         // equivalent instead of going through GSINV.  We are only after the saturation here.
-        var SAT = 0.0
+        //SAT = 0.0
         (X, Y,  SAT ) = calculateContents(pO2: RO2PR, pCO2: RC2PR, pH: RPH, temperature: TEMP, DPG: DPG, Hct: PCV/100, Hgb: HB)
         //        C STORE ARTERIAL SATN. AS PERCENTAGE
+
         PJ=SAT*100.0
         
         
