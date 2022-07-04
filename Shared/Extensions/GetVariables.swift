@@ -87,7 +87,8 @@ extension Human {
          PJ = 97.13               // PJ Factor 76 97.0730 ??
          TND = -10.0              // TND Factor 77 0.0851 ??  Minutes that brain has been deprived of O2
          RC2CT = 47.35            // MacPuf variable RC2CT  Factor 78
-         QB = 33.29               // QB Factor 79   Net CO2 output per unit time interval
+//         QB = 33.29               // QB Factor 79   Net CO2 output per unit time interval
+         QB = 3.329                // Adjusting for time interval
          PW = 2.3618              // MacPuf variable PW        Factor 80
          FT = 0.016667            // FT Factor 81 = 1/60
          CONOM = 4.6000           // MacPuf variable CONOM    Factor 82
@@ -107,7 +108,8 @@ extension Human {
          TO2PR = 40.13            // TO2PR Factor 96
          TC2PR = 45.43            // TC2PR Factor 97
          VO2MT = 437.0            // VO2MT  Factor 98
-         AVENT = 710.8            // AVENT Factor 99
+         //AVENT = 710.8            // AVENT Factor 99 Value reflects original 10 sec FT
+         AVENT = 71.08
          PL = 0                   // PL Factor 100
          EC2CT = 47.35            // MacPuf variable EC2CT  Factor 101
          TN2MT = 76.07            // TN2MT - Amount in fast Factor 102
@@ -121,7 +123,9 @@ extension Human {
          STRVL = 70.0             // STRVL Factor 110  Stroke Volume
          TC3AJ = -0.03            // TC3AJ Factor 111
          SN2MT = 967.0            // SN2MT - Amount in slow Factor 112
-         QA = 41.61               // QA Factor 113 O2 uptake per unit time interval
+         //QA = 41.61               // QA Factor 113 O2 uptake per unit time interval
+         QA = 4.161               // QA Factor 113 O2 uptake per unit time interval
+
          RVADM = 0.000            // RVADM used only when using PFT (see end of Clin2) Factor 114
          XDSPA = 0.000            // MacPuf variable XDSPA  Factor Factor 115
          BAG = 0.0                // MacPuf variable BAG   Factor 116

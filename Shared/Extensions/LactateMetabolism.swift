@@ -133,6 +133,5 @@ extension Human {
         TLAMT=TLAMT+V
         //RLACT=DAMP(TLAMT*C15,RLACT,COADJ*C55)
         RLACT = dampChange(TLAMT*c15, oldValue: RLACT, dampConstant: COADJ*c55)
-        
     }
 }

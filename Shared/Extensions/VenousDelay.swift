@@ -10,7 +10,6 @@ import Foundation
 extension Human {
     
     mutating func venousDelay(){
-        
         //        C*** LOCAL ARRANGEMENTS
         //        C+++ S/R DELAY CAN BE OMITTED WITH LOSS OF ACCURACY ONLY
         //        C+++ WHEN USING SHORT ITERATION INTERVALS

@@ -10,11 +10,13 @@ import Foundation
 extension Human {
     
     mutating func lungMetabolism2(){
-        
         //740
         PC=FTCO*c14*PC
+       // print("AVENT in lung metabolism line 740 = \(AVENT).")
         X=AVENT*c12
+       // print("In lung metabolism line 740 X = \(X).")
         U=X*FIO2
+      //  print("In lung metabolism line 740 U = \(U).")
         V=X*FIC2
         AO2MT=AO2MT+U
         AC2MT=AC2MT+V
@@ -94,5 +96,6 @@ extension Human {
         X = VC3MT*c1+c3*(AC2PR - 40.0)
         Y = calculatePh(X, CO2: AC2PR)
         (PO2CT, PC2CT, SAT) = calculateContents(pO2: AO2PR, pCO2: AC2PR, pH: TPH, temperature: TEMP, DPG: DPG, Hct: PCV/100, Hgb: HB)
+        
     }
 }

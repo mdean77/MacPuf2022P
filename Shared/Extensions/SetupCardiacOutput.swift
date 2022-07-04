@@ -72,6 +72,5 @@ extension Human {
         //        C TIME INTERVAL
         FTCO=c17*COADJ
         FTCOC=FTCO*(1.0-c69*COADJ)
-        
     }
 }

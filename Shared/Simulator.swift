@@ -9,8 +9,8 @@
 import Foundation
 
 class  Simulator {
-    var iterations = 1800
-    var intervalFactor = 30
+    var iterations = 4
+    var intervalFactor = 1
     var totalSeconds = -1
     var human = Human()
     
@@ -30,6 +30,7 @@ class  Simulator {
             }
         }
         reportOut(title: "\nConditions after \(iterations) seconds of simulation:")
+        //print(dumpAllParametersReport())
     }
     
     
@@ -39,7 +40,7 @@ class  Simulator {
         // Routine that will be called from Views to start new patient
         human.getVariables()
         human.getConstants()
-//        print(dumpAllParametersReport())
+        //print(dumpAllParametersReport())
         simulate()
     }
     
@@ -47,7 +48,7 @@ class  Simulator {
         // Routine that will be called from Views to continue the same patient
         // DO NOT re-initialize variables of old model results will be destroyed
         human.getConstants()
-//        print(dumpAllParametersReport())
+        //print(dumpAllParametersReport())
         simulate()
     }
 }

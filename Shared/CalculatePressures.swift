@@ -18,6 +18,11 @@ extension Human {
     mutating func calculatePressures(O2CT:Double, CO2CT:Double, pH:Double, temperature:Double = 37.0, DPG:Double = 3.7842, Hct:Double = 45.0,
                                      Hgb: Double = 14.8) -> (pO2:Double, pCO2:Double){
         
+        // sign(f,g) = sgn(g) * abs(f)
+        func sign(_ op1:Double,  op2:Double) -> Double {
+            return op2 < 0 ? -abs(op1) : abs(op1)
+        }
+        
         let err = 0.01
         var (trialO2Content, trialCO2Content) = (0.0, 0.0)
         var (deltaOxygen1, deltaOxygen2, deltaCarbonDioxide1, deltaCarbonDioxide2) = (0.0,0.0,0.0,0.0)

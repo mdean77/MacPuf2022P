@@ -10,7 +10,6 @@ import Foundation
 extension Human{
     
     mutating func tissueMetabolism(){
-        
         //    C++++++++++++++++ RELATION BETWEEN TRQ AND OXYGEN CONSUMPTION
          X=QA/FT
         //CALL FUNCTN (X,TRQ,FUN1,5)

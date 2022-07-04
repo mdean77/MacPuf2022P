@@ -19,8 +19,5 @@ extension Human {
         return (newValue * dampConstant + oldValue)/(dampConstant + 1)
     }
     
-    // sign(f,g) = sgn(g) * abs(f)
-    func sign(_ op1:Double, op2:Double) -> Double {
-        return op2 < 0 ? -abs(op1) : abs(op1)
-    }
+
 }

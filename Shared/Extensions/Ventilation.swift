@@ -10,6 +10,7 @@ import Foundation
 extension Human {
     
     mutating func ventilation(){
+
         //        C PREVENT IMMEDIATE CHANGES IN SPECIFIED VENT. CAPACITY
         //XRESP=DAMP(C46,XRESP,C68)
         XRESP = dampChange(c46, oldValue: XRESP, dampConstant: c68)
