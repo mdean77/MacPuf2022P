@@ -11,7 +11,8 @@ extension Human {
     
     
     mutating func setupCardiacOutput(){
-        
+//        print("Stroke volume going in to cardiac output is \(STRVL).")
+//        print("Cardiac output going in to cardiac output is \(COADJ).")
         ///  Initial set up for Macpuf FORTRAN  lines 210 through 280
         
         //        C NEXT AUTOMATICALLY INCREASES CARDIAC OUTPUT ifO2 SUPPLIED IS LOW
@@ -25,7 +26,9 @@ extension Human {
         //        C OUTPUT GOES UP AS TOTAL O2 CONSUMPTION INCREASES.
         //        C+++++++++++++++++++++++ CO TRANSFERRED TO INFLUENCE STOKEVOL.
         //          240 COADJ=DAMP(((C8+C9)/Y),COADJ,C61)
+//        print("Cardiac output before damp change in cardiac output is \(COADJ).")
         COADJ = dampChange((c8+c9)/Y, oldValue: COADJ, dampConstant: c61)
+//        print("Cardiac output after damp change to cardiac output is \(COADJ).")
         //        C++++++++++++++++
         //        C........
         //        C++++++++++++++++++++++++++++++++++++++++++++++++
@@ -34,8 +37,11 @@ extension Human {
         if COADJ > 20 {X = 130}
         //               if(COADJ.GE.20.) X=130.
         //        C STRVOL IN LITERS
-        STRVL=c75*X/130000.0
-        HRATE=COADJ/STRVL
+        //print("COADJ is \(COADJ), HRATE IS \(HRATE) and STRVL is \(STRVL) initially.")
+        //print("X factor is \(X) and calculation factor is \(c75*X/130000)")
+       // STRVL=c75*X/130000.0  // This was dividing stroke volume every cycle
+        STRVL = c75*X/130.0
+        HRATE=COADJ*1000/STRVL
         //        C LIMIT CARDIAC OUTPUT THROUGH STROKE VOLUME AND HEART RATE
         //               if(HRATE.LE.C74) GOTO 242
         //               HRATE=C74
@@ -43,8 +49,9 @@ extension Human {
         //          242  CONTINUE
         if HRATE > c74 {
             HRATE = c74
-            COADJ = HRATE*STRVL
+            COADJ = HRATE*STRVL/1000
         }
+       // print("COADJ is \(COADJ), HRATE IS \(HRATE) and STRVL is \(STRVL) after calculations..")
         
         //        C++++++++++++++++++++++++++++++++++++++++++++++++++++
         //              if(CO-3.) 250,260,260
@@ -72,5 +79,7 @@ extension Human {
         //        C TIME INTERVAL
         FTCO=c17*COADJ
         FTCOC=FTCO*(1.0-c69*COADJ)
+//        print("Stroke volume coming out of cardiac output is \(STRVL).")
+//        print("Cardiac output coming out of cardiac output is \(COADJ).")
     }
 }

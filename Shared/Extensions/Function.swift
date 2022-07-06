@@ -34,15 +34,18 @@ import Foundation
 //RETURN
 //END
 
-///  This routine accepts an array of x,y variables in FUN and then checks the low and high X values
-///  and returns the corresponding y.  If x is intermediate then it does an extrapolation.
-///  FUN may be one of three different arrays of values that were experimentally obtained:
-///  FUN1 is for tissue RQ calculations
-///  FUN2 is used for muscle lactate catabolism
-///  FUN3 is for work rate-efficiency relationship.
-///  VERIFIED correctness in a Playground.
-///
+
 extension Human {
+    ///  This routine accepts an array of x,y variables in FUN and then checks the low and high X values
+    ///  and returns the corresponding y.  If x is intermediate then it does an extrapolation.
+    ///
+    ///  Verified correctness in a Playground.
+    ///
+    ///  FUN may be one of three different arrays of values that were experimentally obtained:
+    ///  - FUN1 is for tissue RQ calculations
+    ///  - FUN2 is used for muscle lactate catabolism
+    ///  - FUN3 is for work rate-efficiency relationship.
+    ///
     func FUNCTN(_ EN:Double, _ FUN:[Double], _ NBP:Int) -> Double{
         let NL0 = NBP - 1
         let NL1 = NBP * 2 - 1

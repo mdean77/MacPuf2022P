@@ -10,6 +10,8 @@ import Foundation
 extension Human{
     
     mutating func tissueMetabolism(){
+//        print("Entry into tissue")
+//        print(TO2PR, TC2PR, TPH)
         //    C++++++++++++++++ RELATION BETWEEN TRQ AND OXYGEN CONSUMPTION
          X=QA/FT
         //CALL FUNCTN (X,TRQ,FUN1,5)
@@ -41,7 +43,9 @@ extension Human{
         TPH = calculatePh(TC3CT, CO2: TC2PR)
         // 700 TPH=PHFNC(TC3CT,TC2PR)
         //CALL GASES (TO2PR,TC2PR,TO2CT,TC2CT,TPH,SAT)
+//        print(TO2PR, TC2PR, TPH)
         (TO2CT, TC2CT, SAT) = calculateContents(pO2: TO2PR, pCO2: TC2PR, pH: TPH, temperature: TEMP, DPG: DPG, Hct: PCV/100, Hgb: HB)
+//        print(TO2PR, TC2PR, TPH)
         //    C AMTS OF GASES IN VENOUS POOL INC.BY ARRIVING BLOOD FROM
         //    C TISSUES AND DECREMENTED BY BLOOD GOING TO LUNGS. SAME FOR
         //    C BICARBONATE. CONTENTS V-2CT THEN DETERMINED

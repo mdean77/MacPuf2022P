@@ -9,8 +9,8 @@
 import Foundation
 
 class  Simulator {
-    var iterations = 4
-    var intervalFactor = 1
+    var iterations = 180
+    var intervalFactor = 30
     var totalSeconds = -1
     var human = Human()
     
@@ -22,15 +22,18 @@ class  Simulator {
         reportOut(title:"Initial conditions before starting simulations:")
         print("\n   Time     0     10    20    30    40    50    60    70    80    90   100   110   120")
         print("(Min:Secs)  .     .     .     .     .     .     .     .     .     .     .     .     .")
+//        print(debugVariablesReport1())
         for cycle in 0...iterations {
+            
             human.simulate(cycle: cycle, iterations: iterations)
             totalSeconds += 1
             if cycle % intervalFactor == 0 {
                 print(cycleReport())
+//                print(debugVariablesReport1())
             }
         }
         reportOut(title: "\nConditions after \(iterations) seconds of simulation:")
-        //print(dumpAllParametersReport())
+//        print(dumpAllParametersReport())
     }
     
     

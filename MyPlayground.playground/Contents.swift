@@ -35,20 +35,29 @@ func calculateContents(pO2:Double, pCO2:Double, pH:Double,
     return(o2Content, co2Content, sat)
 
 }
-struct MacPuf  {
-    var pH = 7.40
-    var po2 = 90.0
-    var pco2 = 40.0
-    var o2Content = 0.0
-    var co2Content = 0.0
-   
-    mutating func simulate(){
-        o2Content = calculateContents(pO2: po2, pCO2: pco2, pH: pH).oxygenContent
-        co2Content = calculateContents(pO2: po2, pCO2: pco2, pH: pH).carbonDioxideContent
-    }
-    
-}
 
-var puf = MacPuf()
-puf.simulate()
+calculateContents(pO2: 99, pCO2: 52.79, pH: 7.34, temperature: 37, DPG: 3.8, Hct: 0.45, Hgb: 14.8)
+calculateContents(pO2: 90, pCO2: 52.79, pH: 7.33, temperature: 37, DPG: 3.8, Hct: 0.45, Hgb: 14.8)
+calculateContents(pO2: 75, pCO2: 52.79, pH: 7.32, temperature: 37, DPG: 3.8, Hct: 0.45, Hgb: 14.8)
+calculateContents(pO2: 60, pCO2: 52.79, pH: 7.31, temperature: 37, DPG: 3.8, Hct: 0.45, Hgb: 14.8)
+calculateContents(pO2: 45, pCO2: 52.79, pH: 7.30, temperature: 37, DPG: 3.8, Hct: 0.45, Hgb: 14.8)
+calculateContents(pO2: 30, pCO2: 52.79, pH: 7.29, temperature: 37, DPG: 3.8, Hct: 0.45, Hgb: 14.8)
+
+
+//struct MacPuf  {
+//    var pH = 7.40
+//    var po2 = 90.0
+//    var pco2 = 40.0
+//    var o2Content = 0.0
+//    var co2Content = 0.0
+//
+//    mutating func simulate(){
+//        o2Content = calculateContents(pO2: po2, pCO2: pco2, pH: pH).oxygenContent
+//        co2Content = calculateContents(pO2: po2, pCO2: pco2, pH: pH).carbonDioxideContent
+//    }
+//
+//}
+//
+//var puf = MacPuf()
+//puf.simulate()
 

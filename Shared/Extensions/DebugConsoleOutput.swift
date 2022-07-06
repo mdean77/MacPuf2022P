@@ -86,9 +86,7 @@ extension Simulator {
         return(result)
     }
     func dumpAllParametersReport() -> String{
-        let row1 =  String(format:"\n%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f",
-               human.FIO2,human.FIC2,human.CO,human.PD,human.FADM,human.BULLA,
-               human.VLUNG,human.ELAST,human.VADM,human.AZ)
+        let row1 =  String(format:"\n%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f",human.FIO2,human.FIC2,human.CO,human.PD,human.FADM,human.BULLA,human.VLUNG,human.ELAST,human.VADM,human.AZ)
         let row2 =  String(format:"\n%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f",human.BZ,human.CZ,human.BARPR,human.TEMP,human.TRQ,human.TC2MT,human.TVOL,human.HB,human.PCV,human.VBLVL)
         let row3 =  String(format:"\n%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f",human.ADDC3,human.BC3AJ,human.DPG,human.PR,human.FITNS,human.SPACE,human.COMAX,human.SHUNT,human.VC,human.PEEP)
         let row4 =  String(format:"\n%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f",human.VO2CT,human.RCOAJ,human.RPH,human.VPH,human.FVENT,human.BPH,human.BAGO,human.BAGC,human.AO2MT,human.AC2MT)
@@ -104,12 +102,19 @@ extension Simulator {
         return row1+row2+row3+row4+row5+row6+row7+row8+row9+row10+row11+row12
     }
     
+    func debugVariablesReport1() -> String{
+        let header = String("   RO2PR    RPH    PC2CT   RC2MT   RC2PR   AN2MT   TC2CT   TIDVL   BC2CT  TC2CT   RC2CT")
+        let values = String(format:"\n%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f\n",human.RO2PR, human.RPH, human.PC2CT, human.RC2MT, human.RC2PR, human.AN2MT, human.TC2CT, human.TIDVL,
+                            human.BC2CT, human.TC2CT, human.RC2CT)
+        return header + values
+    }
+    
     func reportOut(title: String){
         print(title)
-        print(runReport())
         print(inspectionReport())
         print(dumpFirstSixParametersReport())
-        print(dumpAllParametersReport())
+        print(runReport())
+//        print(dumpAllParametersReport())
     }
     
 }

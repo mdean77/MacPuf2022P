@@ -9,6 +9,7 @@ import Foundation
 
 extension Human {
     
+
     mutating func lungMetabolism2(){
         //740
         PC=FTCO*c14*PC

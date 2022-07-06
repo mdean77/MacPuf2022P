@@ -27,12 +27,13 @@ extension Human{
         if AO2PR > 400 { X=X-(Y-400.0)*0.3 }
         //          320 if(AO2PR-400.) 340,340,330
         //          330 X=X-(Y-400.)*.3
-        if X > 55 {X=55}
+        if X < 55 {X=55}
         //          340 if(X-55.) 350,350,360
         //          350 X=55.
         //        C PW=EFFECTIVE VENOUS ADMIXTURE, AFFECTED BY PEEP, ALV.PO2, ETC
         //        C AND ALSO INCORPORATING A FIXED SHUNT COMPONENT, FADM
         //          360 PW=(C18/X+C19)*C21+FADM
+        
         PW=(c18/X+c19)*c21+FADM
         //        C LIMIT RIDICULOUS ADMIXTURES EXCEEDING 100
         if PW > 100 {PW = 100}
@@ -83,11 +84,11 @@ extension Human{
         //        C USE TEST ROUTINE GSINV TO INVERT GASES
         //        C+++ (REPLACES ITERATIVE REVERSAL ROUTINE IN PREVIOUS VERSIONS)
         //              CALL GSINV (RO2PR,RC2PR,RO2CT,RC2CT,RPH,SAT)
-        print("RO2PR before calling calcPressures in arterial pool is \(RO2PR).")
-        (RO2PR, RC2PR) = calculatePressures3(O2CT: RO2CT, CO2CT: RC2CT, pH: RPH, temperature: TEMP, DPG: DPG, Hct: PCV/100, Hgb: HB)
+//        print("RO2PR before calling calcPressures in arterial pool is \(RO2PR).")
+        (RO2PR, RC2PR) = calculatePressures4(O2CT: RO2CT, CO2CT: RC2CT, pH: RPH, temperature: TEMP, DPG: DPG, Hct: PCV/100, Hgb: HB)
         //RO2PR = results.pO2
         //RC2PR = results.pCO2
-        print("RO2PR after calling calcPressures in arterial pool is \(RO2PR).")
+//        print("RO2PR after calling calcPressures in arterial pool is \(RO2PR).")
         // This is a very awkward way to get the saturation.   I am going to call the GASES
         // equivalent instead of going through GSINV.  We are only after the saturation here.
         //SAT = 0.0
