@@ -10,30 +10,33 @@ import Foundation
 
 class  Simulator {
     var iterations = 180
-    var intervalFactor = 30
-    var totalSeconds = -1
+    var intervalFactor = 10
+    var totalSeconds = 0
     var human = Human()
-    
+
     
     private func simulate(){
         // Eventually I will want to get all output removed from the simulate function
         // but for now this controls debugger output via print statements.
         iterations = iterations >= intervalFactor ? iterations : intervalFactor
-        reportOut(title:"Initial conditions before starting simulations:")
+        
+        
         print("\n   Time     0     10    20    30    40    50    60    70    80    90   100   110   120")
         print("(Min:Secs)  .     .     .     .     .     .     .     .     .     .     .     .     .")
-//        print(debugVariablesReport1())
+
         for cycle in 0...iterations {
             
             human.simulate(cycle: cycle, iterations: iterations)
             totalSeconds += 1
             if cycle % intervalFactor == 0 {
                 print(cycleReport())
-//                print(debugVariablesReport1())
+
             }
         }
-        reportOut(title: "\nConditions after \(iterations) seconds of simulation:")
-//        print(dumpAllParametersReport())
+        reportOut(title: "\nConditions after \(totalSeconds) seconds of simulation:")
+        print(runReport)
+        print(inspectionReport())
+
     }
     
     
@@ -43,7 +46,9 @@ class  Simulator {
         // Routine that will be called from Views to start new patient
         human.getVariables()
         human.getConstants()
-        //print(dumpAllParametersReport())
+        totalSeconds = -1
+        reportOut(title:"Initial conditions before starting simulations:")
+        print(inspectionReport())
         simulate()
     }
     
@@ -51,7 +56,63 @@ class  Simulator {
         // Routine that will be called from Views to continue the same patient
         // DO NOT re-initialize variables of old model results will be destroyed
         human.getConstants()
-        //print(dumpAllParametersReport())
+        totalSeconds -= 1
         simulate()
+    }
+    
+    /// This view model function will change the value of one of the first 30 parameters.
+    /// - Parameters:
+    ///   - key: String to represent the variable name, i.e. TIDVL
+    ///   - value: New value for the variable
+    
+    func changeParameterValue(key: String, value: Double)-> (){
+        switch key {
+        case "FIO2":
+            human.FIO2 = value
+            print("FiO2 changed to \(value)%.")
+        case "FIC2":
+            human.FIC2 = value
+            print("FiCO2 changed to \(value)%.")
+        case "CO":
+            human.CO = value
+            print("Cardiac function changed to \(value)% of normal.")
+        case "PD":
+            human.PD  = value
+            print("Metabolic rate changed to \(value)% of normal.")
+        case "FADM":
+            human.FADM  = value
+            print("Fixed right to left shunt  changed to \(value)% of cardiac output. Default = 0.")
+        case "BULLA":
+            human.BULLA  = value
+            print("Added dead space changed to \(value)cc (BTPS). Default = 0.")
+        case "VLUNG":
+            human.VLUNG  = value
+            print("Total lung volume changed to \(value)cc (BTPS). Default = 3000.")
+        case "ELAST":
+            human.ELAST  = value
+            print("Elastance changed to \(value)cm H2O/liter. Default = 5.")
+        case "VADM":
+            human.VADM  = value
+            print("Dynamic venous admixture changed to \(value). Default = 3.")
+        case "BARPR":
+            human.BARPR  = value
+            print("Barometric pressure changed to \(value)mmHg.  Default = 760.")
+        case "TEMP":
+            human.TEMP  = value
+            print("Temperature changed to \(value). Default = 37.0 C.")
+            
+        default: print("Error - no such variable")
+        }
+        
+
+        
+    }
+    
+    func changeDurationSeconds(duration:Int){
+        iterations = duration
+    }
+    
+    func changeReportingInterval(interval:Int){
+        intervalFactor = interval
     }
 }

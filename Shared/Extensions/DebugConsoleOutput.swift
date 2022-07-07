@@ -59,7 +59,7 @@ extension Simulator {
     }
     
     func inspectionReport()->String{
-        let header = String(format:"\nTime         P.Pressures     Contents cc/dl  Amounts in cc  pH    HCO3-\n%4d secs     O2     CO2      O2     CO2       O2     CO2", totalSeconds+1)
+        let header = String(format:"\nTime         P.Pressures     Contents cc/dl  Amounts in cc  pH    HCO3-\n%4d secs     O2     CO2      O2     CO2       O2     CO2", totalSeconds)
         
         let artString = String(format:"\nArterial %8.1f%8.1f%8.1f%8.1f%8.0f%8.0f%7.3f%6.1f",
                                human.RO2PR, human.RC2PR,human.RO2CT,human.RC2CT,human.RO2MT,human.RC2MT,human.RPH,human.RC3CT)
@@ -111,9 +111,10 @@ extension Simulator {
     
     func reportOut(title: String){
         print(title)
-        print(inspectionReport())
-        print(dumpFirstSixParametersReport())
-        print(runReport())
+//        print(runReport())
+//        print(inspectionReport())
+        //print(dumpFirstSixParametersReport())
+        //print(runReport())
 //        print(dumpAllParametersReport())
     }
     

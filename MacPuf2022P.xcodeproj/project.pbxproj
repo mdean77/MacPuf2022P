@@ -158,6 +158,7 @@
 		8533A82D286E548E0077DE75 /* BrainMetabolism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainMetabolism.swift; sourceTree = "<group>"; };
 		8533A832286E612A0077DE75 /* Ventilation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ventilation.swift; sourceTree = "<group>"; };
 		85523186286A10A000484232 /* DebugConsoleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugConsoleOutput.swift; sourceTree = "<group>"; };
+		85A41CC9287794B900582062 /* DictFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictFile.swift; sourceTree = "<group>"; };
 		85B566FD2870D05A00D2B676 /* LungMetabolism2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LungMetabolism2.swift; sourceTree = "<group>"; };
 		85B56702287225DC00D2B676 /* CalculatePressures2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePressures2.swift; sourceTree = "<group>"; };
 		85B567072872263900D2B676 /* FORTRAN CalcPressures.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "FORTRAN CalcPressures.md"; sourceTree = "<group>"; };
@@ -212,6 +213,7 @@
 		850DCAC4286745FB00292A94 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				85A41CC9287794B900582062 /* DictFile.swift */,
 				850DCB272867C9B300292A94 /* Extensions */,
 				850DCAC5286745FB00292A94 /* MacPuf2022PApp.swift */,
 				85B56702287225DC00D2B676 /* CalculatePressures2.swift */,
