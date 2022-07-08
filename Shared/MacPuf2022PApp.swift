@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct MacPuf2022PApp: App {
+    private let simulator = Simulator()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(simulator:simulator)
         }
     }
 }
