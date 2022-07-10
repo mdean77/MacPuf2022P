@@ -18,27 +18,50 @@ struct ContentView: View {
         VStack{
             NavigationView{
                 List{
-                    ForEach(1..<4){i in
-                        HStack{
-                            VStack(alignment: .leading){
-                                Text(simulator.factors[i]!.title)
-                                    .font(.title2)
-                                Text("Reference value: \(simulator.factors[i]!.reference)")
-                                    .font(.caption)
+                    Section(header: Text("Frequent parameter changes")){
+                        
+                            ForEach(1..<7){i in
+                                NavigationLink(destination: Text(simulator.factors[i]!.title)){
+                                HStack{
+                                    VStack(alignment: .leading){
+                                        Text(simulator.factors[i]!.title)
+                                            .font(.subheadline)
+                                        Text("Reference value: \(simulator.factors[i]!.reference,specifier:simulator.factors[1]!.format)")
+                                            .font(.caption)
+                                    }
+                                    Spacer()
+                                    Text("Current Value: \(simulator.factors[i]!.current,specifier: simulator.factors[i]!.format)")
+                                        .font(.caption)
+                                }
                             }
-                            Spacer()
-                            Text("Current Value: \(simulator.factors[i]!.current)")
-                                .font(.title2)
+                        }
+                      
+                    }
+                    Section(header: Text("Other parameter changes")){
+                        ForEach(7..<31){i in
+                            NavigationLink(destination: Text(simulator.factors[i]!.title)){
+                                HStack{
+                                    VStack(alignment: .leading){
+                                        Text(simulator.factors[i]!.title)
+                                            .font(.subheadline)
+                                        Text("Reference value: \(simulator.factors[i]!.reference,specifier:simulator.factors[1]!.format)")
+                                            .font(.caption)
+                                    }
+                                    Spacer()
+                                   
+                                        Text("Current Value: \(simulator.factors[i]!.current,specifier: simulator.factors[i]!.format)")
+                                            .font(.caption)
+                                    }
+                            }
+                          
+                                
+                            
                         }
                     }
+
                     
-                }
-                    
-                    //                            Text("Inspired CO2 (%)")
-                    //                            Text("Cardiac pump performance, % normal")
-                    //                            Text("Metabolic rate, % normal")
-                    //                            Text("Extra R-->L shunt, % cardiac output")
-                    //                            Text("Extra dead space above normal, ml")
+                }.navigationTitle("MacPuf Variables")
+                    .font(.title)
                     
                 }
                 
@@ -78,6 +101,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     
     static var previews: some View {
+
         let simulator = Simulator()
         Group{
             ContentView(simulator: simulator)
@@ -86,6 +110,7 @@ struct ContentView_Previews: PreviewProvider {
                 .previewInterfaceOrientation(.landscapeRight)
                 .preferredColorScheme(.dark)
         }
+
     }
 }
 

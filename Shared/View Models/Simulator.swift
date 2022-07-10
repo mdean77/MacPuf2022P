@@ -12,16 +12,16 @@ class  Simulator: ObservableObject {
     var iterations = 180
     var intervalFactor = 10
     var totalSeconds = 0
+    
     struct Factor {
         let title:String
         let reference: Double
         var current:Double
+        var format:String
     }
-    var factors: [Int:Factor] = [:]
-//    factors[1] = Factor("Inspired O2 (%)",20.93, human.FIO2)
-//    factors[2] = Factor("Inspired CO2 (%)", 0.0, human.FIC2)
-//    factors[3] = Factor("Cardiac pump performance (% normal)", 100, human.CO)
-    @Published private (set) var human = Human()
+    
+     private (set) var human = Human()
+     var factors:[Int:Factor] = [:]
 
     init(){
         human.getVariables()
@@ -29,11 +29,7 @@ class  Simulator: ObservableObject {
         loadFactorDictionary()
     }
     
-    private func loadFactorDictionary(){
-        factors[1] = Factor(title: "Inspired O2 (%)",reference: 20.93, current: human.FIO2)
-        factors[2] = Factor(title: "Inspired CO2 (%)", reference: 0.0, current: human.FIC2)
-        factors[3] = Factor(title: "Cardiac pump performance (% normal)", reference: 100, current: human.CO)
-    }
+
     
     private func simulate(){
         // Eventually I will want to get all output removed from the simulate function

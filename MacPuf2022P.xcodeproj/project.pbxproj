@@ -90,6 +90,10 @@
 		85523188286A10A000484232 /* DebugConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85523186286A10A000484232 /* DebugConsoleOutput.swift */; };
 		85523189286A10A000484232 /* DebugConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85523186286A10A000484232 /* DebugConsoleOutput.swift */; };
 		8552318A286A10A000484232 /* DebugConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85523186286A10A000484232 /* DebugConsoleOutput.swift */; };
+		85A41CD22879F13000582062 /* LoadFactorDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A41CD12879F13000582062 /* LoadFactorDictionary.swift */; };
+		85A41CD32879F13000582062 /* LoadFactorDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A41CD12879F13000582062 /* LoadFactorDictionary.swift */; };
+		85A41CD42879F13000582062 /* LoadFactorDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A41CD12879F13000582062 /* LoadFactorDictionary.swift */; };
+		85A41CD52879F13000582062 /* LoadFactorDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A41CD12879F13000582062 /* LoadFactorDictionary.swift */; };
 		85B566FE2870D05A00D2B676 /* LungMetabolism2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B566FD2870D05A00D2B676 /* LungMetabolism2.swift */; };
 		85B566FF2870D05A00D2B676 /* LungMetabolism2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B566FD2870D05A00D2B676 /* LungMetabolism2.swift */; };
 		85B567002870D05A00D2B676 /* LungMetabolism2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B566FD2870D05A00D2B676 /* LungMetabolism2.swift */; };
@@ -159,6 +163,7 @@
 		8533A832286E612A0077DE75 /* Ventilation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ventilation.swift; sourceTree = "<group>"; };
 		85523186286A10A000484232 /* DebugConsoleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugConsoleOutput.swift; sourceTree = "<group>"; };
 		85A41CC9287794B900582062 /* DictFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictFile.swift; sourceTree = "<group>"; };
+		85A41CD12879F13000582062 /* LoadFactorDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFactorDictionary.swift; sourceTree = "<group>"; };
 		85B566FD2870D05A00D2B676 /* LungMetabolism2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LungMetabolism2.swift; sourceTree = "<group>"; };
 		85B56702287225DC00D2B676 /* CalculatePressures2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePressures2.swift; sourceTree = "<group>"; };
 		85B567072872263900D2B676 /* FORTRAN CalcPressures.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "FORTRAN CalcPressures.md"; sourceTree = "<group>"; };
@@ -213,17 +218,12 @@
 		850DCAC4286745FB00292A94 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				85A41CC9287794B900582062 /* DictFile.swift */,
-				850DCB272867C9B300292A94 /* Extensions */,
 				850DCAC5286745FB00292A94 /* MacPuf2022PApp.swift */,
-				85B56702287225DC00D2B676 /* CalculatePressures2.swift */,
-				850DCAC6286745FB00292A94 /* ContentView.swift */,
-				850DCAC7286745FD00292A94 /* Assets.xcassets */,
-				850DCB0C2867695B00292A94 /* Human.swift */,
+				850DCB272867C9B300292A94 /* Human Model */,
+				85A41CD02879F0A400582062 /* Views */,
 				85A41CCA2878C3FF00582062 /* View Models */,
-				850DCB1828677E0400292A94 /* SmallFunctions.swift */,
-				850DCB1D28677E2B00292A94 /* CalculatePressures.swift */,
-				85B5670928724AB400D2B676 /* CalculatePressures3.swift */,
+				85A41CC9287794B900582062 /* DictFile.swift */,
+				850DCAC7286745FD00292A94 /* Assets.xcassets */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -266,9 +266,10 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
-		850DCB272867C9B300292A94 /* Extensions */ = {
+		850DCB272867C9B300292A94 /* Human Model */ = {
 			isa = PBXGroup;
 			children = (
+				850DCB0C2867695B00292A94 /* Human.swift */,
 				85B5670E28736ED700D2B676 /* CalculatePressures4.swift */,
 				850DCB222867C9A400292A94 /* GetConstants.swift */,
 				850DCB282868E85800292A94 /* GetVariables.swift */,
@@ -281,12 +282,16 @@
 				8533A814286E08440077DE75 /* Function.swift */,
 				8533A819286E28660077DE75 /* TissueNitrogenStores.swift */,
 				8533A81E286E2AB90077DE75 /* TissueMetabolism.swift */,
+				85B56702287225DC00D2B676 /* CalculatePressures2.swift */,
 				8533A823286E376E0077DE75 /* VenousDelay.swift */,
 				850DCB072867626000292A94 /* CalculateContents.swift */,
+				85B5670928724AB400D2B676 /* CalculatePressures3.swift */,
+				850DCB1D28677E2B00292A94 /* CalculatePressures.swift */,
+				850DCB1828677E0400292A94 /* SmallFunctions.swift */,
 				8533A82D286E548E0077DE75 /* BrainMetabolism.swift */,
 				8533A832286E612A0077DE75 /* Ventilation.swift */,
 			);
-			path = Extensions;
+			path = "Human Model";
 			sourceTree = "<group>";
 		};
 		8533A7FF286DEF9F0077DE75 /* FORTRAN Source */ = {
@@ -302,8 +307,17 @@
 			isa = PBXGroup;
 			children = (
 				850DCB1128676B4100292A94 /* Simulator.swift */,
+				85A41CD12879F13000582062 /* LoadFactorDictionary.swift */,
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		85A41CD02879F0A400582062 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				850DCAC6286745FB00292A94 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,6 +478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85A41CD22879F13000582062 /* LoadFactorDictionary.swift in Sources */,
 				8533A81F286E2AB90077DE75 /* TissueMetabolism.swift in Sources */,
 				8533A806286DF3120077DE75 /* SetupCardiacOutput.swift in Sources */,
 				8533A810286E02A10077DE75 /* LactateMetabolism.swift in Sources */,
@@ -495,6 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85A41CD32879F13000582062 /* LoadFactorDictionary.swift in Sources */,
 				8533A820286E2AB90077DE75 /* TissueMetabolism.swift in Sources */,
 				8533A807286DF3120077DE75 /* SetupCardiacOutput.swift in Sources */,
 				8533A811286E02A10077DE75 /* LactateMetabolism.swift in Sources */,
@@ -550,6 +566,7 @@
 				85523189286A10A000484232 /* DebugConsoleOutput.swift in Sources */,
 				850DCB252867C9A400292A94 /* GetConstants.swift in Sources */,
 				8533A817286E08440077DE75 /* Function.swift in Sources */,
+				85A41CD42879F13000582062 /* LoadFactorDictionary.swift in Sources */,
 				85B567002870D05A00D2B676 /* LungMetabolism2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,6 +575,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85A41CD52879F13000582062 /* LoadFactorDictionary.swift in Sources */,
 				8533A822286E2AB90077DE75 /* TissueMetabolism.swift in Sources */,
 				8533A809286DF3120077DE75 /* SetupCardiacOutput.swift in Sources */,
 				8533A813286E02A10077DE75 /* LactateMetabolism.swift in Sources */,
