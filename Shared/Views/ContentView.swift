@@ -12,7 +12,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var patientStarted = false
     @ObservedObject var simulator: Simulator
-
+    @State var isActive: Bool = false       // to handle coming back from detail view
     var body: some View {
 
         VStack{
@@ -21,7 +21,9 @@ struct ContentView: View {
                     Section(header: Text("Frequent parameter changes")){
                         
                             ForEach(1..<7){i in
-                                NavigationLink(destination: Text(simulator.factors[i]!.title)){
+                                NavigationLink(destination: VariableChangeView(index: i, simulator: simulator)){
+//                                               rootIsActive: self.$isActive),
+//                                               isActive: self.$isActive)
                                 HStack{
                                     VStack(alignment: .leading){
                                         Text(simulator.factors[i]!.title)
@@ -39,7 +41,7 @@ struct ContentView: View {
                     }
                     Section(header: Text("Other parameter changes")){
                         ForEach(7..<31){i in
-                            NavigationLink(destination: Text(simulator.factors[i]!.title)){
+                            NavigationLink(destination: VariableChangeView(index: i, simulator: simulator)){
                                 HStack{
                                     VStack(alignment: .leading){
                                         Text(simulator.factors[i]!.title)

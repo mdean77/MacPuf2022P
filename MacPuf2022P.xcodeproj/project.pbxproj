@@ -110,6 +110,12 @@
 		85B5671028736ED700D2B676 /* CalculatePressures4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B5670E28736ED700D2B676 /* CalculatePressures4.swift */; };
 		85B5671128736ED700D2B676 /* CalculatePressures4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B5670E28736ED700D2B676 /* CalculatePressures4.swift */; };
 		85B5671228736ED700D2B676 /* CalculatePressures4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B5670E28736ED700D2B676 /* CalculatePressures4.swift */; };
+		85BB7375287B838C00B602EA /* VariableChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BB7374287B838C00B602EA /* VariableChangeView.swift */; };
+		85BB7376287B838C00B602EA /* VariableChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BB7374287B838C00B602EA /* VariableChangeView.swift */; };
+		85BB7378287CD1A700B602EA /* ChangeVariableValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BB7377287CD1A700B602EA /* ChangeVariableValues.swift */; };
+		85BB7379287CD1A700B602EA /* ChangeVariableValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BB7377287CD1A700B602EA /* ChangeVariableValues.swift */; };
+		85BB737A287CD1A700B602EA /* ChangeVariableValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BB7377287CD1A700B602EA /* ChangeVariableValues.swift */; };
+		85BB737B287CD1A700B602EA /* ChangeVariableValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BB7377287CD1A700B602EA /* ChangeVariableValues.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +175,8 @@
 		85B567072872263900D2B676 /* FORTRAN CalcPressures.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "FORTRAN CalcPressures.md"; sourceTree = "<group>"; };
 		85B5670928724AB400D2B676 /* CalculatePressures3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePressures3.swift; sourceTree = "<group>"; };
 		85B5670E28736ED700D2B676 /* CalculatePressures4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePressures4.swift; sourceTree = "<group>"; };
+		85BB7374287B838C00B602EA /* VariableChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableChangeView.swift; sourceTree = "<group>"; };
+		85BB7377287CD1A700B602EA /* ChangeVariableValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeVariableValues.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +316,7 @@
 			children = (
 				850DCB1128676B4100292A94 /* Simulator.swift */,
 				85A41CD12879F13000582062 /* LoadFactorDictionary.swift */,
+				85BB7377287CD1A700B602EA /* ChangeVariableValues.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -316,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				850DCAC6286745FB00292A94 /* ContentView.swift */,
+				85BB7374287B838C00B602EA /* VariableChangeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -478,6 +488,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85BB7378287CD1A700B602EA /* ChangeVariableValues.swift in Sources */,
+				85BB7375287B838C00B602EA /* VariableChangeView.swift in Sources */,
 				85A41CD22879F13000582062 /* LoadFactorDictionary.swift in Sources */,
 				8533A81F286E2AB90077DE75 /* TissueMetabolism.swift in Sources */,
 				8533A806286DF3120077DE75 /* SetupCardiacOutput.swift in Sources */,
@@ -510,6 +522,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85BB7379287CD1A700B602EA /* ChangeVariableValues.swift in Sources */,
+				85BB7376287B838C00B602EA /* VariableChangeView.swift in Sources */,
 				85A41CD32879F13000582062 /* LoadFactorDictionary.swift in Sources */,
 				8533A820286E2AB90077DE75 /* TissueMetabolism.swift in Sources */,
 				8533A807286DF3120077DE75 /* SetupCardiacOutput.swift in Sources */,
@@ -542,6 +556,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85BB737A287CD1A700B602EA /* ChangeVariableValues.swift in Sources */,
 				85B5670C28724AB400D2B676 /* CalculatePressures3.swift in Sources */,
 				8533A808286DF3120077DE75 /* SetupCardiacOutput.swift in Sources */,
 				8533A835286E612A0077DE75 /* Ventilation.swift in Sources */,
@@ -596,6 +611,7 @@
 				85B5670D28724AB400D2B676 /* CalculatePressures3.swift in Sources */,
 				85B5671228736ED700D2B676 /* CalculatePressures4.swift in Sources */,
 				850DCB102867695B00292A94 /* Human.swift in Sources */,
+				85BB737B287CD1A700B602EA /* ChangeVariableValues.swift in Sources */,
 				850DCB2128677E2B00292A94 /* CalculatePressures.swift in Sources */,
 				85B567012870D05A00D2B676 /* LungMetabolism2.swift in Sources */,
 				8533A836286E612A0077DE75 /* Ventilation.swift in Sources */,

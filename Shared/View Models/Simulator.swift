@@ -9,8 +9,8 @@
 import Foundation
 
 class  Simulator: ObservableObject {
-    var iterations = 180
-    var intervalFactor = 10
+    var iterations = 30
+    var intervalFactor = 1
     var totalSeconds = 0
     
     struct Factor {
@@ -18,18 +18,18 @@ class  Simulator: ObservableObject {
         let reference: Double
         var current:Double
         var format:String
+        var lower:Double        //Lower acceptable limit for changed parameter
+        var upper:Double        //Upper acceptable limit for changed parameter
     }
     
-     private (set) var human = Human()
-     var factors:[Int:Factor] = [:]
+      @Published var human = Human()
+     @Published var factors:[Int:Factor] = [:]
 
     init(){
         human.getVariables()
         human.getConstants()
         loadFactorDictionary()
     }
-    
-
     
     private func simulate(){
         // Eventually I will want to get all output removed from the simulate function
@@ -62,6 +62,7 @@ class  Simulator: ObservableObject {
         // Routine that will be called from Views to start new patient
         human.getVariables()
         human.getConstants()
+        loadFactorDictionary()
         totalSeconds = -1
         reportOut(title:"Initial conditions before starting simulations:")
         print(inspectionReport())
@@ -78,51 +79,13 @@ class  Simulator: ObservableObject {
     
     /// This view model function will change the value of one of the first 30 parameters.
     /// - Parameters:
-    ///   - key: String to represent the variable name, i.e. TIDVL
+    ///   - key: Integer that indicates index into the dictionary
     ///   - value: New value for the variable
-    
-    func changeParameterValue(key: String, value: Double)-> (){
-        switch key {
-        case "FIO2":
-            human.FIO2 = value
-            print("FiO2 changed to \(value)%.")
-        case "FIC2":
-            human.FIC2 = value
-            print("FiCO2 changed to \(value)%.")
-        case "CO":
-            human.CO = value
-            print("Cardiac function changed to \(value)% of normal.")
-        case "PD":
-            human.PD  = value
-            print("Metabolic rate changed to \(value)% of normal.")
-        case "FADM":
-            human.FADM  = value
-            print("Fixed right to left shunt  changed to \(value)% of cardiac output. Default = 0.")
-        case "BULLA":
-            human.BULLA  = value
-            print("Added dead space changed to \(value)cc (BTPS). Default = 0.")
-        case "VLUNG":
-            human.VLUNG  = value
-            print("Total lung volume changed to \(value)cc (BTPS). Default = 3000.")
-        case "ELAST":
-            human.ELAST  = value
-            print("Elastance changed to \(value)cm H2O/liter. Default = 5.")
-        case "VADM":
-            human.VADM  = value
-            print("Dynamic venous admixture changed to \(value). Default = 3.")
-        case "BARPR":
-            human.BARPR  = value
-            print("Barometric pressure changed to \(value)mmHg.  Default = 760.")
-        case "TEMP":
-            human.TEMP  = value
-            print("Temperature changed to \(value). Default = 37.0 C.")
-            
-        default: print("Error - no such variable")
-        }
+    /// func changeParameterValue(key: Int, value: Double)-> (){
+    /// THIS IS AN EXTENSION OF SIMULATOR.
+    /// SOURCE IN A DIFFERENT FILE.
         
-
-        
-    }
+       
     
     func changeDurationSeconds(duration:Int){
         iterations = duration

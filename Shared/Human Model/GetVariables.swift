@@ -39,6 +39,7 @@ extension Human {
          SHUNT = 0.0              // MacPuf variable SHUNT    Factor 28
          VC = 5.0000              // MacPuf variable VC     Factor 29
          PEEP = 0.0               // PEEP  Factor 30
+        
          VO2CT = 14.56            // VO2CT  Factor 31
          RCOAJ = 100.0            // Factor 32
          RPH = 7.4                // MacPuf variable RPH    Factor 33
