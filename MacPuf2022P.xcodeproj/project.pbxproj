@@ -116,6 +116,10 @@
 		85BB7379287CD1A700B602EA /* ChangeVariableValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BB7377287CD1A700B602EA /* ChangeVariableValues.swift */; };
 		85BB737A287CD1A700B602EA /* ChangeVariableValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BB7377287CD1A700B602EA /* ChangeVariableValues.swift */; };
 		85BB737B287CD1A700B602EA /* ChangeVariableValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BB7377287CD1A700B602EA /* ChangeVariableValues.swift */; };
+		85BB738C287E2BC600B602EA /* VariableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BB738B287E2BC600B602EA /* VariableListView.swift */; };
+		85BB738D287E2BC600B602EA /* VariableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BB738B287E2BC600B602EA /* VariableListView.swift */; };
+		85BB738E287E2BC600B602EA /* VariableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BB738B287E2BC600B602EA /* VariableListView.swift */; };
+		85BB738F287E2BC600B602EA /* VariableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BB738B287E2BC600B602EA /* VariableListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +181,7 @@
 		85B5670E28736ED700D2B676 /* CalculatePressures4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePressures4.swift; sourceTree = "<group>"; };
 		85BB7374287B838C00B602EA /* VariableChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableChangeView.swift; sourceTree = "<group>"; };
 		85BB7377287CD1A700B602EA /* ChangeVariableValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeVariableValues.swift; sourceTree = "<group>"; };
+		85BB738B287E2BC600B602EA /* VariableListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -326,6 +331,7 @@
 			children = (
 				850DCAC6286745FB00292A94 /* ContentView.swift */,
 				85BB7374287B838C00B602EA /* VariableChangeView.swift */,
+				85BB738B287E2BC600B602EA /* VariableListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -490,6 +496,7 @@
 			files = (
 				85BB7378287CD1A700B602EA /* ChangeVariableValues.swift in Sources */,
 				85BB7375287B838C00B602EA /* VariableChangeView.swift in Sources */,
+				85BB738C287E2BC600B602EA /* VariableListView.swift in Sources */,
 				85A41CD22879F13000582062 /* LoadFactorDictionary.swift in Sources */,
 				8533A81F286E2AB90077DE75 /* TissueMetabolism.swift in Sources */,
 				8533A806286DF3120077DE75 /* SetupCardiacOutput.swift in Sources */,
@@ -524,6 +531,7 @@
 			files = (
 				85BB7379287CD1A700B602EA /* ChangeVariableValues.swift in Sources */,
 				85BB7376287B838C00B602EA /* VariableChangeView.swift in Sources */,
+				85BB738D287E2BC600B602EA /* VariableListView.swift in Sources */,
 				85A41CD32879F13000582062 /* LoadFactorDictionary.swift in Sources */,
 				8533A820286E2AB90077DE75 /* TissueMetabolism.swift in Sources */,
 				8533A807286DF3120077DE75 /* SetupCardiacOutput.swift in Sources */,
@@ -558,6 +566,7 @@
 			files = (
 				85BB737A287CD1A700B602EA /* ChangeVariableValues.swift in Sources */,
 				85B5670C28724AB400D2B676 /* CalculatePressures3.swift in Sources */,
+				85BB738E287E2BC600B602EA /* VariableListView.swift in Sources */,
 				8533A808286DF3120077DE75 /* SetupCardiacOutput.swift in Sources */,
 				8533A835286E612A0077DE75 /* Ventilation.swift in Sources */,
 				850DCB2B2868E85800292A94 /* GetVariables.swift in Sources */,
@@ -603,6 +612,7 @@
 				850DCB2C2868E85800292A94 /* GetVariables.swift in Sources */,
 				8533A831286E548E0077DE75 /* BrainMetabolism.swift in Sources */,
 				850DCAEC286745FD00292A94 /* Tests_macOSLaunchTests.swift in Sources */,
+				85BB738F287E2BC600B602EA /* VariableListView.swift in Sources */,
 				8533A81D286E28660077DE75 /* TissueNitrogenStores.swift in Sources */,
 				850DCAEA286745FD00292A94 /* Tests_macOS.swift in Sources */,
 				8533A818286E08440077DE75 /* Function.swift in Sources */,

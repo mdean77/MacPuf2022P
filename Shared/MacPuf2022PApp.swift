@@ -9,10 +9,11 @@ import SwiftUI
 
 @main
 struct MacPuf2022PApp: App {
-    private let simulator = Simulator()
+    @StateObject var simulator = Simulator()
     var body: some Scene {
         WindowGroup {
-            ContentView(simulator:simulator)
+            ContentView()
+                .environmentObject(simulator)
         }
     }
 }

@@ -11,19 +11,19 @@ struct VariableChangeView: View {
     
 
     let index:Int
-    @ObservedObject var simulator: Simulator
-    @State  var newValue:Double? = 0.0
+    @EnvironmentObject var simulator: Simulator
+    @State var newValue:String = ""
 
-
-    let formatter: NumberFormatter = {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        return formatter
-    }()
+//    let formatter: NumberFormatter = {
+//        let formatter = NumberFormatter()
+//        //formatter.numberStyle = .decimal
+//        formatter.maximumFractionDigits = 3
+//        return formatter
+//    }()
     
     func checkValue(index:Int)-> Bool{
         // Check new value against limits in the dictionary
-        if let value = newValue {
+        if let value = Double(newValue) {
             return value >= simulator.factors[index]!.lower && value <= simulator.factors[index]!.upper}
         return false
     }
@@ -38,23 +38,30 @@ struct VariableChangeView: View {
                 .font(.caption)
             HStack{
                 Text("Change value:").padding(.leading)
-                TextField("Enter new value", value: $newValue, formatter: formatter)
+                TextField("Enter new value", text: $newValue)
             }
-            Text("Proposed new value = \(newValue ?? simulator.factors[index]!.current, specifier:simulator.factors[index]!.format)")
+            
+            if let value = Double(newValue) {
+            Text("Proposed new value = \(value)")
+            } else {
+                Text("Current value unchanged: \(simulator.factors[index]!.current, specifier:simulator.factors[index]!.format)")
+            }
+            
             HStack{
                 Button {
                     if checkValue(index: index){
-                        simulator.changeParameterValue(key: index, value: newValue ?? simulator.factors[index]!.current)}
+                        simulator.changeParameterValue(key: index, value: Double(newValue) ?? simulator.factors[index]!.current)}
+                    newValue = ""
                 } label: {Text("Save new value")
                 }.padding()
                 Button {
-                    newValue = simulator.factors[index]!.current
+                    newValue = ""
                 } label: {Text("Cancel change")
                 }.padding()
                 Button {
                     simulator.changeParameterValue(key: index, value: simulator.factors[index]!.reference)
-                    newValue = simulator.factors[index]!.current
-                    
+//                    newValue = "\(simulator.factors[index]!.current)"
+                    newValue = ""
                 } label: {Text("Revert to reference value")
                 }.padding()
             }.padding()
@@ -65,9 +72,9 @@ struct VariableChangeView: View {
 
 struct VariableChangeView_Previews: PreviewProvider {
     static var previews: some View {
-        let simulator = Simulator()
         let index = 1
-        VariableChangeView(index:index, simulator: simulator)
+        VariableChangeView(index:index)
             .previewInterfaceOrientation(.landscapeLeft)
+            .environmentObject(Simulator())
     }
 }

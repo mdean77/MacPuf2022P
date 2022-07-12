@@ -22,9 +22,9 @@ class  Simulator: ObservableObject {
         var upper:Double        //Upper acceptable limit for changed parameter
     }
     
-      @Published var human = Human()
-     @Published var factors:[Int:Factor] = [:]
-
+    @Published var human = Human()
+    @Published var factors:[Int:Factor] = [:]
+    
     init(){
         human.getVariables()
         human.getConstants()
@@ -39,20 +39,20 @@ class  Simulator: ObservableObject {
         
         print("\n   Time     0     10    20    30    40    50    60    70    80    90   100   110   120")
         print("(Min:Secs)  .     .     .     .     .     .     .     .     .     .     .     .     .")
-
+        
         for cycle in 0...iterations {
             
             human.simulate(cycle: cycle, iterations: iterations)
             totalSeconds += 1
             if cycle % intervalFactor == 0 {
                 print(cycleReport())
-
+                
             }
         }
         reportOut(title: "\nConditions after \(totalSeconds) seconds of simulation:")
         print(runReport)
         print(inspectionReport())
-
+        
     }
     
     
@@ -84,8 +84,8 @@ class  Simulator: ObservableObject {
     /// func changeParameterValue(key: Int, value: Double)-> (){
     /// THIS IS AN EXTENSION OF SIMULATOR.
     /// SOURCE IN A DIFFERENT FILE.
-        
-       
+    
+    
     
     func changeDurationSeconds(duration:Int){
         iterations = duration
