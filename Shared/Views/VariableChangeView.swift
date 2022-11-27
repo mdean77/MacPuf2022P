@@ -9,17 +9,10 @@ import SwiftUI
 
 struct VariableChangeView: View {
     
-
     let index:Int
     @EnvironmentObject var simulator: Simulator
     @State var newValue:String = ""
-
-//    let formatter: NumberFormatter = {
-//        let formatter = NumberFormatter()
-//        //formatter.numberStyle = .decimal
-//        formatter.maximumFractionDigits = 3
-//        return formatter
-//    }()
+    
     
     func checkValue(index:Int)-> Bool{
         // Check new value against limits in the dictionary
@@ -39,34 +32,50 @@ struct VariableChangeView: View {
             HStack{
                 Text("Change value:").padding(.leading)
                 TextField("Enter new value", text: $newValue)
-            }
+            }.padding()
             
             if let value = Double(newValue) {
-            Text("Proposed new value = \(value)")
+                Text("Proposed new value: \(value,specifier: simulator.factors[index]!.format)")
             } else {
-                Text("Current value unchanged: \(simulator.factors[index]!.current, specifier:simulator.factors[index]!.format)")
+                Text("Current value: \(simulator.factors[index]!.current, specifier:simulator.factors[index]!.format)")
             }
             
             HStack{
-                Button {
-                    if checkValue(index: index){
-                        simulator.changeParameterValue(key: index, value: Double(newValue) ?? simulator.factors[index]!.current)}
-                    newValue = ""
-                } label: {Text("Save new value")
-                }.padding()
-                Button {
-                    newValue = ""
-                } label: {Text("Cancel change")
-                }.padding()
-                Button {
-                    simulator.changeParameterValue(key: index, value: simulator.factors[index]!.reference)
-//                    newValue = "\(simulator.factors[index]!.current)"
-                    newValue = ""
-                } label: {Text("Revert to reference value")
-                }.padding()
-            }.padding()
-
+                saveButton
+                cancelButton
+                revertToReferenceButton
+            }.padding(.top)
         }
+    }
+    
+    var saveButton: some View {
+        Button {
+            if checkValue(index: index){
+                simulator.changeParameterValue(key: index, value: Double(newValue) ?? simulator.factors[index]!.current)}
+            newValue = ""
+        } label: {Text("Save new value")
+            
+        }.padding(.horizontal)
+            .buttonStyle(.bordered)
+            
+    }
+    
+    var cancelButton: some View {
+        Button {
+            newValue = ""
+        } label: {Text("Cancel change")
+        }.padding(.horizontal)
+            .buttonStyle(.bordered)
+        
+    }
+    
+    var revertToReferenceButton: some View {
+        Button {
+            simulator.changeParameterValue(key: index, value: simulator.factors[index]!.reference)
+            newValue = ""
+        } label: {Text("Revert to reference value")
+        }.padding(.horizontal)
+            .buttonStyle(.bordered)
     }
 }
 

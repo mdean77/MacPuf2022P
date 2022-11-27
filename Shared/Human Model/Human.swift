@@ -50,16 +50,6 @@ struct Human {
     var (FTCO, FTCOC, U, V,Y, X,W,Z, SAT, FY) = zeroes
     var INDEX:Int = 1
     
-    // Replace parameters with correct values from extension
-//    mutating func getVariables(){
-//        setVariables()
-//    }
-
-    // Replace constants with the correct constant values from extension
-//    mutating func getConstants (){
-//        setConstants()
-//    }
-    
     mutating func simulate(cycle:Int, iterations:Int){
         if PL > 1.5 {
             print("CALL BAGER") //200 CALL BAGER (2,C12,C12,C12,SIMLT)
