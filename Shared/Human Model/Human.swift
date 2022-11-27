@@ -47,18 +47,18 @@ struct Human {
     var NARTI = 1
     var SIMLT = 1.0
     let E = 0.0000001
-    var (FTCO, FTCOC, U, V,Y, X,W,Z, SAT, FY) = (0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0)
+    var (FTCO, FTCOC, U, V,Y, X,W,Z, SAT, FY) = zeroes
     var INDEX:Int = 1
     
     // Replace parameters with correct values from extension
-    mutating func getVariables(){
-        setVariables()
-    }
+//    mutating func getVariables(){
+//        setVariables()
+//    }
 
     // Replace constants with the correct constant values from extension
-    mutating func getConstants (){
-        setConstants()
-    }
+//    mutating func getConstants (){
+//        setConstants()
+//    }
     
     mutating func simulate(cycle:Int, iterations:Int){
         if PL > 1.5 {

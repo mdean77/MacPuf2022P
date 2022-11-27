@@ -38,14 +38,14 @@
 		850DCB1F28677E2B00292A94 /* CalculatePressures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1D28677E2B00292A94 /* CalculatePressures.swift */; };
 		850DCB2028677E2B00292A94 /* CalculatePressures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1D28677E2B00292A94 /* CalculatePressures.swift */; };
 		850DCB2128677E2B00292A94 /* CalculatePressures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB1D28677E2B00292A94 /* CalculatePressures.swift */; };
-		850DCB232867C9A400292A94 /* GetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB222867C9A400292A94 /* GetConstants.swift */; };
-		850DCB242867C9A400292A94 /* GetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB222867C9A400292A94 /* GetConstants.swift */; };
-		850DCB252867C9A400292A94 /* GetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB222867C9A400292A94 /* GetConstants.swift */; };
-		850DCB262867C9A400292A94 /* GetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB222867C9A400292A94 /* GetConstants.swift */; };
-		850DCB292868E85800292A94 /* GetVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB282868E85800292A94 /* GetVariables.swift */; };
-		850DCB2A2868E85800292A94 /* GetVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB282868E85800292A94 /* GetVariables.swift */; };
-		850DCB2B2868E85800292A94 /* GetVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB282868E85800292A94 /* GetVariables.swift */; };
-		850DCB2C2868E85800292A94 /* GetVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB282868E85800292A94 /* GetVariables.swift */; };
+		850DCB232867C9A400292A94 /* SettConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB222867C9A400292A94 /* SettConstants.swift */; };
+		850DCB242867C9A400292A94 /* SettConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB222867C9A400292A94 /* SettConstants.swift */; };
+		850DCB252867C9A400292A94 /* SettConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB222867C9A400292A94 /* SettConstants.swift */; };
+		850DCB262867C9A400292A94 /* SettConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB222867C9A400292A94 /* SettConstants.swift */; };
+		850DCB292868E85800292A94 /* SetVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB282868E85800292A94 /* SetVariables.swift */; };
+		850DCB2A2868E85800292A94 /* SetVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB282868E85800292A94 /* SetVariables.swift */; };
+		850DCB2B2868E85800292A94 /* SetVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB282868E85800292A94 /* SetVariables.swift */; };
+		850DCB2C2868E85800292A94 /* SetVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850DCB282868E85800292A94 /* SetVariables.swift */; };
 		8533A806286DF3120077DE75 /* SetupCardiacOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A805286DF3120077DE75 /* SetupCardiacOutput.swift */; };
 		8533A807286DF3120077DE75 /* SetupCardiacOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A805286DF3120077DE75 /* SetupCardiacOutput.swift */; };
 		8533A808286DF3120077DE75 /* SetupCardiacOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533A805286DF3120077DE75 /* SetupCardiacOutput.swift */; };
@@ -158,8 +158,8 @@
 		850DCB1628677C8500292A94 /* TestCalculateContentFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCalculateContentFunction.swift; sourceTree = "<group>"; };
 		850DCB1828677E0400292A94 /* SmallFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallFunctions.swift; sourceTree = "<group>"; };
 		850DCB1D28677E2B00292A94 /* CalculatePressures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePressures.swift; sourceTree = "<group>"; };
-		850DCB222867C9A400292A94 /* GetConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetConstants.swift; sourceTree = "<group>"; };
-		850DCB282868E85800292A94 /* GetVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVariables.swift; sourceTree = "<group>"; };
+		850DCB222867C9A400292A94 /* SettConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettConstants.swift; sourceTree = "<group>"; };
+		850DCB282868E85800292A94 /* SetVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetVariables.swift; sourceTree = "<group>"; };
 		8533A800286DEFE20077DE75 /* MACPUF17december1981JMD.for */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.fortran; path = MACPUF17december1981JMD.for; sourceTree = "<group>"; };
 		8533A805286DF3120077DE75 /* SetupCardiacOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupCardiacOutput.swift; sourceTree = "<group>"; };
 		8533A80A286DF7180077DE75 /* ArterialPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArterialPool.swift; sourceTree = "<group>"; };
@@ -284,8 +284,8 @@
 			children = (
 				850DCB0C2867695B00292A94 /* Human.swift */,
 				85B5670E28736ED700D2B676 /* CalculatePressures4.swift */,
-				850DCB222867C9A400292A94 /* GetConstants.swift */,
-				850DCB282868E85800292A94 /* GetVariables.swift */,
+				850DCB222867C9A400292A94 /* SettConstants.swift */,
+				850DCB282868E85800292A94 /* SetVariables.swift */,
 				85523186286A10A000484232 /* DebugConsoleOutput.swift */,
 				8533A805286DF3120077DE75 /* SetupCardiacOutput.swift */,
 				8533A80A286DF7180077DE75 /* ArterialPool.swift */,
@@ -505,9 +505,9 @@
 				850DCAEF286745FD00292A94 /* ContentView.swift in Sources */,
 				8533A829286E4A020077DE75 /* LungMetabolism.swift in Sources */,
 				850DCB1228676B4100292A94 /* Simulator.swift in Sources */,
-				850DCB232867C9A400292A94 /* GetConstants.swift in Sources */,
+				850DCB232867C9A400292A94 /* SettConstants.swift in Sources */,
 				85B56703287225DC00D2B676 /* CalculatePressures2.swift in Sources */,
-				850DCB292868E85800292A94 /* GetVariables.swift in Sources */,
+				850DCB292868E85800292A94 /* SetVariables.swift in Sources */,
 				8533A82E286E548E0077DE75 /* BrainMetabolism.swift in Sources */,
 				850DCB082867626000292A94 /* CalculateContents.swift in Sources */,
 				8533A81A286E28660077DE75 /* TissueNitrogenStores.swift in Sources */,
@@ -540,9 +540,9 @@
 				850DCAF0286745FD00292A94 /* ContentView.swift in Sources */,
 				8533A82A286E4A020077DE75 /* LungMetabolism.swift in Sources */,
 				850DCB1328676B4100292A94 /* Simulator.swift in Sources */,
-				850DCB242867C9A400292A94 /* GetConstants.swift in Sources */,
+				850DCB242867C9A400292A94 /* SettConstants.swift in Sources */,
 				85B56704287225DC00D2B676 /* CalculatePressures2.swift in Sources */,
-				850DCB2A2868E85800292A94 /* GetVariables.swift in Sources */,
+				850DCB2A2868E85800292A94 /* SetVariables.swift in Sources */,
 				8533A82F286E548E0077DE75 /* BrainMetabolism.swift in Sources */,
 				850DCB092867626000292A94 /* CalculateContents.swift in Sources */,
 				8533A81B286E28660077DE75 /* TissueNitrogenStores.swift in Sources */,
@@ -569,7 +569,7 @@
 				85BB738E287E2BC600B602EA /* VariableListView.swift in Sources */,
 				8533A808286DF3120077DE75 /* SetupCardiacOutput.swift in Sources */,
 				8533A835286E612A0077DE75 /* Ventilation.swift in Sources */,
-				850DCB2B2868E85800292A94 /* GetVariables.swift in Sources */,
+				850DCB2B2868E85800292A94 /* SetVariables.swift in Sources */,
 				8533A830286E548E0077DE75 /* BrainMetabolism.swift in Sources */,
 				850DCB0A2867626000292A94 /* CalculateContents.swift in Sources */,
 				850DCB1428676B4100292A94 /* Simulator.swift in Sources */,
@@ -588,7 +588,7 @@
 				8533A826286E376E0077DE75 /* VenousDelay.swift in Sources */,
 				8533A81C286E28660077DE75 /* TissueNitrogenStores.swift in Sources */,
 				85523189286A10A000484232 /* DebugConsoleOutput.swift in Sources */,
-				850DCB252867C9A400292A94 /* GetConstants.swift in Sources */,
+				850DCB252867C9A400292A94 /* SettConstants.swift in Sources */,
 				8533A817286E08440077DE75 /* Function.swift in Sources */,
 				85A41CD42879F13000582062 /* LoadFactorDictionary.swift in Sources */,
 				85B567002870D05A00D2B676 /* LungMetabolism2.swift in Sources */,
@@ -607,9 +607,9 @@
 				850DCB0B2867626000292A94 /* CalculateContents.swift in Sources */,
 				8533A82C286E4A020077DE75 /* LungMetabolism.swift in Sources */,
 				850DCB1528676B4100292A94 /* Simulator.swift in Sources */,
-				850DCB262867C9A400292A94 /* GetConstants.swift in Sources */,
+				850DCB262867C9A400292A94 /* SettConstants.swift in Sources */,
 				85B56706287225DC00D2B676 /* CalculatePressures2.swift in Sources */,
-				850DCB2C2868E85800292A94 /* GetVariables.swift in Sources */,
+				850DCB2C2868E85800292A94 /* SetVariables.swift in Sources */,
 				8533A831286E548E0077DE75 /* BrainMetabolism.swift in Sources */,
 				850DCAEC286745FD00292A94 /* Tests_macOSLaunchTests.swift in Sources */,
 				85BB738F287E2BC600B602EA /* VariableListView.swift in Sources */,

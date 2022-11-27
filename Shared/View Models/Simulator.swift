@@ -26,8 +26,8 @@ class  Simulator: ObservableObject {
     @Published var factors:[Int:Factor] = [:]
     
     init(){
-        human.getVariables()
-        human.getConstants()
+        human.setVariables()
+        human.setConstants()
         loadFactorDictionary()
     }
     
@@ -60,8 +60,8 @@ class  Simulator: ObservableObject {
     
     func startUp(){
         // Routine that will be called from Views to start new patient
-        human.getVariables()
-        human.getConstants()
+        human.setVariables()
+        human.setConstants()
         loadFactorDictionary()
         totalSeconds = -1
         reportOut(title:"Initial conditions before starting simulations:")
@@ -72,7 +72,7 @@ class  Simulator: ObservableObject {
     func continueSubject(){
         // Routine that will be called from Views to continue the same patient
         // DO NOT re-initialize variables of old model results will be destroyed
-        human.getConstants()
+        human.setConstants()
         totalSeconds -= 1
         simulate()
     }

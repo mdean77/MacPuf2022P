@@ -1,8 +1,8 @@
 //
-//  GetVariables.swift
+//  SetVariables.swift
 //  MacPuf2022P
 //
-//  Created by J Michael Dean on 6/26/22.
+//  Created by J Michael Dean on 6/26/22.  Revised November 27, 2022
 //
 
 import Foundation
