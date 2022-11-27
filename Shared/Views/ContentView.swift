@@ -2,22 +2,25 @@
 //  ContentView.swift
 //  Shared
 //
-//  Created by J Michael Dean on 6/25/22.
+//  Created by J Michael Dean on 6/25/22.  Revised November 27, 2022.
 //
 
 import SwiftUI
 
 struct ContentView: View {
-    @State private var patientStarted = false
-    @State private var selection: String? = nil
+
+   // @State private var selection: String? = nil
     @EnvironmentObject var simulator: Simulator
-    
     var body: some View {
         
         NavigationView{
            Form {
+               NavigationLink(destination: ConsoleView()){
+                   Text("Go to main simulation window")
+               }
+               
                 NavigationLink(destination: VariableListView()){
-                    Text("Change parameters")
+                    Text("Change model parameters")
                 }
                 
                HStack{
@@ -37,40 +40,13 @@ struct ContentView: View {
                }
               Text("Length of each simulation run (seconds)")
 
-               NavigationLink(destination: ConsoleView()){
-                   Text("Simulate")
-               }
-               simButtons
+
+               //simButtons
            }.font(.subheadline)
-                .navigationTitle("MacPuf Simulation") .buttonStyle(.bordered)
+                .navigationTitle("MacPuf Simulation Setup") .buttonStyle(.bordered)
         }
     }
 
-    
-    var simButtons: some View {
-        HStack{
-            Button{
-                simulator.startUp()
-                patientStarted = true
-            }
-        label: {
-            Text("Simulate new")
-                .font(.headline)
-        }
-        .buttonStyle(.bordered)
-        Spacer()
-            Button{
-                simulator.continueSubject()
-            }
-        label: {
-            Text("Continue same")
-                .font(.headline)
-        }.buttonStyle(.bordered)
-                .disabled(!patientStarted)
-            
-        }.padding(.horizontal)
-        
-    }
 }
 
 

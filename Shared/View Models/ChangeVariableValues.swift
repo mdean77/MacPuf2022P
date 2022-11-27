@@ -16,7 +16,7 @@ extension Simulator {
     func changeParameterValue(key: Int, value: Double)-> (){
         
         func printString()->(){
-            print("\(factors[key]!.title) changed from \(factors[key]!.current) to \(value).")
+            outputResults(additionToString: "\(factors[key]!.title) changed from \(factors[key]!.current) to \(value).")
         }
         
         func updateFactorDictionary()->(){

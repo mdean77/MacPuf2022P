@@ -10,11 +10,39 @@ import SwiftUI
 
 struct ConsoleView: View {
     @EnvironmentObject var simulator: Simulator
+    
     var body: some View {
             TextEditor(text: $simulator.consoleContentString)
                 .monospaced()
-                .font(.system(size:14))
-
+                .font(.system(size:12))
+        simButtons
+    }
+    
+    
+    var simButtons: some View {
+        HStack{
+            Button{
+                simulator.consoleContentString = ""
+                simulator.startUp()
+                simulator.patientStarted = true
+            }
+        label: {
+            Text("Simulate new")
+                .font(.headline)
+        }
+        .buttonStyle(.bordered)
+        Spacer()
+            Button{
+                simulator.continueSubject()
+            }
+        label: {
+            Text("Continue same")
+                .font(.headline)
+        }.buttonStyle(.bordered)
+                .disabled(!simulator.patientStarted)
+            
+        }.padding(.horizontal)
+        
     }
 }
 

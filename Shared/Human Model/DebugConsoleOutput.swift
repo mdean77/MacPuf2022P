@@ -22,6 +22,7 @@ extension Simulator {
         let minutes = totalSeconds / 60
         var temp = String(repeating: " ", count: 73)
         
+        let newlineIndex = temp.index(temp.startIndex, offsetBy: 0)
         let oxygenIndex = temp.index(temp.startIndex, offsetBy:po2)
         let carbonDioxideIndex = temp.index(temp.startIndex, offsetBy:pco2)
         let rateIndex = temp.index(temp.startIndex, offsetBy: rate)
@@ -31,7 +32,7 @@ extension Simulator {
         temp.replaceSubrange(carbonDioxideIndex...carbonDioxideIndex, with:"C")
         temp.replaceSubrange(rateIndex...rateIndex, with:"F")
         temp.replaceSubrange(ventIndex...ventIndex, with:"V")
-        let result = String(format:"%4d:%2d     ",minutes, seconds).appending(temp)
+        let result = String(format:"\n%4d:%2d     ",minutes, seconds).appending(temp)
         return(result)
     }
     
@@ -109,13 +110,13 @@ extension Simulator {
         return header + values
     }
     
-    func reportOut(title: String){
-        print(title)
-//        print(runReport())
-//        print(inspectionReport())
-        //print(dumpFirstSixParametersReport())
-        //print(runReport())
-//        print(dumpAllParametersReport())
-    }
+//    func reportOut(title: String){
+//        print(title)
+////        print(runReport())
+////        print(inspectionReport())
+//        //print(dumpFirstSixParametersReport())
+//        //print(runReport())
+////        print(dumpAllParametersReport())
+//    }
     
 }
