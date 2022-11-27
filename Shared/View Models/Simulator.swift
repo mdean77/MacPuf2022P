@@ -24,6 +24,7 @@ class  Simulator: ObservableObject {
     
     @Published var human = Human()
     @Published var factors:[Int:Factor] = [:]
+    @Published var consoleContentString:String = "                               Welcome to MacPuf.\n\nMacPuf is a model of the human respiratory system designed at McMaster University\nMedical School, Canada, and St. Bartholomew's Hospital Medical College, England, \nby Drs. CJ Dickinson, EJM Campbell, AS Rebuck, NL Jones, D Ingram, and K Ahmed.  \nMacPuf was created to study gas transport and exchange.  MacPuf contains simulated \nlungs, circulating blood, and tissues.  Initially MacPuf breathes at a rate and depth \ndetermined by known influences upon ventilation.\n\nEnjoy yourself and try not to hurt your new experimental volunteer (or patient!)"
     
     init(){
         human.setVariables()
@@ -36,9 +37,11 @@ class  Simulator: ObservableObject {
         // but for now this controls debugger output via print statements.
         iterations = iterations >= intervalFactor ? iterations : intervalFactor
         
-        
+       
         print("\n   Time     0     10    20    30    40    50    60    70    80    90   100   110   120")
         print("(Min:Secs)  .     .     .     .     .     .     .     .     .     .     .     .     .")
+        
+        consoleContentString.append(inspectionReport())
         
         for cycle in 0...iterations {
             
@@ -64,8 +67,9 @@ class  Simulator: ObservableObject {
         human.setConstants()
         loadFactorDictionary()
         totalSeconds = -1
-        reportOut(title:"Initial conditions before starting simulations:")
-        print(inspectionReport())
+       // reportOut(title:"Initial conditions before starting simulations:")
+      //  print(inspectionReport())
+        print(consoleContentString)
         simulate()
     }
     

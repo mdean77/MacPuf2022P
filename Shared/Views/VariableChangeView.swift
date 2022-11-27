@@ -66,6 +66,7 @@ struct VariableChangeView: View {
         } label: {Text("Cancel change")
         }.padding(.horizontal)
             .buttonStyle(.bordered)
+            .disabled(newValue == "")
         
     }
     

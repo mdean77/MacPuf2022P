@@ -120,6 +120,12 @@
 		85BB738D287E2BC600B602EA /* VariableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BB738B287E2BC600B602EA /* VariableListView.swift */; };
 		85BB738E287E2BC600B602EA /* VariableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BB738B287E2BC600B602EA /* VariableListView.swift */; };
 		85BB738F287E2BC600B602EA /* VariableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BB738B287E2BC600B602EA /* VariableListView.swift */; };
+		85D596182933DF7700EDE968 /* VariableChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BB7374287B838C00B602EA /* VariableChangeView.swift */; };
+		85D596192933DF7700EDE968 /* VariableChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BB7374287B838C00B602EA /* VariableChangeView.swift */; };
+		85D5961B2933E13100EDE968 /* ConsoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D5961A2933E13100EDE968 /* ConsoleView.swift */; };
+		85D5961C2933E13100EDE968 /* ConsoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D5961A2933E13100EDE968 /* ConsoleView.swift */; };
+		85D5961D2933E13100EDE968 /* ConsoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D5961A2933E13100EDE968 /* ConsoleView.swift */; };
+		85D5961E2933E13100EDE968 /* ConsoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D5961A2933E13100EDE968 /* ConsoleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,6 +188,7 @@
 		85BB7374287B838C00B602EA /* VariableChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableChangeView.swift; sourceTree = "<group>"; };
 		85BB7377287CD1A700B602EA /* ChangeVariableValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeVariableValues.swift; sourceTree = "<group>"; };
 		85BB738B287E2BC600B602EA /* VariableListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableListView.swift; sourceTree = "<group>"; };
+		85D5961A2933E13100EDE968 /* ConsoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,6 +339,7 @@
 				850DCAC6286745FB00292A94 /* ContentView.swift */,
 				85BB7374287B838C00B602EA /* VariableChangeView.swift */,
 				85BB738B287E2BC600B602EA /* VariableListView.swift */,
+				85D5961A2933E13100EDE968 /* ConsoleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -498,6 +506,7 @@
 				85BB7375287B838C00B602EA /* VariableChangeView.swift in Sources */,
 				85BB738C287E2BC600B602EA /* VariableListView.swift in Sources */,
 				85A41CD22879F13000582062 /* LoadFactorDictionary.swift in Sources */,
+				85D5961B2933E13100EDE968 /* ConsoleView.swift in Sources */,
 				8533A81F286E2AB90077DE75 /* TissueMetabolism.swift in Sources */,
 				8533A806286DF3120077DE75 /* SetupCardiacOutput.swift in Sources */,
 				8533A810286E02A10077DE75 /* LactateMetabolism.swift in Sources */,
@@ -533,6 +542,7 @@
 				85BB7376287B838C00B602EA /* VariableChangeView.swift in Sources */,
 				85BB738D287E2BC600B602EA /* VariableListView.swift in Sources */,
 				85A41CD32879F13000582062 /* LoadFactorDictionary.swift in Sources */,
+				85D5961C2933E13100EDE968 /* ConsoleView.swift in Sources */,
 				8533A820286E2AB90077DE75 /* TissueMetabolism.swift in Sources */,
 				8533A807286DF3120077DE75 /* SetupCardiacOutput.swift in Sources */,
 				8533A811286E02A10077DE75 /* LactateMetabolism.swift in Sources */,
@@ -571,6 +581,7 @@
 				8533A835286E612A0077DE75 /* Ventilation.swift in Sources */,
 				850DCB2B2868E85800292A94 /* SetVariables.swift in Sources */,
 				8533A830286E548E0077DE75 /* BrainMetabolism.swift in Sources */,
+				85D596182933DF7700EDE968 /* VariableChangeView.swift in Sources */,
 				850DCB0A2867626000292A94 /* CalculateContents.swift in Sources */,
 				850DCB1428676B4100292A94 /* Simulator.swift in Sources */,
 				85B5671128736ED700D2B676 /* CalculatePressures4.swift in Sources */,
@@ -579,6 +590,7 @@
 				8533A821286E2AB90077DE75 /* TissueMetabolism.swift in Sources */,
 				850DCAE0286745FD00292A94 /* Tests_iOSLaunchTests.swift in Sources */,
 				850DCADE286745FD00292A94 /* Tests_iOS.swift in Sources */,
+				85D5961D2933E13100EDE968 /* ConsoleView.swift in Sources */,
 				85B56705287225DC00D2B676 /* CalculatePressures2.swift in Sources */,
 				850DCB1728677C8500292A94 /* TestCalculateContentFunction.swift in Sources */,
 				850DCB2028677E2B00292A94 /* CalculatePressures.swift in Sources */,
@@ -603,6 +615,7 @@
 				8533A822286E2AB90077DE75 /* TissueMetabolism.swift in Sources */,
 				8533A809286DF3120077DE75 /* SetupCardiacOutput.swift in Sources */,
 				8533A813286E02A10077DE75 /* LactateMetabolism.swift in Sources */,
+				85D5961E2933E13100EDE968 /* ConsoleView.swift in Sources */,
 				8552318A286A10A000484232 /* DebugConsoleOutput.swift in Sources */,
 				850DCB0B2867626000292A94 /* CalculateContents.swift in Sources */,
 				8533A82C286E4A020077DE75 /* LungMetabolism.swift in Sources */,
@@ -613,6 +626,7 @@
 				8533A831286E548E0077DE75 /* BrainMetabolism.swift in Sources */,
 				850DCAEC286745FD00292A94 /* Tests_macOSLaunchTests.swift in Sources */,
 				85BB738F287E2BC600B602EA /* VariableListView.swift in Sources */,
+				85D596192933DF7700EDE968 /* VariableChangeView.swift in Sources */,
 				8533A81D286E28660077DE75 /* TissueNitrogenStores.swift in Sources */,
 				850DCAEA286745FD00292A94 /* Tests_macOS.swift in Sources */,
 				8533A818286E08440077DE75 /* Function.swift in Sources */,
@@ -772,7 +786,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -781,9 +795,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = edu.utah.hsc.dean.mike.MacPuf2022P;
 				PRODUCT_NAME = MacPuf2022P;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -803,7 +820,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -812,9 +829,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = edu.utah.hsc.dean.mike.MacPuf2022P;
 				PRODUCT_NAME = MacPuf2022P;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -887,11 +907,15 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4WMEP3BNE5;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.utah.hsc.dean.mike.Tests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -907,11 +931,15 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4WMEP3BNE5;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.utah.hsc.dean.mike.Tests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

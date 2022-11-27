@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import MacPuf2022P
 
 class Tests_iOSLaunchTests: XCTestCase {
 

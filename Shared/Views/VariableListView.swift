@@ -16,7 +16,8 @@ struct VariableListView: View {
 //    var changeVariables: some View {
         NavigationView{
             List{
-                Section(header: Text("Frequent parameter changes")){
+                Section(header: Text("Frequent parameter changes")
+                    .font(.headline)){
                     ForEach(1..<7){i in
                         NavigationLink(destination: VariableChangeView(index: i)){
                             HStack{
@@ -33,7 +34,8 @@ struct VariableListView: View {
                         }
                     }
                 }
-                Section(header: Text("Other parameter changes")){
+                Section(header: Text("Other parameter changes")
+                    .font(.headline)){
                     ForEach(7..<31){i in
                         NavigationLink(destination: VariableChangeView(index: i)){
                             HStack{
