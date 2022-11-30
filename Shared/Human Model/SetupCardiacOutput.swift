@@ -13,7 +13,7 @@ extension Human {
     mutating func setupCardiacOutput(){
 //        print("Stroke volume going in to cardiac output is \(STRVL).")
 //        print("Cardiac output going in to cardiac output is \(COADJ).")
-        ///  Initial set up for Macpuf FORTRAN  lines 210 through 280
+        ///  Initial set up for Macpuf FORTRAN  lines 210 through 280  This is change.
         
         //        C NEXT AUTOMATICALLY INCREASES CARDIAC OUTPUT ifO2 SUPPLIED IS LOW
          Y=RO2CT*0.056
