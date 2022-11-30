@@ -22,7 +22,6 @@ extension Simulator {
         let minutes = totalSeconds / 60
         var temp = String(repeating: " ", count: 73)
         
-        let newlineIndex = temp.index(temp.startIndex, offsetBy: 0)
         let oxygenIndex = temp.index(temp.startIndex, offsetBy:po2)
         let carbonDioxideIndex = temp.index(temp.startIndex, offsetBy:pco2)
         let rateIndex = temp.index(temp.startIndex, offsetBy: rate)

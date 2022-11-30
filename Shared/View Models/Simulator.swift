@@ -3,6 +3,7 @@
 //  MacPuf2022P
 //
 //  Created by J Michael Dean on 6/25/22.
+//  Extensive revisions November 28, 2022.
 //
 //  This is my ViewModel class which mediates between the model (Human) and the views.
 
@@ -37,13 +38,7 @@ class  Simulator: ObservableObject {
     }
     
     private func simulate(){
-        // Eventually I will want to get all output removed from the simulate function
-        // but for now this controls debugger output via print statements.
         iterations = iterations >= intervalFactor ? iterations : intervalFactor
-        
-       
-//        print("\n   Time     0     10    20    30    40    50    60    70    80    90   100   110   120")
-//        print("(Min:Secs)  .     .     .     .     .     .     .     .     .     .     .     .     .")
 
         outputResults(additionToString:"\n   Time     0     10    20    30    40    50    60    70    80    90   100   110   120\n")
         outputResults(additionToString:"(Min:Secs)  .     .     .     .     .     .     .     .     .     .     .     .     .")
@@ -54,18 +49,13 @@ class  Simulator: ObservableObject {
             human.simulate(cycle: cycle, iterations: iterations)
             totalSeconds += 1
             if cycle % intervalFactor == 0 {
-               // print(cycleReport())
                 outputResults(additionToString: cycleReport())
             }
         }
-//        print("\nConditions after \(totalSeconds) seconds of simulation:")
-//        print(runReport)
-//        print(inspectionReport())
         outputResults(additionToString: "\nConditions after \(totalSeconds) seconds of simulation:")
         outputResults(additionToString: runReport())
         outputResults(additionToString: inspectionReport())
     }
-    
     
     //MARK: INTENTION FUNCTIONS
     
@@ -75,9 +65,6 @@ class  Simulator: ObservableObject {
         human.setConstants()
         loadFactorDictionary()
         totalSeconds = -1
-       // reportOut(title:"Initial conditions before starting simulations:")
-      //  print(inspectionReport())
-        //outputResults(additionToString: consoleContentString)
         outputResults(additionToString: introduction)
         simulate()
     }
@@ -99,6 +86,13 @@ class  Simulator: ObservableObject {
     }
     
     func outputResults(additionToString:String){
+        // Print statements send output to debugger, not to the app screens on the phone.
+        // The consoleContentString contains what should be displayed in the text editor
+        // that forms the main simulation view.  So I append to that string, the string
+        // is changed, and binding changes what is shown in the view automatically.
+        //
+        // This is super cool because there is no code required that connects this
+        // routine to the text editor review.  All handled by SWIFTUI.
         print(additionToString)
         consoleContentString.append(additionToString)
     }
