@@ -10,8 +10,8 @@
 import Foundation
 
 class  Simulator: ObservableObject {
-    var iterations = 30
-    var intervalFactor = 1
+    var iterations = 360
+    var intervalFactor = 10
     var totalSeconds = 0
     var patientStarted = false
     
@@ -26,7 +26,7 @@ class  Simulator: ObservableObject {
     
     @Published var human = Human()
     @Published var factors:[Int:Factor] = [:]
-    var consoleContentString:String = ""
+    @Published var consoleContentString:String = ""
     var introduction:String = "                               Welcome to MacPuf.\n\nMacPuf is a model of the human respiratory system designed at McMaster University\nMedical School, Canada, and St. Bartholomew's Hospital Medical College, England, \nby Drs. CJ Dickinson, EJM Campbell, AS Rebuck, NL Jones, D Ingram, and K Ahmed.  \nMacPuf was created to study gas transport and exchange.  MacPuf contains simulated \nlungs, circulating blood, and tissues.  Initially MacPuf breathes at a rate and depth \ndetermined by known influences upon ventilation.\n\nEnjoy yourself and try not to hurt your new experimental volunteer (or patient!)\n"
 
     
@@ -42,30 +42,31 @@ class  Simulator: ObservableObject {
 
         outputResults(additionToString:"\n   Time     0     10    20    30    40    50    60    70    80    90   100   110   120\n")
         outputResults(additionToString:"(Min:Secs)  .     .     .     .     .     .     .     .     .     .     .     .     .")
-       // consoleContentString.append(inspectionReport())
         
         for cycle in 0...iterations {
-            
             human.simulate(cycle: cycle, iterations: iterations)
             totalSeconds += 1
+
             if cycle % intervalFactor == 0 {
                 outputResults(additionToString: cycleReport())
             }
         }
+        
         outputResults(additionToString: "\nConditions after \(totalSeconds) seconds of simulation:")
         outputResults(additionToString: runReport())
-        outputResults(additionToString: inspectionReport())
     }
     
     //MARK: INTENTION FUNCTIONS
     
     func startUp(){
         // Routine that will be called from Views to start new patient
+        consoleContentString = ""
         human.setVariables()
         human.setConstants()
         loadFactorDictionary()
         totalSeconds = -1
         outputResults(additionToString: introduction)
+        patientStarted = true
         simulate()
     }
     
@@ -75,6 +76,14 @@ class  Simulator: ObservableObject {
         human.setConstants()
         totalSeconds -= 1
         simulate()
+    }
+    
+    func inspectSubject(){
+        outputResults(additionToString: inspectionReport())
+    }
+    
+    func dumpParameters(){
+        outputResults(additionToString: dumpAllParametersReport())
     }
     
     func changeDurationSeconds(duration:Int){

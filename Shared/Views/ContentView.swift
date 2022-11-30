@@ -3,17 +3,16 @@
 //  Shared
 //
 //  Created by J Michael Dean on 6/25/22.  Revised November 27, 2022.
-//
+//  Changed to new navigation stack.
 
 import SwiftUI
 
 struct ContentView: View {
 
-   // @State private var selection: String? = nil
     @EnvironmentObject var simulator: Simulator
     var body: some View {
         
-        NavigationView{
+        NavigationStack{
            Form {
                NavigationLink(destination: ConsoleView()){
                    Text("Go to main simulation window")
@@ -39,9 +38,6 @@ struct ContentView: View {
                    Text("Display frequency")
                }
               Text("Length of each simulation run (seconds)")
-
-
-               //simButtons
            }.font(.subheadline)
                 .navigationTitle("MacPuf Simulation Setup") .buttonStyle(.bordered)
         }

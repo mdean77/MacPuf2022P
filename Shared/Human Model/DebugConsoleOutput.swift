@@ -86,20 +86,20 @@ extension Simulator {
         return(result)
     }
     func dumpAllParametersReport() -> String{
-        let row1 =  String(format:"\n%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f",human.FIO2,human.FIC2,human.CO,human.PD,human.FADM,human.BULLA,human.VLUNG,human.ELAST,human.VADM,human.AZ)
-        let row2 =  String(format:"\n%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f",human.BZ,human.CZ,human.BARPR,human.TEMP,human.TRQ,human.TC2MT,human.TVOL,human.HB,human.PCV,human.VBLVL)
-        let row3 =  String(format:"\n%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f",human.ADDC3,human.BC3AJ,human.DPG,human.PR,human.FITNS,human.SPACE,human.COMAX,human.SHUNT,human.VC,human.PEEP)
-        let row4 =  String(format:"\n%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f",human.VO2CT,human.RCOAJ,human.RPH,human.VPH,human.FVENT,human.BPH,human.BAGO,human.BAGC,human.AO2MT,human.AC2MT)
-        let row5 =  String(format:"\n%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f",human.AO2PR,human.AC2PR,human.DPH,human.XLACT,human.BO2PR,human.BC2PR,human.TIDVL,human.RRATE,human.RO2CT,human.VC2MT)
-        let row6 =  String(format:"\n%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f",human.DVENT,human.SVENT,human.PC2CT,human.PO2CT,human.TO2CT,human.TC2CT,human.BO2CT,human.BC2CT,human.TPH,human.RC3CT)
-        let row7 =  String(format:"\n%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f",human.VC2CT,human.RO2MT,human.RC2MT,human.XRESP,human.AN2MT,human.BO2MT,human.BC2MT,human.CBF,human.PC,human.DSPAC)
-        let row8 =  String(format:"\n%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f",human.REFLV,human.RO2PR,human.CONSO,human.RC2PR,human.PG,human.PJ,human.TND,human.RC2CT,human.QB,human.PW)
-        let row9 =  String(format:"\n%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f",human.FT,human.CONOM,human.BUBBL,human.TC2RF,human.TC3MT,human.VC3MT,human.TC3CT,human.VC3CT,human.TLAMT,human.RLACT)
-        let row10 =  String(format:"\n%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f",human.BC3CT,human.BO2AD,human.COADJ,human.EO2CT,human.TO2MT,human.TO2PR,human.TC2PR,human.VO2MT,human.AVENT,human.PL)
-        let row11 =  String(format:"\n%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f",human.EC2CT,human.TN2MT,human.TN2PR,human.FEV,human.SN2PR,human.EN2CT,human.UN2MT,human.RN2MT,human.HRATE,human.STRVL)
-        let row12 =  String(format:"\n%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f",human.TC3AJ,human.SN2MT,human.QA,human.RVADM,human.XDSPA,human.BAG,human.XMALE,human.HT,human.WT,human.AGE)
+        let row1 =  String(format:"\n(001) %8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f (10)",human.FIO2,human.FIC2,human.CO,human.PD,human.FADM,human.BULLA,human.VLUNG,human.ELAST,human.VADM,human.AZ)
+        let row2 =  String(format:"\n(011) %8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f (20)",human.BZ,human.CZ,human.BARPR,human.TEMP,human.TRQ,human.TC2MT,human.TVOL,human.HB,human.PCV,human.VBLVL)
+        let row3 =  String(format:"\n(021) %8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f (30)",human.ADDC3,human.BC3AJ,human.DPG,human.PR,human.FITNS,human.SPACE,human.COMAX,human.SHUNT,human.VC,human.PEEP)
+        let row4 =  String(format:"\n(031) %8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f (40)",human.VO2CT,human.RCOAJ,human.RPH,human.VPH,human.FVENT,human.BPH,human.BAGO,human.BAGC,human.AO2MT,human.AC2MT)
+        let row5 =  String(format:"\n(041) %8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f (50)",human.AO2PR,human.AC2PR,human.DPH,human.XLACT,human.BO2PR,human.BC2PR,human.TIDVL,human.RRATE,human.RO2CT,human.VC2MT)
+        let row6 =  String(format:"\n(051) %8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f (60)",human.DVENT,human.SVENT,human.PC2CT,human.PO2CT,human.TO2CT,human.TC2CT,human.BO2CT,human.BC2CT,human.TPH,human.RC3CT)
+        let row7 =  String(format:"\n(061) %8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f (70)",human.VC2CT,human.RO2MT,human.RC2MT,human.XRESP,human.AN2MT,human.BO2MT,human.BC2MT,human.CBF,human.PC,human.DSPAC)
+        let row8 =  String(format:"\n(071) %8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f (80)",human.REFLV,human.RO2PR,human.CONSO,human.RC2PR,human.PG,human.PJ,human.TND,human.RC2CT,human.QB,human.PW)
+        let row9 =  String(format:"\n(081) %8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f (90)",human.FT,human.CONOM,human.BUBBL,human.TC2RF,human.TC3MT,human.VC3MT,human.TC3CT,human.VC3CT,human.TLAMT,human.RLACT)
+        let row10 =  String(format:"\n(091) %8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f (100)",human.BC3CT,human.BO2AD,human.COADJ,human.EO2CT,human.TO2MT,human.TO2PR,human.TC2PR,human.VO2MT,human.AVENT,human.PL)
+        let row11 =  String(format:"\n(101) %8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f (110)",human.EC2CT,human.TN2MT,human.TN2PR,human.FEV,human.SN2PR,human.EN2CT,human.UN2MT,human.RN2MT,human.HRATE,human.STRVL)
+        let row12 =  String(format:"\n(110) %8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f (120)\n",human.TC3AJ,human.SN2MT,human.QA,human.RVADM,human.XDSPA,human.BAG,human.XMALE,human.HT,human.WT,human.AGE)
 
-        return row1+row2+row3+row4+row5+row6+row7+row8+row9+row10+row11+row12
+        return "\nParameter dump:" + row1+row2+row3+row4+row5+row6+row7+row8+row9+row10+row11+row12
     }
     
     func debugVariablesReport1() -> String{

@@ -10,11 +10,10 @@ import SwiftUI
 
 struct ConsoleView: View {
     @EnvironmentObject var simulator: Simulator
-    
     var body: some View {
-            TextEditor(text: $simulator.consoleContentString)
-                .monospaced()
-                .font(.system(size:12))
+        TextEditor(text: $simulator.consoleContentString)
+            .monospaced()
+            .font(.system(size:12))
         simButtons
     }
     
@@ -22,23 +21,37 @@ struct ConsoleView: View {
     var simButtons: some View {
         HStack{
             Button{
-                simulator.consoleContentString = ""
                 simulator.startUp()
-                simulator.patientStarted = true
+            } label: {
+                Text("Simulate new")
+                    .font(.headline)
             }
-        label: {
-            Text("Simulate new")
-                .font(.headline)
-        }
-        .buttonStyle(.bordered)
-        Spacer()
-            Button{
-                simulator.continueSubject()
-            }
-        label: {
-            Text("Continue same")
-                .font(.headline)
-        }.buttonStyle(.bordered)
+            .buttonStyle(.bordered)
+            
+            //Spacer()
+            
+            Group{
+                Button{
+                    simulator.continueSubject()
+                } label: {
+                    Text("Continue same")
+                        .font(.headline)
+                }
+                
+                Button{
+                    simulator.inspectSubject()
+                } label: {
+                    Text("Inspect")
+                        .font(.headline)
+                }
+                
+                Button{
+                    simulator.dumpParameters()
+                } label: {
+                    Text("Dump Parameters")
+                        .font(.headline)
+                }
+            }.buttonStyle(.bordered)
                 .disabled(!simulator.patientStarted)
             
         }.padding(.horizontal)
