@@ -5,3 +5,5 @@ This project is an adaptation of MacPUF, originally published in 1977 by C.J. Di
 To preserve the legacy of this program, I have included the original FORTRAN source code for the reader's interest.
 
 The current (November 2022) code base successfully executes on iPhones;  I have not fleshed out the iPad platform and have not begun work on the MacOS version.
+
+The evolution of computer performance is astounding.  The original program processed 10 iterations per second on a PDP 11/45 with a floating point processor in 1977;  my iPhone processes 100,000 iterations per second.  I may institute a time delay in the output because part of the charm of the educational experience was to see the effects of user interactions play out through the teletype machines;  the iPhone version is instantaneous and the user may not realize that the simulator has executed their intervention! 
