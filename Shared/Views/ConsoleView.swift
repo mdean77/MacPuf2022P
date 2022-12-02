@@ -37,6 +37,7 @@ struct ConsoleView: View {
                     Text("Continue same")
                         .font(.headline)
                 }
+                .disabled(!simulator.alive)
                 
                 Button{
                     simulator.inspectSubject()

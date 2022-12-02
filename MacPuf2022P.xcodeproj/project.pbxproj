@@ -90,6 +90,10 @@
 		85523188286A10A000484232 /* DebugConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85523186286A10A000484232 /* DebugConsoleOutput.swift */; };
 		85523189286A10A000484232 /* DebugConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85523186286A10A000484232 /* DebugConsoleOutput.swift */; };
 		8552318A286A10A000484232 /* DebugConsoleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85523186286A10A000484232 /* DebugConsoleOutput.swift */; };
+		8559F4062939689400B87CFD /* Symptoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8559F4052939689400B87CFD /* Symptoms.swift */; };
+		8559F4072939689400B87CFD /* Symptoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8559F4052939689400B87CFD /* Symptoms.swift */; };
+		8559F4082939689400B87CFD /* Symptoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8559F4052939689400B87CFD /* Symptoms.swift */; };
+		8559F4092939689400B87CFD /* Symptoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8559F4052939689400B87CFD /* Symptoms.swift */; };
 		85A41CD22879F13000582062 /* LoadFactorDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A41CD12879F13000582062 /* LoadFactorDictionary.swift */; };
 		85A41CD32879F13000582062 /* LoadFactorDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A41CD12879F13000582062 /* LoadFactorDictionary.swift */; };
 		85A41CD42879F13000582062 /* LoadFactorDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A41CD12879F13000582062 /* LoadFactorDictionary.swift */; };
@@ -178,6 +182,7 @@
 		8533A82D286E548E0077DE75 /* BrainMetabolism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainMetabolism.swift; sourceTree = "<group>"; };
 		8533A832286E612A0077DE75 /* Ventilation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ventilation.swift; sourceTree = "<group>"; };
 		85523186286A10A000484232 /* DebugConsoleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugConsoleOutput.swift; sourceTree = "<group>"; };
+		8559F4052939689400B87CFD /* Symptoms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symptoms.swift; sourceTree = "<group>"; };
 		85A41CC9287794B900582062 /* DictFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictFile.swift; sourceTree = "<group>"; };
 		85A41CD12879F13000582062 /* LoadFactorDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFactorDictionary.swift; sourceTree = "<group>"; };
 		85B566FD2870D05A00D2B676 /* LungMetabolism2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LungMetabolism2.swift; sourceTree = "<group>"; };
@@ -328,6 +333,7 @@
 			children = (
 				850DCB1128676B4100292A94 /* Simulator.swift */,
 				85A41CD12879F13000582062 /* LoadFactorDictionary.swift */,
+				8559F4052939689400B87CFD /* Symptoms.swift */,
 				85BB7377287CD1A700B602EA /* ChangeVariableValues.swift */,
 			);
 			path = "View Models";
@@ -517,6 +523,7 @@
 				850DCB232867C9A400292A94 /* SettConstants.swift in Sources */,
 				85B56703287225DC00D2B676 /* CalculatePressures2.swift in Sources */,
 				850DCB292868E85800292A94 /* SetVariables.swift in Sources */,
+				8559F4062939689400B87CFD /* Symptoms.swift in Sources */,
 				8533A82E286E548E0077DE75 /* BrainMetabolism.swift in Sources */,
 				850DCB082867626000292A94 /* CalculateContents.swift in Sources */,
 				8533A81A286E28660077DE75 /* TissueNitrogenStores.swift in Sources */,
@@ -553,6 +560,7 @@
 				850DCB242867C9A400292A94 /* SettConstants.swift in Sources */,
 				85B56704287225DC00D2B676 /* CalculatePressures2.swift in Sources */,
 				850DCB2A2868E85800292A94 /* SetVariables.swift in Sources */,
+				8559F4072939689400B87CFD /* Symptoms.swift in Sources */,
 				8533A82F286E548E0077DE75 /* BrainMetabolism.swift in Sources */,
 				850DCB092867626000292A94 /* CalculateContents.swift in Sources */,
 				8533A81B286E28660077DE75 /* TissueNitrogenStores.swift in Sources */,
@@ -586,6 +594,7 @@
 				850DCB1428676B4100292A94 /* Simulator.swift in Sources */,
 				85B5671128736ED700D2B676 /* CalculatePressures4.swift in Sources */,
 				8533A812286E02A10077DE75 /* LactateMetabolism.swift in Sources */,
+				8559F4082939689400B87CFD /* Symptoms.swift in Sources */,
 				8533A80D286DF7180077DE75 /* ArterialPool.swift in Sources */,
 				8533A821286E2AB90077DE75 /* TissueMetabolism.swift in Sources */,
 				850DCAE0286745FD00292A94 /* Tests_iOSLaunchTests.swift in Sources */,
@@ -626,6 +635,7 @@
 				8533A831286E548E0077DE75 /* BrainMetabolism.swift in Sources */,
 				850DCAEC286745FD00292A94 /* Tests_macOSLaunchTests.swift in Sources */,
 				85BB738F287E2BC600B602EA /* VariableListView.swift in Sources */,
+				8559F4092939689400B87CFD /* Symptoms.swift in Sources */,
 				85D596192933DF7700EDE968 /* VariableChangeView.swift in Sources */,
 				8533A81D286E28660077DE75 /* TissueNitrogenStores.swift in Sources */,
 				850DCAEA286745FD00292A94 /* Tests_macOS.swift in Sources */,

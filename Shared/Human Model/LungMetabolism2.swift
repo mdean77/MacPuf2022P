@@ -90,11 +90,17 @@ extension Human {
         AO2PR = dampChange(Y+(AO2PR-Y)*V, oldValue: AO2PR, dampConstant: X)
         //AC2PR=DAMP((Z+(PC2-Z)*V),AC2PR,X)
         AC2PR = dampChange(Z+(AC2PR-Z)*V, oldValue: AC2PR, dampConstant: X)
-        if AO2PR < 0 || AC2PR < 0 {
-            print("We have negative pressures in the lungs, patient dead.")
+        if AO2PR < E || AC2PR < E {
+            print("\nWe have negative pressures in the lungs, arithmetic error line 94.\n")
         }
-        PC = QB/QA
+        if QA != 0 {
+            PC = QB/QA
+        }
+
         X = VC3MT*c1+c3*(AC2PR - 40.0)
+                if X < E {
+                    print("\nPatient is dead (arithmetic error) in lungs with VC3MT = \(VC3MT) and AC2PR = \(AC2PR).\n")
+                }
         Y = calculatePh(X, CO2: AC2PR)
         (PO2CT, PC2CT, SAT) = calculateContents(pO2: AO2PR, pCO2: AC2PR, pH: TPH, temperature: TEMP, DPG: DPG, Hct: PCV/100, Hgb: HB)
         

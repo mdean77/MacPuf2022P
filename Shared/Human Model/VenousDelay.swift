@@ -41,7 +41,7 @@ extension Human {
         INDEX=N
         
         VC3CT=VC3MT*c1+Y
-        if VC3CT <= 0 {print("The patient is dead in venousDelay. VC3CT = \(VC3CT)")} //MARK: Dead patient again
+        if VC3CT <= 0 {print("\nArithmetic error in venousDelay codeline 44. VC3CT = \(VC3CT)")} //MARK: Dead patient again
         VPH = calculatePh(VC3CT, CO2: TC2PR)
             
     }

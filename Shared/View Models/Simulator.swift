@@ -10,10 +10,11 @@
 import Foundation
 
 class  Simulator: ObservableObject {
-    var iterations = 360
+    var iterations = 180
     var intervalFactor = 10
     var totalSeconds = 0
     var patientStarted = false
+    var alive = false
     
     struct Factor {
         let title:String
@@ -44,15 +45,15 @@ class  Simulator: ObservableObject {
         outputResults(additionToString:"(Min:Secs)  .     .     .     .     .     .     .     .     .     .     .     .     .")
         
         for cycle in 0...iterations {
-            human.simulate(cycle: cycle, iterations: iterations)
-            totalSeconds += 1
-
-            if cycle % intervalFactor == 0 {
-                outputResults(additionToString: cycleReport())
+            if alive {
+                human.simulate(cycle: cycle, iterations: iterations)
+                totalSeconds += 1
+                if cycle % intervalFactor == 0 {
+                    outputResults(additionToString: cycleReport())
+                }
+                observeForArithmeticError()
             }
         }
-        
-        outputResults(additionToString: "\nConditions after \(totalSeconds) seconds of simulation:")
         outputResults(additionToString: runReport())
     }
     
@@ -67,6 +68,7 @@ class  Simulator: ObservableObject {
         totalSeconds = -1
         outputResults(additionToString: introduction)
         patientStarted = true
+        alive = true
         simulate()
     }
     

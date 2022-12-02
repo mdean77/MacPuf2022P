@@ -76,7 +76,7 @@ extension Human{
         //        C LIMITS SET TO PREVENT ARITHMETIC ERRORS
         RC3CT=c3*(RC2PR-40.0)+VC3MT*c1
         //              if(RC3CT) 940,940,410
-        if RC3CT <= 0 {print("The patient is dead in arterialPool. RC3CT = \(RC3CT)")}
+        if RC3CT <= 0 {print("\nArithmetic error in arterialPool codeline 79. RC3CT = \(RC3CT)\n")}
         // MARK: We must take care of death.
         //        C ENTER ART.BICARB.,CALC.PH AND ENTER VALUE INTO RPH (ART. PH)
         //          410 RPH=PHFNC(RC3CT,RC2PR)

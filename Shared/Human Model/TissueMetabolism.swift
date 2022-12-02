@@ -39,7 +39,7 @@ extension Human{
         //690
         TC3CT=TC3MT*c13+Y
         //if(TC3CT) 940,940,700
-        if TC3CT <= 0 {print("Patient is dead in tissue metabolism. TC3CT = \(TC3CT)")}  //MARK: Dead patient routine needed.
+        if TC3CT <= 0 {print("\nArithmetic error in tissue metabolism codeline 42. TC3CT = \(TC3CT)")}  //MARK: Dead patient routine needed.
         TPH = calculatePh(TC3CT, CO2: TC2PR)
         // 700 TPH=PHFNC(TC3CT,TC2PR)
         //CALL GASES (TO2PR,TC2PR,TO2CT,TC2CT,TPH,SAT)

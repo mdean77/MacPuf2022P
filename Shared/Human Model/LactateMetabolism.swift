@@ -22,8 +22,8 @@ extension Human {
         //500
         TO2MT=TO2MT+FTCOC*(EO2CT-TO2CT)-U+XLACT
         //        C SET LIMITS TO PREVENT ARITH.ERRORS
-        if TO2MT < E {print("The patient is dead in lactate metabolism. TO2MT = \(TO2MT)\n")
-            print("U, FT, SVENT, c4, c5, COADJ and c7: \(U),\(FT),\(SVENT),\(c4),\(c5),\(COADJ),\(c7)")
+        if TO2MT < E {print("\nArithmetic error in lactate metabolism codeline 25. TO2MT = \(TO2MT)\n")
+            print("U, FT, SVENT, c4, c5, COADJ and c7: \(U),\(FT),\(SVENT),\(c4),\(c5),\(COADJ),\(c7)\n")
             
             
         }  //MARK: Patient death needs to be handled

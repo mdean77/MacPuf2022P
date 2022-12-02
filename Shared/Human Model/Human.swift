@@ -49,6 +49,7 @@ struct Human {
     let E = 0.0000001
     var (FTCO, FTCOC, U, V,Y, X,W,Z, SAT, FY) = zeroes
     var INDEX:Int = 1
+    var macpufDead = false
     
     mutating func simulate(cycle:Int, iterations:Int){
         if PL > 1.5 {
