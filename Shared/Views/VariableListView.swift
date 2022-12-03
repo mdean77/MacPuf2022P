@@ -62,5 +62,6 @@ struct VariableListView_Previews: PreviewProvider {
     static var previews: some View {
         VariableListView()
             .environmentObject(Simulator())
+            .previewInterfaceOrientation(.landscapeLeft)
     }
 }

@@ -12,7 +12,8 @@ struct VariableChangeView: View {
     let index:Int
     @EnvironmentObject var simulator: Simulator
     @State var newValue:String = ""
-    
+    @State var showInfo = false
+    @State var showAlert = false
     
     func checkValue(index:Int)-> Bool{
         // Check new value against limits in the dictionary
@@ -23,12 +24,12 @@ struct VariableChangeView: View {
     
     var body: some View {
         VStack(alignment: .center){
-            Text(simulator.factors[index]!.title)
-                .font(.subheadline)
-            Text("Reference value: \(simulator.factors[index]!.reference,specifier:simulator.factors[index]!.format)")
-                .font(.caption)
-            Text("Current Value: \(simulator.factors[index]!.current,specifier: simulator.factors[index]!.format)")
-                .font(.caption)
+                    Text(simulator.factors[index]!.title)
+                        .font(.subheadline)
+                    Text("Reference value: \(simulator.factors[index]!.reference,specifier:simulator.factors[index]!.format)")
+                        .font(.caption)
+                    Text("Current Value: \(simulator.factors[index]!.current,specifier: simulator.factors[index]!.format)")
+                        .font(.caption)
             HStack{
                 Text("Change value:").padding(.leading)
                 TextField("Enter new value", text: $newValue)
@@ -44,6 +45,7 @@ struct VariableChangeView: View {
                 saveButton
                 cancelButton
                 revertToReferenceButton
+                infoButton
             }.padding(.top)
         }
     }
@@ -51,13 +53,22 @@ struct VariableChangeView: View {
     var saveButton: some View {
         Button {
             if checkValue(index: index){
-                simulator.changeParameterValue(key: index, value: Double(newValue) ?? simulator.factors[index]!.current)}
-            newValue = ""
+                simulator.changeParameterValue(key: index, value: Double(newValue) ?? simulator.factors[index]!.current)
+                newValue = ""
+            } else {
+                    showAlert.toggle()
+                }
+            //newValue = ""
         } label: {Text("Save new value")
             
-        }.padding(.horizontal)
-            .buttonStyle(.bordered)
-            
+        }
+        .padding(.horizontal)
+        .buttonStyle(.bordered)
+        .alert(isPresented: $showAlert, content: {
+            Alert(title:Text("To change \(simulator.factors[index]!.title)") ,message:Text("Please enter a numerical value between \(simulator.factors[index]!.lower,specifier:simulator.factors[index]!.format) and \(simulator.factors[index]!.upper,specifier:simulator.factors[index]!.format).  The value is unchanged."))
+        })
+        
+        
     }
     
     var cancelButton: some View {
@@ -75,6 +86,14 @@ struct VariableChangeView: View {
             simulator.changeParameterValue(key: index, value: simulator.factors[index]!.reference)
             newValue = ""
         } label: {Text("Revert to reference value")
+        }.padding(.horizontal)
+            .buttonStyle(.bordered)
+    }
+    
+    var infoButton: some View {
+        Button {
+            showInfo.toggle()
+        } label: {Text("Info")
         }.padding(.horizontal)
             .buttonStyle(.bordered)
     }
