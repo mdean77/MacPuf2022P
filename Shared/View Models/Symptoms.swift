@@ -15,15 +15,27 @@ extension Simulator {
     /// Also provides information for the view to update by appending to the consoleContentString that
     /// the patient has died..
     ///
-
     func observeForDeath() {
         if human.TPH < 6.63  {
-            outputResults(additionToString: "\nYour patient has died ...\n")
-            alive = false        }
-    if human.TPH > 7.8 {
-        
-    }
-        // This is temporary - need to handle additional variables
+            outputResults(additionToString: "\nYour patient has died with lethal acidosis  (pH = \(human.TPH).\n")
+            alive = false
+        }
+        if human.TPH > 7.80  {
+            outputResults(additionToString: "\nYour patient has died with lethal alkalosis  (pH = \(human.TPH).\n")
+            alive = false
+        }
+        if human.PG > 7 {
+            outputResults(additionToString: "\nYour patient has suffered severe anoxemia leading to braind death.\n")
+                          alive = false
+        }
+        if human.BUBBL > 280 {
+            outputResults(additionToString: "\nYour patient's brain is irrecoverably full of gas bubbles.\n")
+            alive = false
+        }
+        if human.PD > 290 && human.TPH < 7.10 { // intolerable acidosis during exercise
+            outputResults(additionToString: "\n.... I can't go on ....\n")
+            alive = false
+        }
     }
     
     /// Observes the human model for parameter values that should lead to patient symptoms,

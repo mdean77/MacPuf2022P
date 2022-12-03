@@ -31,7 +31,7 @@ extension Human {
          VBLVL = 3000.00          // MacPuf variable VBLVL  Factor 20
          ADDC3 = 0.0              // MacPuf variable ADDC3  Factor 21
          BC3AJ = 0.0              //BC3AJ Factor 22
-         DPG = 3.8                // DPG Factor 23
+         DPG = 3.7843                // DPG Factor 23
          PR = 100.0               //  PR  Factor 24  - same as ventilatory coupling
          FITNS = 33.0             // FITNS  Factor 25
          SPACE = 0.4000           // % of respiratory cycle spent in inspiration SPACE Factor 26
