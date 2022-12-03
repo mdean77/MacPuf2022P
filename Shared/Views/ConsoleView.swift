@@ -17,7 +17,6 @@ struct ConsoleView: View {
         simButtons
     }
     
-    
     var simButtons: some View {
         HStack{
             Button{

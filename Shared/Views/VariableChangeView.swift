@@ -24,12 +24,12 @@ struct VariableChangeView: View {
     
     var body: some View {
         VStack(alignment: .center){
-                    Text(simulator.factors[index]!.title)
-                        .font(.subheadline)
-                    Text("Reference value: \(simulator.factors[index]!.reference,specifier:simulator.factors[index]!.format)")
-                        .font(.caption)
-                    Text("Current Value: \(simulator.factors[index]!.current,specifier: simulator.factors[index]!.format)")
-                        .font(.caption)
+            Text(simulator.factors[index]!.title)
+                .font(.subheadline)
+            Text("Reference value: \(simulator.factors[index]!.reference,specifier:simulator.factors[index]!.format)")
+                .font(.caption)
+            Text("Current Value: \(simulator.factors[index]!.current,specifier: simulator.factors[index]!.format)")
+                .font(.caption)
             HStack{
                 Text("Change value:").padding(.leading)
                 TextField("Enter new value", text: $newValue)
@@ -56,8 +56,9 @@ struct VariableChangeView: View {
                 simulator.changeParameterValue(key: index, value: Double(newValue) ?? simulator.factors[index]!.current)
                 newValue = ""
             } else {
-                    showAlert.toggle()
-                }
+                showAlert.toggle()
+                //newValue = ""
+            }
             //newValue = ""
         } label: {Text("Save new value")
             
@@ -65,9 +66,10 @@ struct VariableChangeView: View {
         .padding(.horizontal)
         .buttonStyle(.bordered)
         .alert(isPresented: $showAlert, content: {
-            Alert(title:Text("To change \(simulator.factors[index]!.title)") ,message:Text("Please enter a numerical value between \(simulator.factors[index]!.lower,specifier:simulator.factors[index]!.format) and \(simulator.factors[index]!.upper,specifier:simulator.factors[index]!.format).  The value is unchanged."))
+            Alert(title:Text("To change \(simulator.factors[index]!.title)") ,message:Text("Please enter a numerical value between \(simulator.factors[index]!.lower,specifier:simulator.factors[index]!.format) and \(simulator.factors[index]!.upper,specifier:simulator.factors[index]!.format).  The value is unchanged.")
+            )
+            
         })
-        
         
     }
     
@@ -96,7 +98,44 @@ struct VariableChangeView: View {
         } label: {Text("Info")
         }.padding(.horizontal)
             .buttonStyle(.bordered)
+            .sheet(isPresented: $showInfo, content:{
+                infoView
+            })
     }
+    
+    var infoView:  some View {
+        VStack{
+            VStack(alignment: .center){
+                
+                Text("\(simulator.factors[index]!.title)")
+                    .font(.title)
+                
+                Text("\nReference value: \(simulator.factors[index]!.reference,specifier:simulator.factors[index]!.format)")
+                    .font(.subheadline)
+                Text("Current Value: \(simulator.factors[index]!.current,specifier: simulator.factors[index]!.format)")
+                    .font(.subheadline)
+            }
+            
+            VStack(alignment: .leading){
+                Text("\nValid values for this parameter range from \(simulator.factors[index]!.lower,specifier:simulator.factors[index]!.format) to \(simulator.factors[index]!.upper,specifier:simulator.factors[index]!.format).")
+                Text("\n\(simulator.factors[index]!.information)")
+            }
+            
+            HStack(alignment: .bottom) {
+                Spacer()
+                Button(action: {
+                    showInfo.toggle()
+                }, label: {
+                    Image(systemName: "xmark")
+                        .font(.largeTitle)
+                        .padding(20)
+                }
+                )}
+        }
+    }
+    
+    
+    
 }
 
 struct VariableChangeView_Previews: PreviewProvider {

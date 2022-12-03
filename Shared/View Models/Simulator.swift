@@ -23,6 +23,7 @@ class  Simulator: ObservableObject {
         var format:String
         var lower:Double        //Lower acceptable limit for changed parameter
         var upper:Double        //Upper acceptable limit for changed parameter
+        var information:String
     }
     
     @Published var human = Human()
