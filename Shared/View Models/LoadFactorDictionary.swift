@@ -30,24 +30,29 @@ extension Simulator {
                             of exercise fitness or with conditions that increase metabolic rate.
                             """)
         factors[4] = Factor(title: "Metabolic rate, % normal",reference: 100, current: human.PD,format: "%.0f", lower:0, upper:16000
-                            , information: "Information")
+                            , information: """
+                            "Increase to simulate exercise, for example, and decrease to simulate clinical interventions such as \
+                            anesthesia, barbiturate coma, etc.
+                            """)
         factors[5] = Factor(title: "Extra R-->L shunt, % cardiac output", reference: 0.0, current: human.FADM,format: "%.0f", lower:0, upper:90
-                            , information: "Information")
-        factors[6] = Factor(title: "Extra dead space above normal, ml", reference: 0, current: human.BULLA,format: "%.0f", lower:-200, upper:16000
-                            , information: "Information")
-        factors[7] = Factor(title: "Lung volume (end expiratory), ml",reference: 3000, current: human.VLUNG,format: "%.0f", lower:0, upper:16000
+                            , information: """
+                            Fixed shunt, such as occurs with cyanotic congenital heart conditions.
+                            """)
+        factors[6] = Factor(title: "Extra dead space above normal, ml", reference: 0, current: human.BULLA,format: "%.0f", lower:-200, upper:1000
+                            , information: "Adjust this parameter as desired to change extra dead space.  Particularly useful when combined with artificial ventilation.")
+        factors[7] = Factor(title: "Lung volume (end expiratory), ml",reference: 3000, current: human.VLUNG,format: "%.0f", lower:0, upper:6000
                             , information: "Information")
         factors[8] = Factor(title: "Lung elastance, cm H20/liter", reference: 5, current: human.ELAST,format: "%.1f", lower:1, upper:90
                             , information: "Information")
         factors[9] = Factor(title: "Venous admixture effect, %cardiac output", reference: 3, current: human.VADM,format: "%.0f", lower:0, upper:90
                             , information: "Information")
-        factors[10] = Factor(title: "Vent response to CO2 or H+, % normal",reference: 100, current: human.AZ,format: "%.0f", lower:0, upper:16000
+        factors[10] = Factor(title: "Vent response to CO2 or H+, % normal",reference: 100, current: human.AZ,format: "%.0f", lower:0, upper:500
                              , information: "Information")
-        factors[11] = Factor(title: "Vent response to hypoxia, % normal", reference: 100, current: human.BZ,format: "%.0f", lower:0, upper:16000
+        factors[11] = Factor(title: "Vent response to hypoxia, % normal", reference: 100, current: human.BZ,format: "%.0f", lower:0, upper:500
                              , information: "Information")
-        factors[12] = Factor(title: "Central neurogenic vent drive, % normal", reference: 100, current: human.CZ,format: "%.0f", lower:0, upper:16000
+        factors[12] = Factor(title: "Central neurogenic vent drive, % normal", reference: 100, current: human.CZ,format: "%.0f", lower:0, upper:500
                              , information: "Information")
-        factors[13] = Factor(title: "Total barometric pressure, mm Hg",reference: 760, current: human.BARPR,format: "%.0f", lower:0, upper:16000
+        factors[13] = Factor(title: "Total barometric pressure, mm Hg",reference: 760, current: human.BARPR,format: "%.0f", lower:0, upper:3500
                              , information: "Information")
         factors[14] = Factor(title: "Body temperature, degrees Centigrade", reference: 37, current: human.TEMP,format: "%.1f", lower:25, upper:44
                              , information: "Information")

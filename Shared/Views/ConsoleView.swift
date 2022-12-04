@@ -11,11 +11,35 @@ import SwiftUI
 struct ConsoleView: View {
     @EnvironmentObject var simulator: Simulator
     var body: some View {
+        
         TextEditor(text: $simulator.consoleContentString)
             .monospaced()
             .font(.system(size:12))
         simButtons
     }
+        
+        func render() -> URL {
+            let renderer = ImageRenderer(content:
+                                            Text(simulator.consoleContentString)
+                .monospaced()
+                .font(.system(size:8)))
+
+            let url = URL.documentsDirectory.appending(path: "output.pdf")
+            renderer.render{size, context in
+                var box = CGRect(x:0, y:0, width:size.width, height:size.height)
+                guard let pdf = CGContext(url as CFURL, mediaBox: &box, nil)
+                else {
+                    return
+                }
+                //pdf.beginPDFPage(nil)
+                pdf.beginPDFPage(["setTopMargin":50] as CFDictionary)
+                context(pdf)
+                pdf.endPDFPage()
+                pdf.closePDF()
+            }
+            return url
+        }
+    
     
     var simButtons: some View {
         HStack{
@@ -48,12 +72,13 @@ struct ConsoleView: View {
                 Button{
                     simulator.dumpParameters()
                 } label: {
-                    Text("Dump Parameters")
+                    Text("Dump")
                         .font(.headline)
                 }
             }.buttonStyle(.bordered)
                 .disabled(!simulator.patientStarted)
-            
+            ShareLink("Export PDF", item:render())
+                .buttonStyle(.bordered)
         }.padding(.horizontal)
         
     }

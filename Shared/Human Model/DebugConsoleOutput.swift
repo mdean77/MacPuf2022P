@@ -54,7 +54,7 @@ extension Simulator {
     func dumpFirstSixParametersReport() -> String {
         // Print out first 6 changeable parameters
         
-        let result = String(format:"\nList of first six parameters:\n     Inspired O2 %%:%6.1f\n     Inspired CO2 %%:%6.2f\n     Cardiac performance %% of normal:%7.2f\n     Metabolic rate %% of normal:%7.2f\n     Extra anatomic right to left shunt:%6.2f\n     Extra dead space:%6.2f",human.FIO2,human.FIC2,human.CO,human.PD,human.FADM, human.BULLA)
+        let result = String(format:"\nList of frequently changed parameters:\n     Inspired O2 %%:%6.1f\n     Inspired CO2 %%:%6.2f\n     Cardiac performance %% of normal:%7.2f\n     Metabolic rate %% of normal:%7.2f\n     Extra anatomic right to left shunt:%6.2f\n     Extra dead space:%6.2f\n",human.FIO2,human.FIC2,human.CO,human.PD,human.FADM, human.BULLA)
         return result;
     }
     

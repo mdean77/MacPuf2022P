@@ -16,6 +16,8 @@ class  Simulator: ObservableObject {
     var patientStarted = false
     var alive = false
     
+    /// Factors are changeable by the user and are not recalculated during the simulation.
+    /// The lower and upper bounds restrict the changes that will be permitted.
     struct Factor {
         let title:String
         let reference: Double
@@ -26,8 +28,18 @@ class  Simulator: ObservableObject {
         var information:String
     }
     
+    /// Parameters are changed continuously during the simulation.  It would not make sense
+    /// for a user to change any of these, but it is important to be able to report on any of them.
+    struct Parameter {
+        let abbreviation:String
+        let title:String
+        let current:Double
+        let Format:String
+    }
+    
     @Published var human = Human()
     @Published var factors:[Int:Factor] = [:]
+    var parameters:[Int:Parameter] = [:]    // Note that this is NOT marked @Published because these vars are continuously changing!
     @Published var consoleContentString:String = ""
     var introduction:String = "                               Welcome to MacPuf.\n\nMacPuf is a model of the human respiratory system designed at McMaster University\nMedical School, Canada, and St. Bartholomew's Hospital Medical College, England, \nby Drs. CJ Dickinson, EJM Campbell, AS Rebuck, NL Jones, D Ingram, and K Ahmed.  \nMacPuf was created to study gas transport and exchange.  MacPuf contains simulated \nlungs, circulating blood, and tissues.  Initially MacPuf breathes at a rate and depth \ndetermined by known influences upon ventilation.\n\nEnjoy yourself and try not to hurt your new experimental volunteer (or patient!)\n"
 
@@ -41,6 +53,7 @@ class  Simulator: ObservableObject {
     
     private func simulate(){
         iterations = iterations >= intervalFactor ? iterations : intervalFactor
+        outputResults(additionToString: dumpFirstSixParametersReport())
 
         outputResults(additionToString:"\n   Time     0     10    20    30    40    50    60    70    80    90   100   110   120\n")
         outputResults(additionToString:"(Min:Secs)  .     .     .     .     .     .     .     .     .     .     .     .     .")

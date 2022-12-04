@@ -98,6 +98,7 @@ struct VariableChangeView: View {
         } label: {Text("Info")
         }.padding(.horizontal)
             .buttonStyle(.bordered)
+            .disabled(simulator.factors[index]!.information == "Information")
             .sheet(isPresented: $showInfo, content:{
                 infoView
             })

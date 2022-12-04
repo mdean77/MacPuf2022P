@@ -130,6 +130,10 @@
 		85D5961C2933E13100EDE968 /* ConsoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D5961A2933E13100EDE968 /* ConsoleView.swift */; };
 		85D5961D2933E13100EDE968 /* ConsoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D5961A2933E13100EDE968 /* ConsoleView.swift */; };
 		85D5961E2933E13100EDE968 /* ConsoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D5961A2933E13100EDE968 /* ConsoleView.swift */; };
+		85FAC33D293D1BE200743916 /* UpdateParameterDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FAC33C293D1BE200743916 /* UpdateParameterDictionary.swift */; };
+		85FAC33E293D1BE200743916 /* UpdateParameterDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FAC33C293D1BE200743916 /* UpdateParameterDictionary.swift */; };
+		85FAC33F293D1BE200743916 /* UpdateParameterDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FAC33C293D1BE200743916 /* UpdateParameterDictionary.swift */; };
+		85FAC340293D1BE200743916 /* UpdateParameterDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FAC33C293D1BE200743916 /* UpdateParameterDictionary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -194,6 +198,7 @@
 		85BB7377287CD1A700B602EA /* ChangeVariableValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeVariableValues.swift; sourceTree = "<group>"; };
 		85BB738B287E2BC600B602EA /* VariableListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableListView.swift; sourceTree = "<group>"; };
 		85D5961A2933E13100EDE968 /* ConsoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleView.swift; sourceTree = "<group>"; };
+		85FAC33C293D1BE200743916 /* UpdateParameterDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateParameterDictionary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,6 +338,7 @@
 			children = (
 				850DCB1128676B4100292A94 /* Simulator.swift */,
 				85A41CD12879F13000582062 /* LoadFactorDictionary.swift */,
+				85FAC33C293D1BE200743916 /* UpdateParameterDictionary.swift */,
 				8559F4052939689400B87CFD /* Symptoms.swift */,
 				85BB7377287CD1A700B602EA /* ChangeVariableValues.swift */,
 			);
@@ -529,6 +535,7 @@
 				8533A81A286E28660077DE75 /* TissueNitrogenStores.swift in Sources */,
 				850DCAED286745FD00292A94 /* MacPuf2022PApp.swift in Sources */,
 				8533A815286E08440077DE75 /* Function.swift in Sources */,
+				85FAC33D293D1BE200743916 /* UpdateParameterDictionary.swift in Sources */,
 				850DCB1928677E0400292A94 /* SmallFunctions.swift in Sources */,
 				8533A80B286DF7180077DE75 /* ArterialPool.swift in Sources */,
 				85B5670A28724AB400D2B676 /* CalculatePressures3.swift in Sources */,
@@ -566,6 +573,7 @@
 				8533A81B286E28660077DE75 /* TissueNitrogenStores.swift in Sources */,
 				850DCAEE286745FD00292A94 /* MacPuf2022PApp.swift in Sources */,
 				8533A816286E08440077DE75 /* Function.swift in Sources */,
+				85FAC33E293D1BE200743916 /* UpdateParameterDictionary.swift in Sources */,
 				850DCB1A28677E0400292A94 /* SmallFunctions.swift in Sources */,
 				8533A80C286DF7180077DE75 /* ArterialPool.swift in Sources */,
 				85B5670B28724AB400D2B676 /* CalculatePressures3.swift in Sources */,
@@ -602,6 +610,7 @@
 				85D5961D2933E13100EDE968 /* ConsoleView.swift in Sources */,
 				85B56705287225DC00D2B676 /* CalculatePressures2.swift in Sources */,
 				850DCB1728677C8500292A94 /* TestCalculateContentFunction.swift in Sources */,
+				85FAC33F293D1BE200743916 /* UpdateParameterDictionary.swift in Sources */,
 				850DCB2028677E2B00292A94 /* CalculatePressures.swift in Sources */,
 				850DCB0F2867695B00292A94 /* Human.swift in Sources */,
 				850DCB1B28677E0400292A94 /* SmallFunctions.swift in Sources */,
@@ -641,6 +650,7 @@
 				850DCAEA286745FD00292A94 /* Tests_macOS.swift in Sources */,
 				8533A818286E08440077DE75 /* Function.swift in Sources */,
 				850DCB1C28677E0400292A94 /* SmallFunctions.swift in Sources */,
+				85FAC340293D1BE200743916 /* UpdateParameterDictionary.swift in Sources */,
 				8533A80E286DF7180077DE75 /* ArterialPool.swift in Sources */,
 				85B5670D28724AB400D2B676 /* CalculatePressures3.swift in Sources */,
 				85B5671228736ED700D2B676 /* CalculatePressures4.swift in Sources */,
