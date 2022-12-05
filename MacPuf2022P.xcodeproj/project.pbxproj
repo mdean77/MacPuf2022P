@@ -134,6 +134,10 @@
 		85FAC33E293D1BE200743916 /* UpdateParameterDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FAC33C293D1BE200743916 /* UpdateParameterDictionary.swift */; };
 		85FAC33F293D1BE200743916 /* UpdateParameterDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FAC33C293D1BE200743916 /* UpdateParameterDictionary.swift */; };
 		85FAC340293D1BE200743916 /* UpdateParameterDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FAC33C293D1BE200743916 /* UpdateParameterDictionary.swift */; };
+		85FAC342293D4C8400743916 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FAC341293D4C8400743916 /* SplashView.swift */; };
+		85FAC343293D4C8400743916 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FAC341293D4C8400743916 /* SplashView.swift */; };
+		85FAC344293D4C8400743916 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FAC341293D4C8400743916 /* SplashView.swift */; };
+		85FAC345293D4C8400743916 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FAC341293D4C8400743916 /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,6 +203,7 @@
 		85BB738B287E2BC600B602EA /* VariableListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableListView.swift; sourceTree = "<group>"; };
 		85D5961A2933E13100EDE968 /* ConsoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleView.swift; sourceTree = "<group>"; };
 		85FAC33C293D1BE200743916 /* UpdateParameterDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateParameterDictionary.swift; sourceTree = "<group>"; };
+		85FAC341293D4C8400743916 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				850DCAC6286745FB00292A94 /* ContentView.swift */,
+				85FAC341293D4C8400743916 /* SplashView.swift */,
 				85BB7374287B838C00B602EA /* VariableChangeView.swift */,
 				85BB738B287E2BC600B602EA /* VariableListView.swift */,
 				85D5961A2933E13100EDE968 /* ConsoleView.swift */,
@@ -531,6 +537,7 @@
 				850DCB292868E85800292A94 /* SetVariables.swift in Sources */,
 				8559F4062939689400B87CFD /* Symptoms.swift in Sources */,
 				8533A82E286E548E0077DE75 /* BrainMetabolism.swift in Sources */,
+				85FAC342293D4C8400743916 /* SplashView.swift in Sources */,
 				850DCB082867626000292A94 /* CalculateContents.swift in Sources */,
 				8533A81A286E28660077DE75 /* TissueNitrogenStores.swift in Sources */,
 				850DCAED286745FD00292A94 /* MacPuf2022PApp.swift in Sources */,
@@ -569,6 +576,7 @@
 				850DCB2A2868E85800292A94 /* SetVariables.swift in Sources */,
 				8559F4072939689400B87CFD /* Symptoms.swift in Sources */,
 				8533A82F286E548E0077DE75 /* BrainMetabolism.swift in Sources */,
+				85FAC343293D4C8400743916 /* SplashView.swift in Sources */,
 				850DCB092867626000292A94 /* CalculateContents.swift in Sources */,
 				8533A81B286E28660077DE75 /* TissueNitrogenStores.swift in Sources */,
 				850DCAEE286745FD00292A94 /* MacPuf2022PApp.swift in Sources */,
@@ -613,6 +621,7 @@
 				85FAC33F293D1BE200743916 /* UpdateParameterDictionary.swift in Sources */,
 				850DCB2028677E2B00292A94 /* CalculatePressures.swift in Sources */,
 				850DCB0F2867695B00292A94 /* Human.swift in Sources */,
+				85FAC344293D4C8400743916 /* SplashView.swift in Sources */,
 				850DCB1B28677E0400292A94 /* SmallFunctions.swift in Sources */,
 				8533A82B286E4A020077DE75 /* LungMetabolism.swift in Sources */,
 				8533A826286E376E0077DE75 /* VenousDelay.swift in Sources */,
@@ -646,6 +655,7 @@
 				85BB738F287E2BC600B602EA /* VariableListView.swift in Sources */,
 				8559F4092939689400B87CFD /* Symptoms.swift in Sources */,
 				85D596192933DF7700EDE968 /* VariableChangeView.swift in Sources */,
+				85FAC345293D4C8400743916 /* SplashView.swift in Sources */,
 				8533A81D286E28660077DE75 /* TissueNitrogenStores.swift in Sources */,
 				850DCAEA286745FD00292A94 /* Tests_macOS.swift in Sources */,
 				8533A818286E08440077DE75 /* Function.swift in Sources */,

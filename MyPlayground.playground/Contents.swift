@@ -21,4 +21,20 @@ string = "\(params)"
 
 paramsToCollect[0]
 
+enum OutputFormats:String, CaseIterable, Equatable {
+    case GraphsOnly = "Graphs Only"
+    case GraphsAndTables = "Graphs and Tables"
+    case SelectedVariables = "Selected Parameters"
+}
+
+var outputFormat:OutputFormats = .GraphsAndTables
+outputFormat.rawValue
+
+OutputFormats(rawValue: "Selected Parameters")
+
+OutputFormats.allCases
+for value in OutputFormats.allCases {
+    value
+}
+
 

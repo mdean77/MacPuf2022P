@@ -30,5 +30,6 @@ extension Simulator {
     /// string is what is used to print out the value in repiorts.
     func updateParameterDictionary(){
         
+        parameters[31] = Parameter(abbreviation: "VO2CT", title: "Venous oxygen content", current: human.VO2CT, Format: "%.2f")
     }
 }

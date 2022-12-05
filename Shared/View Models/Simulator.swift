@@ -10,11 +10,13 @@
 import Foundation
 
 class  Simulator: ObservableObject {
-    var iterations = 180
-    var intervalFactor = 10
+    @Published var iterations = 60
+    @Published var intervalFactor = 6
     var totalSeconds = 0
     var patientStarted = false
     var alive = false
+    
+
     
     /// Factors are changeable by the user and are not recalculated during the simulation.
     /// The lower and upper bounds restrict the changes that will be permitted.
@@ -37,6 +39,13 @@ class  Simulator: ObservableObject {
         let Format:String
     }
     
+    enum OutputFormats:String, CaseIterable, Equatable {
+        case GraphsOnly = "Graphs Only"
+        case GraphsAndTables = "Graphs and Tables"
+        case SelectedVariables = "Selected Parameters"
+    }
+    
+    @Published var outputFormat:OutputFormats = .GraphsAndTables
     @Published var human = Human()
     @Published var factors:[Int:Factor] = [:]
     var parameters:[Int:Parameter] = [:]    // Note that this is NOT marked @Published because these vars are continuously changing!
@@ -53,22 +62,59 @@ class  Simulator: ObservableObject {
     
     private func simulate(){
         iterations = iterations >= intervalFactor ? iterations : intervalFactor
-        outputResults(additionToString: dumpFirstSixParametersReport())
-
-        outputResults(additionToString:"\n   Time     0     10    20    30    40    50    60    70    80    90   100   110   120\n")
-        outputResults(additionToString:"(Min:Secs)  .     .     .     .     .     .     .     .     .     .     .     .     .")
+        switch outputFormat{
+        case .GraphsAndTables:
+                    outputResults(additionToString: dumpFirstSixParametersReport())
+            
+                    outputResults(additionToString:"\n   Time     0     10    20    30    40    50    60    70    80    90   100   110   120\n")
+                    outputResults(additionToString:"(Min:Secs)  .     .     .     .     .     .     .     .     .     .     .     .     .")
+            
+                    for cycle in 0...iterations {
+                        if alive {
+                            human.simulate(cycle: cycle, iterations: iterations)
+                            totalSeconds += 1
+                            if cycle % intervalFactor == 0 {
+                                outputResults(additionToString: cycleReport())
+                            }
+                            observeForArithmeticError()
+                        }
+                    }
+                    outputResults(additionToString: runReport())
         
-        for cycle in 0...iterations {
-            if alive {
-                human.simulate(cycle: cycle, iterations: iterations)
-                totalSeconds += 1
-                if cycle % intervalFactor == 0 {
-                    outputResults(additionToString: cycleReport())
+        case .GraphsOnly:
+                    //outputResults(additionToString: dumpFirstSixParametersReport())
+            
+                    outputResults(additionToString:"\n   Time     0     10    20    30    40    50    60    70    80    90   100   110   120\n")
+                    outputResults(additionToString:"(Min:Secs)  .     .     .     .     .     .     .     .     .     .     .     .     .")
+            
+                    for cycle in 0...iterations {
+                        if alive {
+                            human.simulate(cycle: cycle, iterations: iterations)
+                            totalSeconds += 1
+                            if cycle % intervalFactor == 0 {
+                                outputResults(additionToString: cycleReport())
+                            }
+                            observeForArithmeticError()
+                        }
+                    }
+                   // outputResults(additionToString: runReport())
+        
+        case .SelectedVariables:
+            outputResults(additionToString: selectedVariablesHeader())
+            for cycle in 0...iterations {
+                if alive {
+                    human.simulate(cycle: cycle, iterations: iterations)
+                    totalSeconds+=1
+                    if cycle % intervalFactor == 0 {
+                        outputResults(additionToString: selectedVariablesValues())
+                    }
+                    observeForArithmeticError()
                 }
-                observeForArithmeticError()
             }
+        
         }
-        outputResults(additionToString: runReport())
+
+
     }
     
     //MARK: INTENTION FUNCTIONS

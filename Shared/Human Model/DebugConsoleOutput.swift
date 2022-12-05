@@ -102,20 +102,17 @@ extension Simulator {
         return "\nParameter dump:" + row1+row2+row3+row4+row5+row6+row7+row8+row9+row10+row11+row12
     }
     
-    func debugVariablesReport1() -> String{
-        let header = String("   RO2PR    RPH    PC2CT   RC2MT   RC2PR   AN2MT   TC2CT   TIDVL   BC2CT  TC2CT   RC2CT")
-        let values = String(format:"\n%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f%8.2f\n",human.RO2PR, human.RPH, human.PC2CT, human.RC2MT, human.RC2PR, human.AN2MT, human.TC2CT, human.TIDVL,
-                            human.BC2CT, human.TC2CT, human.RC2CT)
-        return header + values
+    func selectedVariablesHeader() -> String{
+        let header = String("\nMin:Sec  RO2PR  PC2CT RC2MT   RC2PR   AN2MT   TC2CT TIDVL   BC2CT  TC2CT  RC2CT")
+        return header
     }
     
-//    func reportOut(title: String){
-//        print(title)
-////        print(runReport())
-////        print(inspectionReport())
-//        //print(dumpFirstSixParametersReport())
-//        //print(runReport())
-////        print(dumpAllParametersReport())
-//    }
+    func selectedVariablesValues() -> String{
+        let seconds = totalSeconds % 60
+        let minutes = totalSeconds / 60
+        let values = String(format:"%7.2f%7.2f%7.2f%7.2f%9.2f%7.2f%7.2f%7.2f%7.2f%7.2f",human.RO2PR, human.PC2CT, human.RC2MT, human.RC2PR, human.AN2MT, human.TC2CT, human.TIDVL,human.BC2CT, human.TC2CT, human.RC2CT)
+        let result = String(format:"\n%4d:%2d",minutes, seconds).appending(values)
+        return result
+    }
     
 }
