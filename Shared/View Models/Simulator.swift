@@ -46,7 +46,8 @@ class  Simulator: ObservableObject {
     }
     
     @Published var outputFormat:OutputFormats = .GraphsAndTables
-    @Published var human = Human()
+    //@Published
+    var human = Human()
     @Published var factors:[Int:Factor] = [:]
     var parameters:[Int:Parameter] = [:]    // Note that this is NOT marked @Published because these vars are continuously changing!
     @Published var consoleContentString:String = ""

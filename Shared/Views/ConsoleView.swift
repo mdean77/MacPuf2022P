@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import CoreText
 
 struct ConsoleView: View {
     @EnvironmentObject var simulator: Simulator
@@ -17,28 +18,47 @@ struct ConsoleView: View {
             .font(.system(size:12))
         simButtons
     }
+    
+    func render() -> URL {
+        let renderer = ImageRenderer(content:Text(simulator.consoleContentString)
+            .monospaced()
+            .font(.system(size:8)))
         
-        func render() -> URL {
-            let renderer = ImageRenderer(content:
-                                            Text(simulator.consoleContentString)
-                .monospaced()
-                .font(.system(size:8)))
-
-            let url = URL.documentsDirectory.appending(path: "output.pdf")
-            renderer.render{size, context in
-                var box = CGRect(x:0, y:0, width:size.width, height:size.height)
-                guard let pdf = CGContext(url as CFURL, mediaBox: &box, nil)
-                else {
-                    return
-                }
-                //pdf.beginPDFPage(nil)
-                pdf.beginPDFPage(["setTopMargin":50] as CFDictionary)
-                context(pdf)
-                pdf.endPDFPage()
-                pdf.closePDF()
+        let url = URL.documentsDirectory.appending(path: "output.pdf")
+        renderer.render{size, context in
+            guard let pdf = CGContext(url as CFURL, mediaBox: nil, nil)
+            else {
+                return
             }
-            return url
+//            var textRange = CFRangeMake(0, simulator.consoleContentString.count)
+//            var pageRange = CFRangeMake(0,2)
+//            let pageSize = CGSize(width: 792.0, height: 612.0)
+//            var contentString = CFAttributedStringCreate(nil, simulator.consoleContentString as CFString, nil)
+//
+//            let frameSetter = CTFramesetterCreateWithAttributedString(contentString ?? "" as! CFAttributedString)
+//            CTFramesetterSuggestFrameSizeWithConstraints(frameSetter, textRange, nil, pageSize, &pageRange)
+//            let pageRect = CGRect(x: 72.0, y: 72.0, width: 468.0, height: 648.0)
+//            let framePath = CGPath(rect: pageRect, transform: nil)
+//            let frame = CTFramesetterCreateFrame(frameSetter, pageRange, framePath, nil)
+
+              // print("frame = \(frame)\n")
+            
+            pdf.beginPDFPage(nil)
+//            print("textRange = \(textRange)\n")
+//            print("pageRange = \(pageRange)\n")
+//            print("contentString = \(contentString)\n")
+//            CTFrameDraw(frame, pdf)
+//            print("textRange = \(textRange)\n")
+//            print("pageRange = \(pageRange)\n")
+//            print("contentString = \(contentString)\n")
+//            CTFrameDraw(frame, pdf)
+             //  print("frame = \(frame)\n")
+            context(pdf)
+            pdf.endPDFPage()
+            pdf.closePDF()
         }
+        return url
+    }
     
     
     var simButtons: some View {
@@ -47,40 +67,30 @@ struct ConsoleView: View {
                 simulator.startUp()
             } label: {
                 Text("Simulate new")
-                    .font(.headline)
             }
-            .buttonStyle(.bordered)
-            
-            //Spacer()
             
             Group{
-                Button{
-                    simulator.continueSubject()
+                Button{simulator.continueSubject()
                 } label: {
                     Text("Continue same")
-                        .font(.headline)
                 }
-                .disabled(!simulator.alive)
-                
+                .disabled(!simulator.alive)     // If not alive, cannot allow continuation
                 Button{
                     simulator.inspectSubject()
                 } label: {
                     Text("Inspect")
-                        .font(.headline)
                 }
-                
                 Button{
                     simulator.dumpParameters()
                 } label: {
                     Text("Dump")
-                        .font(.headline)
                 }
-            }.buttonStyle(.bordered)
-                .disabled(!simulator.patientStarted)
-            ShareLink("Export PDF", item:render())
-                .buttonStyle(.bordered)
-        }.padding(.horizontal)
-        
+                ShareLink("Export PDF", item:render())
+            }
+            .disabled(!simulator.patientStarted)
+        }
+        .buttonStyle(.bordered)
+        .font(.headline)
     }
 }
 
@@ -88,7 +98,7 @@ struct ConsoleView: View {
 
 
 struct ConsoleView_Previews: PreviewProvider {
-
+    
     static var previews: some View {
         Group{
             ConsoleView()
@@ -97,6 +107,6 @@ struct ConsoleView_Previews: PreviewProvider {
                 .previewInterfaceOrientation(.landscapeRight)
                 .preferredColorScheme(.dark)
         }.environmentObject(Simulator())
-
+        
     }
 }
