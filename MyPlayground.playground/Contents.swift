@@ -1,3 +1,5 @@
+import SwiftUI
+
 var FIO2: Float = 20.93
 var FIC2: Float = 0.03
 var a:Float = 1
@@ -36,5 +38,30 @@ OutputFormats.allCases
 for value in OutputFormats.allCases {
     value
 }
+extension String {
+    /// stringToFind must be at least 1 character.
+    func countInstances(of stringToFind: String) -> Int {
+        assert(!stringToFind.isEmpty)
+        var count = 0
+        var searchRange: Range<String.Index>?
+        while let foundRange = range(of: stringToFind, options: [], range: searchRange) {
+            count += 1
+            searchRange = Range(uncheckedBounds: (lower: foundRange.upperBound, upper: endIndex))
+        }
+        return count
+    }
+}
+
+var myContent = "This is a really long string \nthat has several lines in it\nincluding some end of line \ncharacters and I want to know \nhow many lines are in it."
+
+myContent.countInstances(of: "\n")
+
+Text(myContent)
+myContent.append(myContent)
+
+print(myContent)
+
+myContent.countInstances(of: "\n")
+
 
 

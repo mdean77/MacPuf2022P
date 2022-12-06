@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-import CoreText
+//import CoreText
 
 struct ConsoleView: View {
     @EnvironmentObject var simulator: Simulator
@@ -22,44 +22,81 @@ struct ConsoleView: View {
     func render() -> URL {
         let renderer = ImageRenderer(content:Text(simulator.consoleContentString)
             .monospaced()
-            .font(.system(size:8)))
+            .font(.system(size:10)))
         
         let url = URL.documentsDirectory.appending(path: "output.pdf")
+        
+        let numberOfLines = simulator.consoleContentString.countInstances(of: "\n") + 1
+        
+        
         renderer.render{size, context in
             guard let pdf = CGContext(url as CFURL, mediaBox: nil, nil)
             else {
                 return
             }
-//            var textRange = CFRangeMake(0, simulator.consoleContentString.count)
-//            var pageRange = CFRangeMake(0,2)
-//            let pageSize = CGSize(width: 792.0, height: 612.0)
-//            var contentString = CFAttributedStringCreate(nil, simulator.consoleContentString as CFString, nil)
-//
-//            let frameSetter = CTFramesetterCreateWithAttributedString(contentString ?? "" as! CFAttributedString)
-//            CTFramesetterSuggestFrameSizeWithConstraints(frameSetter, textRange, nil, pageSize, &pageRange)
-//            let pageRect = CGRect(x: 72.0, y: 72.0, width: 468.0, height: 648.0)
-//            let framePath = CGPath(rect: pageRect, transform: nil)
-//            let frame = CTFramesetterCreateFrame(frameSetter, pageRange, framePath, nil)
+            let textRange = CFRangeMake(0, simulator.consoleContentString.count)
+            var pageRange = CFRangeMake(0,3)
+            let pageSize = CGSize(width: 612.0, height: 792.0)
+            let contentString = CFAttributedStringCreate(nil, simulator.consoleContentString as CFString, nil)
 
-              // print("frame = \(frame)\n")
+            let frameSetter = CTFramesetterCreateWithAttributedString(contentString ?? "" as! CFAttributedString)
             
+//            CTFramesetterSuggestFrameSizeWithConstraints(frameSetter, textRange, nil, pageSize, &pageRange)
+           let pageRect = CGRect(x: 72, y: 72, width:612.0, height: 792.0)
+           let framePath = CGPath(rect: pageRect, transform: nil)
+//            let frame = CTFramesetterCreateFrame(frameSetter, pageRange, framePath, nil)
+            
+            CTFramesetterSuggestFrameSizeWithConstraints(frameSetter, CFRangeMake(0,min(800, simulator.consoleContentString.count)), nil, pageSize, &pageRange)
+            var frame = CTFramesetterCreateFrame(frameSetter, pageRange, framePath, nil)
             pdf.beginPDFPage(nil)
-//            print("textRange = \(textRange)\n")
-//            print("pageRange = \(pageRange)\n")
-//            print("contentString = \(contentString)\n")
-//            CTFrameDraw(frame, pdf)
-//            print("textRange = \(textRange)\n")
-//            print("pageRange = \(pageRange)\n")
-//            print("contentString = \(contentString)\n")
-//            CTFrameDraw(frame, pdf)
-             //  print("frame = \(frame)\n")
-            context(pdf)
+            CTFrameDraw(frame, pdf)
+            pdf.endPDFPage()
+
+            CTFramesetterSuggestFrameSizeWithConstraints(frameSetter, CFRangeMake(801,min(1600, simulator.consoleContentString.count)), nil, pageSize, &pageRange)
+             frame = CTFramesetterCreateFrame(frameSetter, pageRange, framePath, nil)
+            pdf.beginPDFPage(nil)
+            CTFrameDraw(frame, pdf)
+            pdf.endPDFPage()
+
+            CTFramesetterSuggestFrameSizeWithConstraints(frameSetter, CFRangeMake(1601,min(3000, simulator.consoleContentString.count)), nil, pageSize, &pageRange)
+             frame = CTFramesetterCreateFrame(frameSetter, pageRange, framePath, nil)
+            pdf.beginPDFPage(nil)
+            CTFrameDraw(frame, pdf)
             pdf.endPDFPage()
             pdf.closePDF()
         }
         return url
     }
     
+//    func render() -> URL {
+//        let renderer = ImageRenderer(content:Text(simulator.consoleContentString)
+//            .monospaced()
+//            .font(.system(size:10)))
+//
+//        let url = URL.documentsDirectory.appending(path: "output.pdf")
+//
+//        renderer.render{size, context in
+//            var box = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+//            guard let pdf = CGContext(url as CFURL, mediaBox: &box, nil)
+//            else {
+//                return
+//            }
+//            pdf.beginPDFPage(nil)//pageInfo as CFDictionary)
+//            //CTFrameDraw(frame, pdf)
+//            context(pdf)
+//            pdf.endPDFPage()
+//            pdf.beginPDFPage(nil)//pageInfo as CFDictionary)
+//            //CTFrameDraw(frame, pdf)
+//            context(pdf)
+//            pdf.endPDFPage()
+//            pdf.beginPDFPage(nil)//pageInfo as CFDictionary)
+//            //CTFrameDraw(frame, pdf)
+//            context(pdf)
+//            pdf.endPDFPage()
+//            pdf.closePDF()
+//        }
+//        return url
+//    }
     
     var simButtons: some View {
         HStack{
@@ -108,5 +145,19 @@ struct ConsoleView_Previews: PreviewProvider {
                 .preferredColorScheme(.dark)
         }.environmentObject(Simulator())
         
+    }
+}
+
+extension String {
+    /// stringToFind must be at least 1 character.
+    func countInstances(of stringToFind: String) -> Int {
+        assert(!stringToFind.isEmpty)
+        var count = 0
+        var searchRange: Range<String.Index>?
+        while let foundRange = range(of: stringToFind, options: [], range: searchRange) {
+            count += 1
+            searchRange = Range(uncheckedBounds: (lower: foundRange.upperBound, upper: endIndex))
+        }
+        return count
     }
 }

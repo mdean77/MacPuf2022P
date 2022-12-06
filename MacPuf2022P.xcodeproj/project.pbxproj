@@ -202,6 +202,7 @@
 		85BB7377287CD1A700B602EA /* ChangeVariableValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeVariableValues.swift; sourceTree = "<group>"; };
 		85BB738B287E2BC600B602EA /* VariableListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableListView.swift; sourceTree = "<group>"; };
 		85D5961A2933E13100EDE968 /* ConsoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleView.swift; sourceTree = "<group>"; };
+		85F21E3C2940080000AACD7D /* TestingPrinting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingPrinting.swift; sourceTree = SOURCE_ROOT; };
 		85FAC33C293D1BE200743916 /* UpdateParameterDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateParameterDictionary.swift; sourceTree = "<group>"; };
 		85FAC341293D4C8400743916 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -358,6 +359,7 @@
 				85BB7374287B838C00B602EA /* VariableChangeView.swift */,
 				85BB738B287E2BC600B602EA /* VariableListView.swift */,
 				85D5961A2933E13100EDE968 /* ConsoleView.swift */,
+				85F21E3C2940080000AACD7D /* TestingPrinting.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
