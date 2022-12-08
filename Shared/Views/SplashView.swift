@@ -20,33 +20,41 @@ struct SplashView: View {
         } else {
             VStack{
                 ZStack{
-                    
                     Color.blue
                         .ignoresSafeArea()
                     Image("puf4")
                         .scaledToFit()
-                    VStack {
-                        Text("MacPuf")
-                            .font(.system(size: 80))
-                           Text("Computer Simulation of Gas Exchange and Circulation")
-                            .font(.system(size: 25))
-
-                    } .padding()
-                        .foregroundColor(.black.opacity(0.80))
-                        .background(.yellow)
+                    VStack{
+                        VStack {
+                            Text("MacPuf")
+                                .font(.system(size: 70))
+                            Text("Computer Simulation of Gas Exchange and Circulation\n")
+                                .font(.system(size: 25))
+                            Text("This is an educational simulation based on a simplified mathematical\n model and is intended to increase understanding of the physiology of gas\n exchange and circulation. It is not intended for any clinical purposes. ")
+                                .font(.system(size:20))
+                        } .padding(.bottom)
+                            .padding(.leading)
+                            .padding(.trailing)
+                            .foregroundColor(.black.opacity(0.80))
+                            .background(.yellow)
+                        
+                        Button{
+                            self.isActive = true}
+                    label: {Text("Acknowledge")
+                    }        .buttonStyle(.bordered)
+                            .foregroundColor(.white)
+                            .background(.blue)
+                            .font(.title)
+                            .padding()
+                    }
                 }
                 .scaleEffect(size)
                 .opacity(opacity)
                 .onAppear(){
-                    withAnimation(.easeIn(duration: 3)){
+                    withAnimation(.easeIn(duration: 2)){
                         self.size = 1.0
                         self.opacity = 1.0
                     }
-                }
-            }
-            .onAppear(){
-                DispatchQueue.main.asyncAfter(deadline: .now() + 5.0){
-                    self.isActive = true
                 }
             }
         }

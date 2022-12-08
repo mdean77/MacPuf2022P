@@ -16,8 +16,6 @@ class  Simulator: ObservableObject {
     var patientStarted = false
     var alive = false
     
-
-    
     /// Factors are changeable by the user and are not recalculated during the simulation.
     /// The lower and upper bounds restrict the changes that will be permitted.
     struct Factor {
@@ -46,10 +44,11 @@ class  Simulator: ObservableObject {
     }
     
     @Published var outputFormat:OutputFormats = .GraphsAndTables
-    //@Published
+
     var human = Human()
-    @Published var factors:[Int:Factor] = [:]
-    var parameters:[Int:Parameter] = [:]    // Note that this is NOT marked @Published because these vars are continuously changing!
+    var factors:[Int:Factor] = [:]
+    var parameters:[Int:Parameter] = [:]
+    
     @Published var consoleContentString:String = ""
     var introduction:String = "                               Welcome to MacPuf.\n\nMacPuf is a model of the human respiratory system designed at McMaster University\nMedical School, Canada, and St. Bartholomew's Hospital Medical College, England, \nby Drs. CJ Dickinson, EJM Campbell, AS Rebuck, NL Jones, D Ingram, and K Ahmed.  \nMacPuf was created to study gas transport and exchange.  MacPuf contains simulated \nlungs, circulating blood, and tissues.  Initially MacPuf breathes at a rate and depth \ndetermined by known influences upon ventilation.\n\nEnjoy yourself and try not to hurt your new experimental volunteer (or patient!)\n"
 
@@ -61,6 +60,19 @@ class  Simulator: ObservableObject {
         outputResults(additionToString: introduction)
     }
     
+    fileprivate func cycleReportOutput(addition:String) {
+        for cycle in 0...iterations {
+            if alive {
+                human.simulate(cycle: cycle, iterations: iterations)
+                totalSeconds += 1
+                if cycle % intervalFactor == 0 {
+                    outputResults(additionToString: addition)
+                }
+                observeForArithmeticError()
+            }
+        }
+    }
+    
     private func simulate(){
         iterations = iterations >= intervalFactor ? iterations : intervalFactor
         switch outputFormat{
@@ -69,25 +81,24 @@ class  Simulator: ObservableObject {
             
                     outputResults(additionToString:"\n   Time     0     10    20    30    40    50    60    70    80    90   100   110   120\n")
                     outputResults(additionToString:"(Min:Secs)  .     .     .     .     .     .     .     .     .     .     .     .     .")
-            
-                    for cycle in 0...iterations {
-                        if alive {
-                            human.simulate(cycle: cycle, iterations: iterations)
-                            totalSeconds += 1
-                            if cycle % intervalFactor == 0 {
-                                outputResults(additionToString: cycleReport())
-                            }
-                            observeForArithmeticError()
-                        }
+            for cycle in 0...iterations {
+                if alive {
+                    human.simulate(cycle: cycle, iterations: iterations)
+                    totalSeconds += 1
+                    if cycle % intervalFactor == 0 {
+                        outputResults(additionToString: cycleReport())
                     }
+                    observeForArithmeticError()
+                }
+            }
+            //cycleReportOutput(addition: cycleReport())
                     outputResults(additionToString: runReport())
         
         case .GraphsOnly:
-                    //outputResults(additionToString: dumpFirstSixParametersReport())
             
                     outputResults(additionToString:"\n   Time     0     10    20    30    40    50    60    70    80    90   100   110   120\n")
                     outputResults(additionToString:"(Min:Secs)  .     .     .     .     .     .     .     .     .     .     .     .     .")
-            
+                   // cycleReportOutput(addition: cycleReport())
                     for cycle in 0...iterations {
                         if alive {
                             human.simulate(cycle: cycle, iterations: iterations)
@@ -98,10 +109,11 @@ class  Simulator: ObservableObject {
                             observeForArithmeticError()
                         }
                     }
-                   // outputResults(additionToString: runReport())
+
         
         case .SelectedVariables:
             outputResults(additionToString: selectedVariablesHeader())
+//            cycleReportOutput(addition: selectedVariablesValues())
             for cycle in 0...iterations {
                 if alive {
                     human.simulate(cycle: cycle, iterations: iterations)
@@ -112,7 +124,6 @@ class  Simulator: ObservableObject {
                     observeForArithmeticError()
                 }
             }
-        
         }
 
 
@@ -162,9 +173,7 @@ class  Simulator: ObservableObject {
         // The consoleContentString contains what should be displayed in the text editor
         // that forms the main simulation view.  So I append to that string, the string
         // is changed, and binding changes what is shown in the view automatically.
-        //
-        // This is super cool because there is no code required that connects this
-        // routine to the text editor review.  All handled by SWIFTUI.
+
         print(additionToString)
         consoleContentString.append(additionToString)
     }

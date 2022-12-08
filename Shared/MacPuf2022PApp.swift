@@ -12,6 +12,7 @@ struct MacPuf2022PApp: App {
     @StateObject var simulator = Simulator()
     var body: some Scene {
         WindowGroup {
+
             SplashView()
 //            ContentView()
 //                .environmentObject(simulator)

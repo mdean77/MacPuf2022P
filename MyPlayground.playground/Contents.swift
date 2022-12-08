@@ -63,5 +63,8 @@ print(myContent)
 
 myContent.countInstances(of: "\n")
 
-
-
+var stringArray = myContent.split(separator: "\n")
+print(stringArray)
+for item in 1..<stringArray.count {
+    print(stringArray[item])
+}

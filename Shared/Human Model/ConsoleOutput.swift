@@ -1,8 +1,9 @@
 //
-//  DebugConsoleOutput.swift
+//  ConsoleOutput.swift
 //  MacPuf2022P
 //
 //  Created by J Michael Dean on 6/27/22.
+//  Renamed ConsoleOutput Dec 8, 2022
 //
 
 import Foundation

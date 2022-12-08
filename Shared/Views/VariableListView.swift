@@ -4,6 +4,7 @@
 //
 //  Created by J Michael Dean on 7/12/22.
 //  November 29, 2022 Changed navigationView to navigationStack.
+//  Refactored December 8, 2022
 
 import SwiftUI
 
@@ -16,46 +17,35 @@ struct VariableListView: View {
             List{
                 Section(header: Text("Frequently changed parameters")
                     .font(.headline)){
-                        ForEach(frequentParams, id: \.self){i in
-                            NavigationLink(destination: VariableChangeView(index: i)){
-                                HStack{
-                                    VStack(alignment: .leading){
-                                        Text(simulator.factors[i]!.title)
-                                            .font(.subheadline)
-                                        Text("Reference value: \(simulator.factors[i]!.reference,specifier:simulator.factors[1]!.format)")
-                                            .font(.caption)
-                                    }
-                                    Spacer()
-                                    Text("Current Value: \(simulator.factors[i]!.current,specifier: simulator.factors[i]!.format)")
-                                        .font(.caption)
-                                }
-                            }
-                        }
+                        variableParams(params: frequentParams)
                     }
                 Section(header: Text("Other parameter changes")
                     .font(.headline)){
-                        ForEach(infrequentParams, id: \.self){i in
-                            
-                            
-                            NavigationLink(destination: VariableChangeView(index: i)){
-                                HStack{
-                                    VStack(alignment: .leading){
-                                        Text(simulator.factors[i]!.title)
-                                            .font(.subheadline)
-                                        Text("Reference value: \(simulator.factors[i]!.reference,specifier:simulator.factors[1]!.format)")
-                                            .font(.caption)
-                                    }
-                                    Spacer()
-                                    Text("Current Value: \(simulator.factors[i]!.current,specifier: simulator.factors[i]!.format)")
-                                        .font(.caption)
-                                }
-                            }
-                        }
+                        variableParams(params: infrequentParams)
                     }
             }.navigationTitle("MacPuf Parameters")
                 .font(.title)
         }
     }
+    
+    func variableParams(params:Range<Int>)-> some View {
+        ForEach(params, id: \.self){i in
+            NavigationLink(destination: VariableChangeView(index: i)){
+                HStack{
+                    VStack(alignment: .leading){
+                        Text(simulator.factors[i]!.title)
+                            .font(.subheadline)
+                        Text("Reference value: \(simulator.factors[i]!.reference,specifier:simulator.factors[1]!.format)")
+                            .font(.caption)
+                    }
+                    Spacer()
+                    Text("Current Value: \(simulator.factors[i]!.current,specifier: simulator.factors[i]!.format)")
+                        .font(.caption)
+                }
+            }
+        }
+    }
+    
 }
 
 struct VariableListView_Previews: PreviewProvider {
