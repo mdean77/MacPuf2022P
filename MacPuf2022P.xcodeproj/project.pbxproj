@@ -205,7 +205,7 @@
 		85BB7374287B838C00B602EA /* VariableChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableChangeView.swift; sourceTree = "<group>"; };
 		85BB7377287CD1A700B602EA /* ChangeVariableValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeVariableValues.swift; sourceTree = "<group>"; };
 		85BB738B287E2BC600B602EA /* VariableListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableListView.swift; sourceTree = "<group>"; };
-		85D08381294295FF00734F45 /* MacPuf2022P--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MacPuf2022P--iOS--Info.plist"; sourceTree = "<group>"; };
+		85D083832942AEF600734F45 /* MacPuf2022P--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MacPuf2022P--iOS--Info.plist"; sourceTree = "<group>"; };
 		85D5961A2933E13100EDE968 /* ConsoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleView.swift; sourceTree = "<group>"; };
 		85F21E3C2940080000AACD7D /* TestingPrinting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingPrinting.swift; sourceTree = SOURCE_ROOT; };
 		85F21E3F29414CDC00AACD7D /* PDFExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFExtensions.swift; sourceTree = "<group>"; };
@@ -248,7 +248,7 @@
 		850DCABF286745FB00292A94 = {
 			isa = PBXGroup;
 			children = (
-				85D08381294295FF00734F45 /* MacPuf2022P--iOS--Info.plist */,
+				85D083832942AEF600734F45 /* MacPuf2022P--iOS--Info.plist */,
 				850DCAC4286745FB00292A94 /* Shared */,
 				850DCAD3286745FD00292A94 /* macOS */,
 				850DCADC286745FD00292A94 /* Tests iOS */,
