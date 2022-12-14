@@ -20,9 +20,27 @@ extension String {
         }
         return count
     }
+    
+    
+    func findNthOccurrence(of substring: String, in string: String, n: Int) -> Int? {
+        let range = string.range(of: substring, options: .caseInsensitive)
+        guard let firstOccurrence = range?.lowerBound else { return nil }
+        
+        let offset = string.distance(from: string.startIndex, to: firstOccurrence)
+        let nextOccurrenceIndex = string.index(firstOccurrence, offsetBy: (n - 1) * substring.count)
+        
+        return string.distance(from: string.startIndex, to: nextOccurrenceIndex)
+    }
 }
-
- 
+//let string = "hello, world, hello!"
+//let substring = "hello"
+//let n = 2
+//
+//if let index = findNthOccurrence(of: substring, in: string, n: n) {
+//    print("The index of the 2nd occurrence of 'hello' in 'hello, world, hello!' is: \(index)")
+//}
+//
+//The index of the 2nd occurrence of 'hello' in 'hello, world, hello!' is: 14
 
 //extension View {
     /// Export a SwiftUI view to PDF document

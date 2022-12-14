@@ -46,7 +46,7 @@ struct ConsoleView: View {
                 } label: {
                     Text("Dump")
                 }
-                //ShareLink("Export PDF", item:render())
+                ShareLink("Export PDF", item:render())
             }
             .disabled(!simulator.patientStarted)
         }
@@ -54,6 +54,47 @@ struct ConsoleView: View {
         .font(.headline)
     }
     
+    
+    func render() -> URL {
+        // 1: Render Hello World with some modifiers
+        let renderer = ImageRenderer(content:
+                                        Text(simulator.consoleContentString)
+            .font(.system(size: 12))
+            .monospaced()
+                .foregroundColor(.white)
+                .padding()
+                .background(.blue)
+        )
+
+        // 2: Save it to our documents directory
+       let url = URL.documentsDirectory.appending(path: "output.pdf")
+
+        // 3: Start the rendering process
+        renderer.render { size, context in
+
+            var box = CGRect(x: 0, y: 0, width: size.width, height: size.height/2)
+            guard var pdf = CGContext(url as CFURL, mediaBox:&box, nil) else {
+                return
+            }
+
+            pdf.beginPDFPage(nil)
+            context(pdf)
+            pdf.endPDFPage()
+            
+            box = CGRect(x: 0, y: size.height/4, width: size.width, height: size.height/2)
+            guard var pdf = CGContext(url as CFURL, mediaBox:&box, nil) else {
+                return
+            }
+            
+            pdf.beginPDFPage(nil)
+            context(pdf)
+            pdf.endPDFPage()
+            
+            pdf.closePDF()
+        }
+
+        return url
+    }
 }
 
 struct ConsoleView_Previews: PreviewProvider {

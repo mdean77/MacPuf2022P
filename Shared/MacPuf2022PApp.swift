@@ -13,7 +13,7 @@ struct MacPuf2022PApp: App {
     var body: some Scene {
         WindowGroup {
 
-            SplashView()
+           SplashView()
 //            ContentView()
 //                .environmentObject(simulator)
         }
